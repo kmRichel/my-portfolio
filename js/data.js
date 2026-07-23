@@ -19,8 +19,8 @@ const DATA = {
     phone: "010-X6X6-XX6X",
     email: "stoprade@gmail.com",
     address: "경기 군포시 대야미동",
-    website: "http://kmdaro.dothome.co.kr",
-    github: "https://github.com",
+    website: "https://kmrichel.github.io/my-portfolio/",
+    github: "https://kmrichel.github.io/my-portfolio/",
     education: "신성대학 자동차공학과 졸업 (2002~2008)",
     military: "육군 병장 만기제대 (2003~2005)",
     totalCareer: "총 14년 2개월",
@@ -74,38 +74,39 @@ const DATA = {
 
   // ─── 프로젝트 (추가/수정 시 이 배열만 편집) ───
   projects: [
+       {
+      title: "포스코인터내셔널 데이터플랫폼",
+      desc: "데이터플랫폼 구축 프로젝트 UI 개발 (반응형 웹)",
+      image: "images/mzc/posco.png",
+      techs: ["Vue", "TypeScript", "반응형"],
+      period: "2025.06 ~ 2025.08",
+      client: "포스코인터내셔널 / 메가존클라우드",
+    },
     {
       title: "Air Studio (GenAi360 v4)",
       desc: "GenAi 플랫폼 v1~v3 → Air Studio v4 전체 Vue 화면 개발",
       image: "images/mzc/AIR-Studio-studio.png",
       techs: ["Vue", "TypeScript", "AI/GenAI"],
-      period: "2022.11 ~ 재직중",
+      period: "2024.05 ~ 2025.01",
       client: "(주)메가존클라우드",
+    },
+        {
+      title: "SK 바이오사이언스 전사 경영관리",
+      desc: "전사 경영 관리 화면 개발 (반응형 웹)",
+      image: "images/mzc/SK_basa.png",
+      techs: ["HTML5", "CSS3", "JavaScript"],
+      period: "2023.10 ~ 2023.10",
+      client: "SK 바이오사이언스 / 메가존클라우드",
     },
     {
       title: "GS 칼텍스 DataCatalog",
       desc: "DataHub 기반 DataCatalog 화면 개발 (반응형 웹)",
       image: "images/mzc/datahub.JPG",
       techs: ["React", "반응형", "DataHub"],
-      period: "2022.11 ~ 재직중",
+      period: "2023.07 ~ 2023.10",
       client: "GS 칼텍스 / 메가존클라우드",
     },
-    {
-      title: "포스코인터내셔널 데이터플랫폼",
-      desc: "데이터플랫폼 구축 프로젝트 UI 개발 (반응형 웹)",
-      image: "images/mzc/posco.png",
-      techs: ["Vue", "TypeScript", "반응형"],
-      period: "2022.11 ~ 재직중",
-      client: "포스코인터내셔널 / 메가존클라우드",
-    },
-    {
-      title: "SK 바이오사이언스 전사 경영관리",
-      desc: "전사 경영 관리 화면 개발 (반응형 웹)",
-      image: "images/mzc/SK_basa.png",
-      techs: ["HTML5", "CSS3", "JavaScript"],
-      period: "2022.11 ~ 재직중",
-      client: "SK 바이오사이언스 / 메가존클라우드",
-    },
+
     {
       title: "맘마먹자 모바일 쇼핑몰 구축",
       desc: "PC/모바일/기업형/사업자몰 콘텐츠 관리 및 모바일 쇼핑몰 신규 구축",
@@ -151,7 +152,7 @@ const DATA = {
   // ─── 경력 (추가/수정 시 이 배열만 편집) ───
   experiences: [
     {
-      period: "2022.11 ~ 재직중",
+      period: "2022.11 ~ 2026.07 (3년 9개월)",
       company: "메가존클라우드주식회사",
       role: "Air Ops 매니저 | 주요직무: 반응형웹",
       highlights: [
