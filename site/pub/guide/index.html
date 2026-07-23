@@ -1,0 +1,1594 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/; charset=euc-kr" />
+<script type="text/javascript" src="../js/lib/jquery-1.12.4.min.js"></script>
+<title>Project - 해커스 모바일 공기업</title>
+<style>
+@import url('https://fonts.googleapis.com/earlyaccess/nanumgothic.css');
+
+* {font-family:font-family: "Nanum Gothic", sans-serif;;font-size:12px;color:#333;margin:0;padding:0;}
+ul,li{margin:0;padding:0;list-style:none;}
+h1 {position:relative;height:35px;font-size:26px; font-family: "Nanum Gothic", sans-serif;;padding:10px;margin-bottom:10px;border-bottom:2px solid #666;}
+h2 {font:bold 20px/24px font-family: "Nanum Gothic", sans-serif;;padding:30px 0 0 0;}
+dt {margin:0;padding:10px 0;border-top:1px solid #666;}
+dd {margin:0;padding:0;}
+.intro {position:absolute;top:0;right:20px;width:600px;text-align:right;line-height:14px;color:#999;}
+.menutree {border-collapse:collapse;width:100%;}
+.menutree thead th {background:#eee;}
+.menutree th {border:1px solid #999;padding:5px 0;vertical-align:middle; font-weight:normal;}
+.menutree tbody{border-bottom:2px soild blue;margin-bottom:3px;}
+.menutree tbody tr th { text-align:left; font-weight:bold; padding-left:10px;}
+.menutree td {border:1px solid #999;padding:5px 0;text-align:center;}
+.menutree td.url {text-align:left;padding-left:10px;}
+
+a {cursor:pointer; color:#02557b;}
+a:visited {color:#666;}
+.tit {background:#6b7bae; color:#fff; }
+.html {background:#feaea5;}
+
+
+.icon_wrap{position:absolute;top:84px;right:20px;}
+.icon_wrap li{float:left;padding-left:10px;color:#366efb;font-weight:bold;}
+
+.top_txt{overflow:hidden;padding-bottom:10px;width:100%;}
+.style_sys{float:left;}
+.color_sys{float:right;}
+.color_sys li{display:inline-block;margin:0 10px;}
+
+.asp_f {background:#ffa76f;}				/* 보류 */
+.dev_f {background:#fff71d;}				/* 진행중 */
+.complete_f {background:#b5b5b5;}		/* 처리완료 */
+.question_f {background:red;}				/* 오류 */
+
+.asp {background:#ffa76f;}				/* 보류 */
+.dev {background:#fff71d;}				/* 진행중 */
+.complete {background:#b5b5b5;}		/* 처리완료 */
+.question {background:red;}				/* 오류 */
+.question td,
+.question th{color:#fff;}
+
+.clear{background:#1a8f4c;color:#fff;}
+.psd-clear{background:#fdff2f;color:;font-weight:bold;}
+
+.intro{font-size:15px;padding:5px;line-height:22px;}
+.intro strong{font-size:15px;}
+</style>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	var total = $('.layout_wrap tr').length;
+	var titLen = $('.layout_wrap th.tit').length;
+	var totalTxt = total-(titLen-1);
+	var astLen =  $('.layout_wrap tr.asp').length;
+	var clearLen = $('.layout_wrap td.clear').length;
+	var workPage = totalTxt-astLen;
+
+	$('.layout_wrap  .totalpage').text(totalTxt);			 // 총페이지
+	$('.layout_wrap  .workpage').text(workPage);	// 작업 페이지
+	$('.layout_wrap  .clearpage').text(clearLen);	// 작업 페이지
+
+
+	$(".url").click(function(){
+		var urlTxt = $(this).text();
+		$(this).find("a").attr("href","../html/" + urlTxt);
+	});
+});
+
+</script>
+</head>
+
+<body>
+<div class="layout_wrap">
+	<div style="position:fixed;top:0;left:0;width:100%;background:#fff;">
+		<h1>
+			Project - 해커스 모바일 공기업(charset=euc-kr)
+			<span class="intro">
+			총 페이지 : <strong class="totalpage"></strong>개&nbsp;&nbsp;&nbsp;&nbsp;
+			작업 페이지 : <strong class="workpage"></strong>개 &nbsp;&nbsp;&nbsp;&nbsp;
+			퍼블리싱 작업 처리 : <strong class="clearpage"></strong>개
+			</span>
+		</h1>
+		<div class="top_txt">
+			<p class="style_sys"><a href="../html/layout.html" target="_blank">layout.html</a></p>
+			<ul class="color_sys">
+				<li>보류 : <span class="asp_f">.asp</span> </li>
+				<li>처리완료 : <span class="complete_f">.complete</span> </li>
+			</ul>
+		</div>
+		<table class="menutree" summary="메뉴구조도">
+			<colgroup>
+				<col width="15%" />
+				<col width="12%" />
+				<col width="8%" />
+				<col width="8%" />
+				<col width="10%" />
+				<col width="8%" />
+				<col width="*" />
+				<col width="80px" />
+				<col width="80px" />
+				<col width="80px" />
+				<col width="90px" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th>1depth</th>
+					<th>2depth</th>
+					<th>3depth</th>
+					<th>4depth</th>
+					<th>5depth</th>
+					<th>PageType</th>
+					<th>URL</th>
+					<th>PSD 전달<br>(체크)</th>
+					<th>완료날짜</th>
+					<th>진행상태</th>
+					<th>작업자</th>
+				</tr>
+			</thead>
+		</table>
+	</div>
+
+	<div style="padding-top:138px;">
+	<table class="menutree" summary="메뉴구조도">
+		<colgroup>
+			<col width="15%" />
+			<col width="12%" />
+			<col width="8%" />
+			<col width="8%" />
+			<col width="10%" />
+			<col width="8%" />
+			<col width="*" />
+			<col width="80px" />
+			<col width="80px" />
+			<col width="80px" />
+			<col width="90px" />
+		</colgroup>
+		<tbody>
+			<tr>
+				<th colspan="11" class="tit">메인</th>
+			</tr>
+			<tr class="complete">
+				<th>MAIN</th>
+				<th>메인</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/main" target="_blank">main.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-08</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+			<tr class="complete">
+				<th></th>
+				<th>전체메뉴모음</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/inc/lnb" target="_blank">lnb.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-10</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+			<tr class="complete">
+				<th></th>
+				<th>오시는길</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/directions" target="_blank">directions.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-11</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+			<tr>
+				<th colspan="11" class="tit">회원정보</th>
+			</tr>
+			<tr>
+				<th>로그인</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/login" target="_blank">login.html</a></td>
+				<td></td>
+				<td>08-10</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+			<tr>
+				<th>회원가입</th>
+				<th>약관동의</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/member_agree" target="_blank">member_agree.html</a></td>
+				<td></td>
+				<td>08-11</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+			<tr>
+				<th></th>
+				<th>정보입력</th>
+				<th>일반_회원</th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/join" target="_blank">join.html</a></td>
+				<td></td>
+				<td>08-13</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+			<tr>
+				<th></th>
+				<th></th>
+				<th>14세_미만</th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/join_14" target="_blank">join_14.html</a></td>
+				<td></td>
+				<td>08-14</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+			<tr>
+				<th></th>
+				<th></th>
+				<th>해외_거주자</th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/join_ip" target="_blank">join_ip.html</a></td>
+				<td></td>
+				<td>08-14</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+			<tr>
+				<th></th>
+				<th></th>
+				<th>네이버 회원가입</th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/join_naver" target="_blank">join_naver.html</a></td>
+				<td></td>
+				<td>08-21</td>
+				<td class="asp">처리완료<br></td>
+				<td>박경민</td>
+			</tr>
+			<tr>
+				<th></th>
+				<th>가입완료</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/join_ok" target="_blank">join_ok.html</a></td>
+				<td></td>
+				<td>08-14</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr>
+				<th>ID/PW</th>
+				<th>아이디_찾기</th>
+				<th>휴대폰인증_선택</th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/findid" target="_blank">findid.html</a></td>
+				<td></td>
+				<td>08-14</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th>회원정보_불일치_팝업</th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/findid" target="_blank">findid.html</a></td>
+				<td></td>
+				<td>08-14</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+			<tr>
+				<th></th>
+				<th></th>
+				<th style="color:red">(Page list에 누락)</th>
+				<th style="color:red">아이디 찾기 완료</th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/findid_complete" target="_blank">findid_complete.html</a></td>
+				<td></td>
+				<td>08-14</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr>
+				<th></th>
+				<th></th>
+				<th>이메일인증_선택</th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/findid" target="_blank">findid.html</a></td>
+				<td></td>
+				<td>08-14</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th>회원정보_불일치_팝업</th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/findid.html" target="_blank">findid.html</a></td>
+				<td></td>
+				<td>08-14</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr>
+				<th></th>
+				<th>비밀번호_찾기</th>
+				<th>휴대폰인증_선택</th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/findpw" target="_blank">findpw.html</a></td>
+				<td></td>
+				<td>08-14</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th>비밀번호_재설정</th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/findpw_complete" target="_blank">findpw_complete.html</a></td>
+				<td></td>
+				<td>08-14</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th>회원정보_불일치_팝업</th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/findpw" target="_blank">findpw.html</a></td>
+				<td></td>
+				<td>08-14</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+			<tr>
+				<th></th>
+				<th></th>
+				<th>이메일인증_선택</th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/findpw" target="_blank">findpw.html</a></td>
+				<td></td>
+				<td>08-14</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th>비밀번호_재설정</th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/findpw_complete" target="_blank">findpw_complete.html</a></td>
+				<td></td>
+				<td>08-14</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+			<tr>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th>회원정보_불일치_팝업</th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/findpw" target="_blank">findpw.html</a></td>
+				<td></td>
+				<td>08-14</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+			<tr>
+				<th>회원정보수정</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/join_edit" target="_blank">join_edit.html</a></td>
+				<td></td>
+				<td>08-16</td>
+				<td>처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr>
+				<th></th>
+				<th>비밀번호_변경</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/password_edit" target="_blank">password_edit.html</a></td>
+				<td></td>
+				<td>08-16</td>
+				<td>처리완료</td>
+				<td>박경민</td>
+			</tr>
+			<tr>
+				<th colspan="11" class="tit">수강신청</th>
+			</tr>
+
+			<tr class="complete">
+				<th>인터넷_강의_리스트</th>
+				<th>목록</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/internet_lect_list" target="_blank">internet_lect_list.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-21</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr class="complete">
+				<th></th>
+				<th>보기</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/internet_lect_view" target="_blank">internet_lect_view.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-21</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr class="complete">
+				<th></th>
+				<th></th>
+				<th>강의목차_팝업</th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/internet_lect_view" target="_blank">internet_lect_view.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-21</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr class="complete">
+				<th>학원_강의_리스트</th>
+				<th>목록</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/academy_lect_list" target="_blank">academy_lect_list.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-22</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr class="complete">
+				<th></th>
+				<th>보기</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/academy_lect_view" target="_blank">academy_lect_view.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-22</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+			<tr class="asp">
+				<th></th>
+				<th></th>
+				<th>커리큘럼_팝업</th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url">스타일,데이타 까지 불러오는 영역이라고 전달 받음<br>(디자인팀 : 정주원)</td>
+				<td></td>
+				<td>06-22</td>
+				<td>보류</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr>
+				<th colspan="11" class="tit">결제</th>
+			</tr>
+
+			<tr class="complete">
+				<th>주문/결제</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/myclass_orders" target="_blank">myclass_orders.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-18</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr class="complete">
+				<th></th>
+				<th>쿠폰/포인트_팝업</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/myclass_orders" target="_blank">myclass_orders.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-18</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr class="complete">
+				<th></th>
+				<th>결제완료</th>
+				<th>무통장</th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/myclass_orders_ok1" target="_blank">myclass_orders_ok1.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-19</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+			<tr class="complete">
+				<th></th>
+				<th></th>
+				<th>카드</th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/myclass_orders_ok2" target="_blank">myclass_orders_ok2.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-19</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr>
+				<th colspan="11" class="tit">무료강의&자료</th>
+			</tr>
+
+			<tr class="complete">
+				<th>공기업_TV</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/free_lecture_tv" target="_blank">free_lecture_tv.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-20</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr class="complete">
+				<th>무료특강</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/free_lecture" target="_blank">free_lecture.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-20</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr class="complete">
+				<th>공기업연구소</th>
+				<th>공기업_채용_속보</th>
+				<th>목록</th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/free_employ_list" target="_blank">free_employ_list.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-20</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr class="complete">
+				<th></th>
+				<th></th>
+				<th>보기</th>
+				<th></th>
+				<th></th>
+				<td>댓글 비노출</td>
+				<td class="url"><a href="/pub/html/free_employ_view" target="_blank">free_employ_view.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-20</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr class="complete">
+				<th></th>
+				<th>취업뉴스</th>
+				<th>목록</th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/free_news_list" target="_blank">free_news_list.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-21</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+			<tr class="complete">
+				<th></th>
+				<th></th>
+				<th>보기</th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/free_news_view" target="_blank">free_news_view.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-21</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+			<tr class="complete">
+				<th></th>
+				<th>무료인강</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/free_internet_lesson" target="_blank">free_internet_lesson.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-22</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr class="complete">
+				<th></th>
+				<th>공기업채용_예측_서비스</th>
+				<th>목록</th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/free_service_list" target="_blank">free_service_list.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-22</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr class="complete">
+				<th></th>
+				<th></th>
+				<th>보기</th>
+				<th></th>
+				<th></th>
+				<td>댓글 비노출</td>
+				<td class="url"><a href="/pub/html/free_service_view" target="_blank">free_service_view.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-22</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+			<tr>
+				<th colspan="11" class="tit">스타강사</th>
+			</tr>
+			<tr class="asp">
+				<th>스타강사</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/" target="_blank"></a></td>
+				<td></td>
+				<td>00-00</td>
+				<td></td>
+				<td>보류</td>
+			</tr>
+
+			<tr>
+				<th colspan="11" class="tit">교재소개</th>
+			</tr>
+			<tr>
+				<th>교재소개</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/textbook_introduce" target="_blank">textbook_introduce.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-22</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr>
+				<th colspan="11" class="tit">커뮤니티</th>
+			</tr>
+
+			<tr>
+				<th>취업_talk</th>
+				<th>목록</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/community_talk_list" target="_blank">community_talk_list.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-22</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+			<tr>
+				<th></th>
+				<th>보기</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/community_talk_view" target="_blank">community_talk_view.html</a></td>
+				<td>X</td>
+				<td>06-22</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr>
+				<th></th>
+				<th>패스워드</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/page_password" target="_blank">page_password.html</a></td>
+				<td>X</td>
+				<td>06-22</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr>
+				<th></th>
+				<th>쓰기</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/community_talk_write" target="_blank">community_talk_write.html</a></td>
+				<td>X</td>
+				<td>06-22</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr>
+				<th>현장강의_빠른상담</th>
+				<th>목록</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/community_fast_list" target="_blank">community_fast_list.html</a></td>
+				<td>X</td>
+				<td>06-22</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr>
+				<th></th>
+				<th>보기</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/community_fast_view" target="_blank">community_fast_view.html</a></td>
+				<td>X</td>
+				<td>06-22</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr>
+				<th></th>
+				<th>패스워드</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/page_password" target="_blank">	page_password.html</a></td>
+				<td>X</td>
+				<td>06-22</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr>
+				<th></th>
+				<th>쓰기</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/community_fast_write" target="_blank">	community_fast_write.html</a></td>
+				<td>X</td>
+				<td>06-22</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr>
+				<th>1:1_상담_게시판</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/community_one_write" target="_blank">community_one_write.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-22</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+			<tr>
+				<th>FAQ</th>
+				<th>목록</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/community_faq_list" target="_blank">community_faq_list.html</a></td>
+				<td>X</td>
+				<td>06-22</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr>
+				<th></th>
+				<th>보기</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/community_faq_view" target="_blank">community_faq_view.html</a></td>
+				<td>X</td>
+				<td>06-22</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr>
+				<th></th>
+				<th>패스워드</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/page_password" target="_blank">	page_password.html</a></td>
+				<td>X</td>
+				<td>06-22</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr>
+				<th colspan="11" class="tit">수강후기</th>
+			</tr>
+			<tr>
+				<th>인터넷_강의</th>
+				<th>목록</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/review_online_list" target="_blank">review_online_list.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-22</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+			<tr>
+				<th></th>
+				<th>보기</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/review_online_view" target="_blank">review_online_view.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-22</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+			<tr>
+				<th></th>
+				<th>패스워드</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/page_password" target="_blank">page_password.html</a></td>
+				<td>X</td>
+				<td>06-22</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+			<tr>
+				<th></th>
+				<th>쓰기</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/review_online_write" target="_blank">review_online_write.html</a></td>
+				<td>X</td>
+				<td>06-22</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr>
+				<th>오프라인_학원_강의</th>
+				<th>목록</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/review_offline_list" target="_blank">review_offline_list.html</a></td>
+				<td>X</td>
+				<td>06-25</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr>
+				<th></th>
+				<th>보기</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/review_offline_view" target="_blank">review_offline_view.html</a></td>
+				<td>X</td>
+				<td>06-25</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr>
+				<th></th>
+				<th>패스워드</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/page_password" target="_blank">page_password.html</a></td>
+				<td>X</td>
+				<td>06-22</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr>
+				<th></th>
+				<th>쓰기</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/review_offline_write" target="_blank">review_offline_write.html</a></td>
+				<td>X</td>
+				<td>06-25</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr>
+				<th colspan="11" class="tit">이벤트</th>
+			</tr>
+
+			<tr class="complete">
+				<th>이벤트</th>
+				<th>목록</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/event_list" target="_blank">event_list.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-19</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr class="complete">
+				<th></th>
+				<th>보기</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/event_view" target="_blank">event_view.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-19</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr>
+				<th colspan="11" class="tit">고객센터</th>
+			</tr>
+
+
+			<tr class="complete">
+				<th>공지사항</th>
+				<th>목록</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/customer_notice_list" target="_blank">customer_notice_list.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-21</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+			<tr class="complete">
+				<th></th>
+				<th>보기</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/customer_notice_view" target="_blank">customer_notice_view.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-21</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+			<tr class="asp">
+				<th>FAQ</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/" target="_blank"></a></td>
+				<td></td>
+				<td>00-00</td>
+				<td></td>
+				<td>보류</td>
+			</tr>
+			<tr class="asp">
+				<th>현장강의_빠른상담</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/" target="_blank"></a></td>
+				<td></td>
+				<td>00-00</td>
+				<td></td>
+				<td>보류</td>
+			</tr>
+
+			<tr class="asp">
+				<th></th>
+				<th>게시글_작성</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/" target="_blank"></a></td>
+				<td></td>
+				<td>00-00</td>
+				<td></td>
+				<td>보류</td>
+			</tr>
+
+			<tr class="asp">
+				<th>1:1상담게시판</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/" target="_blank"></a></td>
+				<td></td>
+				<td>00-00</td>
+				<td></td>
+				<td>보류</td>
+			</tr>
+
+			<tr class="complete">
+				<th>해커스공기업에_바란다</th>
+				<th>쓰기</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/hope_write" target="_blank">hope_write.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-21</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr>
+				<th colspan="11" class="tit">마이클래스</th>
+			</tr>
+
+			<tr class="complete">
+				<th>내강의실</th>
+				<th>인터넷_강의</th>
+				<th>수강중</th>
+				<th></th>
+				<th></th>
+				<td>탭 형식</td>
+				<td class="url"><a href="/pub/html/myclass_internet" target="_blank">myclass_internet.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-11</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr class="complete">
+				<th></th>
+				<th></th>
+				<th></th>
+				<th>강의실_입장</th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/myclass_internet_room" target="_blank">myclass_internet_room.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-11</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr class="complete">
+				<th></th>
+				<th></th>
+				<th>일시정지</th>
+				<th></th>
+				<th></th>
+				<td>탭 형식</td>
+				<td class="url"><a href="/pub/html/myclass_internet" target="_blank">myclass_internet.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-11</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+			<tr class="complete">
+				<th></th>
+				<th></th>
+				<th>수강완료</th>
+				<th></th>
+				<th></th>
+				<td>탭 형식</td>
+				<td class="url"><a href="/pub/html/myclass_internet" target="_blank">myclass_internet.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-11</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+			<tr class="complete">
+				<th></th>
+				<th>학원_강의</th>
+				<th>수강중</th>
+				<th></th>
+				<th></th>
+				<td>탭 형식</td>
+				<td class="url"><a href="/pub/html/myclass_academy" target="_blank">myclass_academy.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-12</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr class="complete">
+				<th></th>
+				<th></th>
+				<th></th>
+				<th>반별게시판</th>
+				<th>목록</th>
+				<td></td>
+				<td class="url"><a href="/pub/html/myclass_academy_list" target="_blank">myclass_academy_list.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-12</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr class="complete">
+				<th></th>
+				<th></th>
+				<th></th>
+				<th>개별게시판</th>
+				<th>목록</th>
+				<td></td>
+				<td class="url"><a href="/pub/html/myclass_academy_list_search" target="_blank">myclass_academy_list_search.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-12</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr class="complete">
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th>보기</th>
+				<td></td>
+				<td class="url"><a href="/pub/html/myclass_academy_view" target="_blank">myclass_academy_view.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-12</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+			<tr class="complete">
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td>패스워드</td>
+				<td class="url"><a href="/pub/html/page_password" target="_blank">page_password.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-12</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr class="complete">
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th>쓰기</th>
+				<td></td>
+				<td class="url"><a href="/pub/html/myclass_academy_write" target="_blank">myclass_academy_write.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-12</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr class="complete">
+				<th></th>
+				<th></th>
+				<th>수강완료</th>
+				<th></th>
+				<th></th>
+				<td>탭 형식</td>
+				<td class="url"><a href="/pub/html/myclass_academy" target="_blank">myclass_academy.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-12</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr class="complete">
+				<th>학습지원</th>
+				<th>선생님께_질문하기</th>
+				<th>목록</th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/myclass_studying_list" target="_blank">myclass_studying_list.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-14</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr class="complete">
+				<th></th>
+				<th></th>
+				<th>보기</th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/myclass_studying_view" target="_blank">myclass_studying_view.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-14</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr class="complete">
+				<th></th>
+				<th></th>
+				<th>쓰기</th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/myclass_studying_write" target="_blank">myclass_studying_write.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-14</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr class="complete">
+				<th></th>
+				<th>교재자료_다운</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/myclass_textbook" target="_blank">myclass_textbook.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-15</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+			<tr class="complete">
+				<th></th>
+				<th></th>
+				<th>인증번호_확인_팝업</th>
+				<th></th>
+				<th></th>
+				<td>팝업</td>
+				<td class="url"><a href="/pub/html/myclass_textbook" target="_blank">myclass_textbook.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-15</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+			<tr class="complete">
+				<th>수강관리</th>
+				<th>일시정지</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/lecture_manage_pause" target="_blank">lecture_manage_pause.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-15</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr class="complete">
+				<th></th>
+				<th></th>
+				<th>일시정지_신청_팝업</th>
+				<th></th>
+				<th></th>
+				<td>팝업</td>
+				<td class="url"><a href="/pub/html/lecture_manage_pause" target="_blank">lecture_manage_pause.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-15</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr class="complete">
+				<th></th>
+				<th>수강증</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/myclass_manage_confirm" target="_blank">myclass_manage_confirm.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-15</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr class="complete">
+				<th></th>
+				<th></th>
+				<th>수강증_팝업</th>
+				<th></th>
+				<th></th>
+				<td>팝업</td>
+				<td class="url"><a href="/pub/html/myclass_manage_confirm" target="_blank">myclass_manage_confirm.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-15</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr class="question">
+				<th></th>
+				<th></th>
+				<th>출석확인증_팝업</th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url">기획자 요청으로 페이지 제외 처리.</td>
+				<td class="psd-clear">O</td>
+				<td>06-15</td>
+				<td>오류</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr class="complete">
+				<th>결제관리</th>
+				<th>포인트·쿠폰·수강권</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/myclass_payment_point" target="_blank">myclass_payment_point.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-15</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr class="complete">
+				<th></th>
+				<th>장바구니</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/myclass_payment_basket" target="_blank">myclass_payment_basket.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-15</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+			<tr class="complete">
+				<th></th>
+				<th>결제현황·결제내역</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/myclass_payment_history" target="_blank">myclass_payment_history.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-15</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+			<tr class="complete">
+				<th></th>
+				<th></th>
+				<th>거래상세내역_팝업</th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/myclass_payment_history" target="_blank">myclass_payment_history.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-18</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+			<tr class="complete">
+				<th></th>
+				<th>교재 구매내역</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/myclass_payment_buy" target="_blank">myclass_payment_buy.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-18</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr>
+				<th colspan="11" class="tit">약관</th>
+			</tr>
+
+			<tr class="complete">
+				<th>이용약관</th>
+				<th>개인회원</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/service" target="_blank">service.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-19</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr class="complete">
+				<th></th>
+				<th>기업회원</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/service" target="_blank">service.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-19</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+			<tr class="complete">
+				<th>개인정보처리방침</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="/pub/html/privacy" target="_blank">privacy.html</a></td>
+				<td class="psd-clear">O</td>
+				<td>06-19</td>
+				<td class="clear">처리완료</td>
+				<td>박경민</td>
+			</tr>
+
+		</tbody>
+	</table>
+	</div>
+</div>
+
+</body>
+</html>

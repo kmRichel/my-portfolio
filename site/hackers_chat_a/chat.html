@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link type="text/css" href="css/admin_chat.css" rel="stylesheet">
+<link type="text/css" href="css/color-picker.css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="js/common.ui.js"></script>
+<script type="text/javascript" src="js/code-snippet.min.js"></script>
+<script type="text/javascript" src="js/color-picker.js"></script>
+
+<script type="text/javascript">
+$(function(){
+
+	$('.color-add').on('click',function(){
+		$("#color-picker, .color-dim").remove();
+
+		//colorPicker 생성
+		$(this).after('<div id="color-picker"></div>');
+		$(this).before('<div class="color-dim"></div>');
+
+		var colorpicker = tui.colorPicker.create({
+			container: document.getElementById('color-picker')
+		});
+
+		//선택 된 color code
+		colorpicker.on('selectColor', function(obj) {
+			var colorSelect = obj.color;
+			console.log(obj);
+		});
+
+		//colorPicker show
+		$("#color-picker").show();
+
+		//빈 화면 클릭시 닫기
+		$('.color-dim').click(function(){
+			$("#color-picker, .color-dim").remove();
+		});
+	});
+
+	// font Bold 처리
+	$("input:checkbox[name=fBold]").change(function(){
+		if($(this).is(':checked')){
+			$(this).closest(".l_tit").find("textarea").css("font-weight","bold");
+		}else {
+			$(this).closest(".l_tit").find("textarea").css("font-weight","normal");
+		}
+	});
+});
+
+// 확인 클릭시
+function doColor(){
+	var colorCode = $(".tui-colorpicker-palette-hex").val();
+	var elClass = $("#color-picker").prev().find(".color-box");
+	var elareaClass = elClass.closest(".l_tit");
+
+	elClass.css("color",colorCode);
+	elareaClass.find("textarea").css("color",colorCode);
+	console.log(colorCode);
+
+	$("#color-picker, .color-dim").remove();
+}
+</script>
+</head>
+<body>
+
+<!-- 해상도 1150 * 800 -->
+
+<h1 class="hide">라이브방송 &amp;실시간 채팅 서비스</h1>
+<div class="ad_live_chat">
+	<!-- 왼쪽 -->
+	<div class="live_l">
+
+		<!-- 방송 컨트롤  -->
+		<div class="live_se bd_n">
+			<div class="l_tit">
+				<h2>방송 컨트롤</h2>
+				<span class="l_option">
+					<a href="#">채팅</a>
+				</span>
+
+				<ul class="live_control">
+					<li><a href="#;"><span></span>인트로</a></li>
+					<li><a href="#;"><span></span>본영상</a></li>
+					<li><a href="#;"><span></span>아웃트로</a></li>
+					<li><a href="javascript:layerOpen(layerBroadCast);"><span class="c_stop"></span>방송대기</a></li>
+					<li><a href="#;"><span class="c_end"></span>방송종료</a></li>
+				</ul>
+
+				<dl class="unexposed_ck">
+					<dt>시청자수</dt>
+					<dd>2,000명</dd>
+
+					<dt>시청자수 노출 여부</dt>
+					<dd>
+						<input type="radio" name="" id="v_show1">
+						<label for="v_show1">노출</label>
+					</dd>
+					<dd>
+						<input type="radio" name="" id="v_show2">
+						<label for="v_show2">비노출</label>
+					</dd>
+					<dd>
+						<input type="radio" name="" id="v_show3">
+						<label for="v_show3">임의노출</label>
+					</dd>
+					<dd>
+						<input type="text" name="">
+						배
+					</dd>
+					<dd class="last">
+						<a href="#" class="btn_ok">저장</a>
+					</dd>
+				</dl>
+			</div>
+		</div>
+
+		<!-- 고정공지 -->
+		<div class="live_se">
+			<div class="l_tit">
+				<h2>고정공지</h2>
+				<ul class="live_enter">
+					<li>
+						<a href="#;" class="color-add"><span class="color-box">&#9608;</span>글자색 선택</a>
+					</li>
+					<li>
+						<input type="checkbox" name="fBold" id="fBold1">
+						<label for="fBold1">글자굵게</label>
+					</li>
+				</ul>
+
+				<span class="l_option">
+					<a href="#" class="btn_ok">적용</a>
+					<a href="#" class="btn_cencle">해제</a>
+				</span>
+
+				<textarea class="txtarea60" name="" rows="" cols="">8월 18일(토) 토익 총평강의가 해커스영어 사이트에서 진행됩니다! 많은 시청 부탁드립니다.</textarea>
+
+			</div>
+		</div>
+
+		<!-- 흐름공지 -->
+		<div class="live_se">
+			<div class="l_tit">
+				<h2>흐름공지</h2>
+				<ul class="live_enter">
+					<li>
+						<a href="#;" class="color-add"><span class="color-box">&#9608;</span>글자색 선택</a>
+					</li>
+					<li>
+						<input type="checkbox" name="fBold" id="fBold2">
+						<label for="fBold2">글자굵게</label>
+					</li>
+				</ul>
+
+				<textarea class="txtarea60" name="" rows="" cols="">8월 18일(토) 토익 총평강의가 해커스영어 사이트에서 진행됩니다! 많은 시청 부탁드립니다.</textarea>
+
+				<dl class="live_select">
+					<dt>공지 재노출 주기</dt>
+					<dd>
+						<select name="">
+							<option value="">메세지</option>
+							<option value=""></option>
+						</select>
+					</dd>
+					<dd><input type="text" name="" placeholder=""></dd>
+				</dl>
+
+				<span class="l_option">
+					<a href="#" class="btn_ok">적용</a>
+					<a href="#" class="btn_cencle">해제</a>
+				</span>
+			</div>
+		</div>
+
+		<!-- 관리 금지어 설정 -->
+		<div class="live_se">
+			<div class="l_tit">
+				<h2>관리 금지어 설정</h2>
+				<p class="live_txt">해당 채팅방에서만 적용되는 금지어입니다. 단어별 구분은<br>
+				쉼표(,)를 입력하며, ‘적용’ 버튼 클릭해야 실시간 채팅창에 적용됩니다.</p>
+
+				<textarea class="txtarea60" name="" rows="" cols="">8월 18일(토) 토익 총평강의가 해커스영어 사이트에서 진행됩니다! 많은 시청 부탁드립니다.</textarea>
+
+				<span class="l_option">
+					<a href="#" class="btn_ok">적용</a>
+				</span>
+			</div>
+		</div>
+	</div>
+	<!--// 왼쪽 -->
+
+	<!-- 오른쪽 -->
+	<div class="live_r">
+		<div class="live_se bd_n">
+			<!-- 검색 -->
+			<ul class="search_panel">
+				<li>
+					<select name="">
+						<option value="">닉네임</option>
+						<option value="">휴대폰번호</option>
+						<option value="">아이피</option>
+					</select>
+				</li>
+				<li><input type="text" name="niname" value="aaaa"></li>
+				<li class="btn_sh"><button id="" type="submit" title="검색" >검색</button></li>
+			</ul>
+
+			<!-- 검색 뷰 -->
+			<div class="search_view">
+				<table>
+					<colgroup>
+						<col style="">
+						<col style="width:132px">
+						<col style="width:149px">
+					</colgroup>
+					<thead>
+						<tr>
+							<th><span>닉네임</span></th>
+							<th><span>휴대폰번호</span></th>
+							<th><span>아이피</span></th>
+						</tr>
+					</thead>
+				</table>
+
+				<div class="scroll_y">
+					<table>
+						<colgroup>
+							<col style="">
+							<col style="width:132px">
+							<col style="width:132px">
+						</colgroup>
+						<tbody>
+							<tr>
+								<td><span>아리아이요</span></td>
+								<td><span>01025642589</span></td>
+								<td><span>158.14.99.101</span></td>
+							</tr>
+							<tr>
+								<td><span>짱구는못말려</span></td>
+								<td><span>01025642589</span></td>
+								<td><span>158.14.99.101</span></td>
+							</tr>
+							<tr>
+								<td><span>아리아이요</span></td>
+								<td><span>01025642589</span></td>
+								<td><span>158.14.99.101</span></td>
+							</tr>
+							<tr class="last"><!-- 마지막 요소일때만 last 추가 -->
+								<td><span>아리아이요</span></td>
+								<td><span>01025642589</span></td>
+								<td><span>158.14.99.101</span></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<!-- 채팅창 181015 수정  -->
+			<div class="live_chat_room">
+				<h3>채팅참여 150명</h3>
+				<div class="room_box on"><!--공지가 있을때 클래스 on 추가, 공지가 없을때 on 삭제 -->
+					<div class="alarm_noti">
+						<h4>8월 18일(토) 토익 총평강의가 해커스영어  사이트에서 진행됩니다! 많은 시청 부탁드립니다 사이트에서 진행됩니다! 많은 시청 부탁드립니다 사이트에서 진행됩니다! 많은 시청 부탁드립니다.</h4>
+					</div>
+					<ul class="scroll_y">
+						<!-- 디폴트 -->
+						<li>
+							<a class="clickLayerMenu">코알라</a>
+							<p>한승태 선생님 강의 완전 잼써요! 짱짱!!!</p>
+						</li>
+						<li>
+							<a class="clickLayerMenu">갓승태</a><span class="icon_tch">선생님</span><!-- 선생님일때 일때 icon_tch -->
+							<p>지난번 적중예상 특강에서 찝어주신 문제가<br>
+							실제 문제가 나왔어요! 완전 대박<br>이번에도 넘넘 기대되요~~~~!!!</p>
+						</li>
+
+						<li>
+							<a class="clickLayerMenu">김실장</a><span class="icon_ad">관리자</span><!-- 관리자 일때 icon_ad -->
+							<p>한승태 선생님 강의 완전 잼써요! 짱짱!!!</p>
+						</li>
+
+						<!-- 관리자 공지 일때 info_notice -->
+						<li class="info_notice">
+							<a class="clickLayerMenu">해토지기</a><span class="icon_ad">관리자 공지</span>
+							<p>한승태 선생님 강의 완전 잼써요! 짱짱!!!</p>
+						</li>
+
+						<li>
+							<a class="clickLayerMenu">코알라</a><span class="icon_spam">차단</span><!-- 차단 일때 icon_spam -->
+							<p>지난번 적중예상 특강에서 찝어주신 문제가
+							실제 문제가 나왔어요! 완전 대박<br>이번에도 넘넘 기대되요~~~~!!!</p>
+						</li>
+					</ul>
+
+					<!-- 레이어 팝업 - 메뉴 -->
+					<div class="layer-area-mn">
+						<ul>
+							<li><a href="javascript:layerOpen('layerSpam');">채팅차단</a></li>
+							<li><a href="javascript:layerOpen('layerTeacher');">선생님 지정</a></li>
+							<li><a href="">선생님 해제</a></li>
+						</ul>
+					</div>
+					<!--// 레이어 팝업 - 메뉴 -->
+				</div>
+			</div>
+			<!--// 채팅창 181015 수정  -->
+
+			<!-- 채팅방 글쓰기 -->
+			<div class="room_write">
+				<div class="check_noti">
+					<input type="checkbox" name="" id="checkNoti">
+					<label for="checkNoti">관리자 공지</label>
+				</div>
+
+				<div class="enter_write">
+					<input type="text" name="">
+					<textarea name="" rows="" cols=""></textarea>
+					<button type="button" id="">보내기</button>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+	<!--// 오른쪽 -->
+
+	<!-- 레이어 팝업 - 방송대기 -->
+	<div id="layerBroadCast" class="layer-area">
+		<div class="layer-default" style="width:380px;">
+			<div class="layer-hd">
+				<strong>방송대기</strong>
+				<a href="javascript:layerClose('layerBroadCast');"><img src="images/layer_close.gif" alt="닫기"></a>
+			</div>
+
+			<div class="layer-con">
+				<table class="tb_type_l">
+					<colgroup>
+						<col style="width:26%">
+						<col style="">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th>대기시간</th>
+							<td><input type="text" name="" value="" style="width:100px;"> 분</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="layer-button">
+				<a href="#" class="btn_ok">확인</a>
+				<a href="javascript:layerClose('layerBroadCast');" class="btn_cencle">취소</a>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- 레이어 팝업 - 선생님지정 -->
+	<div id="layerTeacher" class="layer-area">
+		<div class="layer-default" style="width:500px;">
+			<div class="layer-hd">
+				<strong>선생님 지정</strong>
+				<a href="javascript:layerClose('layerTeacher');"><img src="images/layer_close.gif" alt="닫기"></a>
+			</div>
+
+			<div class="layer-con">
+				<table class="tb_type_l">
+					<colgroup>
+						<col style="width:26%">
+						<col style="">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th>대상자</th>
+							<td>나야나</td>
+						</tr>
+						<tr>
+							<th>노출 닉네임</th>
+							<td><input type="text" name="" value="한승태"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="layer-button">
+				<a href="#" class="btn_ok">확인</a>
+				<a href="javascript:layerClose('layerTeacher');" class="btn_cencle">취소</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- 레이어 팝업 - 채팅차단 -->
+	<div id="layerSpam" class="layer-area">
+		<div class="layer-default" style="width:500px;">
+			<div class="layer-hd">
+				<strong>채팅 차단 등록</strong>
+				<a href="javascript:layerClose('layerSpam');"><img src="images/layer_close.gif" alt="닫기"></a>
+			</div>
+
+			<div class="layer-con">
+				<table class="tb_type_l">
+					<colgroup>
+						<col style="width:26%">
+						<col style="">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th>차단유형*</th>
+							<td>
+								<ul class="tb_check">
+									<li><input type="radio" name=""><label>일반/스팸광고</label></li>
+									<li><input type="radio" name=""><label>타사광고</label></li>
+									<li><input type="radio" name=""><label>악플러</label></li>
+									<li><input type="radio" name=""><label>기타</label></li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<th>상세사유</th>
+							<td><input type="text" name="" value="욕설 사용"></td>
+						</tr>
+						<tr>
+							<th>차단기간*</th>
+							<td>
+								<ul class="tb_select">
+									<li>
+										<select name="">
+											<option value="">2017.10.11</option>
+											<option value=""></option>
+										</select>
+									</li>
+									<li>
+										<select name="">
+											<option value="">10</option>
+											<option value=""></option>
+										</select>시
+									</li>
+									<li>
+										<select name="">
+											<option value="">10</option>
+											<option value=""></option>
+										</select>분
+									</li>
+									<li>
+										<select name="">
+											<option value="">10</option>
+											<option value=""></option>
+										</select>초
+									</li>
+								</ul>
+
+								<div class="tb_check mt15"><input type="checkbox" name=""><label>영구차단</label></div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="layer-button">
+				<a href="#" class="btn_ok">확인</a>
+				<a href="javascript:layerClose('layerSpam');" class="btn_cencle">취소</a>
+			</div>
+		</div>
+	</div>
+
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link type="text/css" href="css/chat.css" rel="stylesheet">
+<link type="text/css" href="css/jquery.mCustomScrollbar.css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script type="text/javascript" src="js/common.ui.js"></script>
+<script type="text/javascript" src="js/placeholders.min.js"></script>
+
+<script type="text/javascript">
+$(function(){
+//임의로 방송종료 알림 호출
+	layerOpen(layerEndAllim);
+});
+
+</script>
+</head>
+<body>
+
+<!-- 해상도 1150 * 800 -->
+<h1 class="hide">라이브방송 &amp;실시간 채팅 서비스</h1>
+<div class="chat_wrap">
+	<div class="chat_head">
+		<h2><img src="images/chat_logo.png" alt="대한민국 1위 영어사이트 해커스 영어"></h2>
+		<ul>
+			<li><a href="javascript:layerOpen(layerNiName);"><img src="images/chat_menu01.png" alt="닉네임"></a></li>
+			<li><a href="javascript:layerOpen(layerChatSns);"><img src="images/chat_menu02.png" alt="공유"></a></li>
+			<li class="icon_chat"><a href="#;"><img src="images/chat_menu03.png" alt="채팅"></a></li>
+		</ul>
+	</div>
+
+	<div class="chat_con">
+		<h3 class="hide">영상 정보</h3>
+		<div class="l_con">
+			<!-- 방송 준비중입니다. 클래스 show 추가시 출력 -->
+			<div class="tv_receive show">
+				<span class="receive_bg"><img src="images/chat_bg_ready.jpg" alt=""></span>
+				<span class="receive_txt"><img src="images/chat_txt_ready.png" alt=""></span>
+				<span class="receive_live"><img src="images/tv_icon_live.png" alt=""></span>
+				<span class="receive_timer">00:27:57</span>
+			</div>
+
+			<!-- 쉬는 시간 입니다. -->
+			<div class="tv_receive">
+				<span class="receive_bg"><img src="images/chat_bg_break.jpg" alt=""></span>
+				<span class="receive_txt"><img src="images/chat_txt_break.png" alt=""></span>
+				<span class="receive_live"><img src="images/tv_icon_live.png" alt=""></span>
+				<span class="receive_timer">00:27:57</span>
+			</div>
+
+			<!-- 방송이 종료 되었습니다. -->
+			<div class="tv_receive">
+				<span class="receive_bg"><img src="images/chat_bg_end.gif" alt=""></span>
+				<span class="receive_txt"><img src="images/chat_txt_end.png" alt=""></span>
+				<span class="receive_live"><img src="images/tv_icon_live.png" alt=""></span>
+				<span class="receive_timer">00:27:57</span>
+			</div>
+
+			<!-- 방송 간략 정보 -->
+			<dl class="chat_txt_info">
+				<dt>해커스 한승태쌤의 1월 29일 LC토익정답 총평강의</dt>
+				<dd class="btn_info">방송정보 <span class="icon_more"></span></dd>
+				<dd>시청: 1,480명</dd>
+			</dl>
+
+			<!-- 방송 상세 정보 -->
+			<ul class="chat_txt_view chatScrollView">
+				<li>강연자: 김짱구</li>
+				<li>방송시자기 2018년 08월 08일 (수) 14:30</li>
+				<li>방송종료 예정: 2018년 08월 08일 (수) 15:20</li>
+				<li>해상도: 1920*1080</li>
+				<li>강연자: 김짱구</li>
+				<li>방송시자기 2018년 08월 08일 (수) 14:30</li>
+				<li>방송종료 예정: 2018년 08월 08일 (수) 15:20</li>
+				<li>해상도: 1920*1080</li>
+			</ul>
+
+			<!-- 배너 -->
+			<div class="chat_ben"><a href="#;"><img src="images/chat_ben.jpg" alt="방송이 종료되었습니다.시청해주셔서 감사합니다. "></a></div>
+		</div>
+
+		<div class="r_con">
+			<div class="room_top">
+				<h3><img src="images/r_chat_tit.gif" alt="채팅"></h3>
+				<a href="#" class="room_close"><img src="images/r_chat_close.gif" alt="닫기"></a>
+			</div>
+
+			<!-- 채팅창 -->
+			<div class="room_box on">
+				<div class="alarm_noti"><!--공지가 있을때 클래스 on 추가, 공지가 없을때 on 삭제 -->
+					<h4>8월 18일(토) 토익 총평강의가 해커스영어  사이트에서 진행됩니다! 많은 시청 부탁드립니다 사이트에서 진행됩니다! 많은 시청 부탁드립니다 사이트에서 진행됩니다! 많은 시청 부탁드립니다.</h4>
+				</div>
+
+				<div class="chatScrollH">
+					<ul>
+						<!-- 디폴트 -->
+						<li>
+							<strong class="icon_hackers">해커스영어 채팅매너</strong>
+							<p>즐거운  대화환경을 위해 소통하고, 배려해주세요!
+							특정인에 대한 비방과 비하, 인종/지역/성/장애인 차별,
+							청소년 보호법 위반, 정치 선동성 채팅은 제재의 대상이 됩니다.</p>
+						</li>
+
+						<!-- 관리자 공지 일때 info_notice -->
+						<li class="info_notice">
+							<strong>해토지기</strong>
+							<p>한승태 선생님 강의 완전 잼써요! 짱짱!!!</p>
+						</li>
+
+						<li>
+							<strong>갓승태</strong>
+							<p>지난번 적중예상 특강에서 찝어주신 문제가<br>
+							실제 문제가 나왔어요! 완전 대박<br>이번에도 넘넘 기대되요~~~~!!!</p>
+						</li>
+
+						<li>
+							<strong>갓승태</strong>
+							<p>지난번 적중예상 특강에서 찝어주신 문제가<br>
+							실제 문제가 나왔어요! 완전 대박<br>이번에도 넘넘 기대되요~~~~!!!</p>
+						</li>
+						<li>
+							<strong>갓승태</strong>
+							<p>지난번 적중예상 특강에서 찝어주신 문제가<br>
+							실제 문제가 나왔어요! 완전 대박<br>이번에도 넘넘 기대되요~~~~!!!</p>
+						</li>
+
+						<li>
+							<strong>갓승태</strong>
+							<p>지난번 적중예상 특강에서 찝어주신 문제가<br>
+							실제 문제가 나왔어요! 완전 대박<br>이번에도 넘넘 기대되요~~~~!!!</p>
+						</li>
+
+						<li>
+							<strong>갓승태</strong>
+							<p>지난번 적중예상 특강에서 찝어주신 문제가<br>
+							실제 문제가 나왔어요! 완전 대박<br>이번에도 넘넘 기대되요~~~~!!!</p>
+						</li>
+
+						<li>
+							<strong>김실장</strong>
+							<p>한승태 선생님 강의 완전 잼써요! 짱짱!!!</p>
+						</li>
+
+						<li class="end_txt">
+							<p>방송이 종료되었습니다,<br/>시청해주셔서 감사합니다.</p>
+						</li>
+					</ul>
+				</div>
+				<div class="downScroll"><img src="images/r_down.png" alt="down"></div>
+			</div>
+
+			<!-- 채팅방 글쓰기 -->
+			<div class="room_write">
+				<ul class="check_noti">
+					<li><a href="javascript:layerOpen(layerNiName);">닉네임설정</a></li>
+					<li><a href="#;">채팅지우기</a></li>
+				</ul>
+
+				<div class="enter_write">
+					<div class="textarea-wrapper active"><!-- textarea disabled 시 active 추가 해줘야 색상 변경 -->
+						<textarea name="" rows="" cols="" placeholder="방송 준비중입니다.&#13;&#10;방송 시작 후 채팅 참여가능합니다." disabled></textarea>
+						<div class="textarea-clone"></div>
+					</div>
+					<button type="button" id="" class="btn_enty"><img src="images/r_write.png" alt="입력"></button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 레이어 팝업 - 닉네임 설정 -->
+	<div id="layerNiName" class="layer-area">
+		<div class="layer-default" style="width:525px;">
+			<div class="layer-hd">
+				<strong>닉네임 설정</strong>
+				<a href="javascript:layerClose(layerNiName);"><img src="images/layer_close.gif" alt="닫기"></a>
+			</div>
+
+			<div class="layer-con" style="padding:38px 20px 0 20px;">
+				<table class="tb_type_l">
+					<colgroup>
+						<col style="width:22%">
+						<col style="">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th>닉네임</th>
+							<td>
+								<input type="text" name="" value="hackers2018" placeholder="">
+								<ul class="mt10">
+									<li>- 한글/영문/숫자 최대12Byte 입력</li>
+									<li>- 욕설, 비하 등이 포함된 닉네임은 채팅이 재제됩니다.</li>
+								</ul>
+								<!-- 유효검사 텍스트 -->
+								<p class="tip error">유효성검사 문구 출력</p>
+							</td>
+						</tr>
+						<tr>
+							<th>핸드폰번호</th>
+							<td>
+								<ul class="tb_select">
+									<li>
+										<select name="" style="width:76px">
+											<option value="">010</option>
+											<option value=""></option>
+										</select>
+									</li>
+									<li><input type="text" name="" value="2563" style="width:61px;" placeholder="" class="al_cen"></li>
+									<li><input type="text" name="" value="7411" style="width:61px;" placeholder="" class="al_cen"></li>
+									<li><a href="#" class="btn_ok">인증</a></li>
+								</ul>
+								<!-- 유효검사 텍스트 -->
+								<p class="tip error">유효성검사 문구 출력</p>
+							</td>
+						</tr>
+						<tr>
+							<th>인증번호</th>
+							<td>
+								<input type="text" name="" value="">
+								<!-- 유효검사 텍스트 -->
+								<p class="tip error">유효성검사 문구 출력</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<dl class="check_agree">
+					<dt>
+						<span class="check-area">
+							<input type="checkbox" id="agreeView1" name="">
+							<label for="agreeView1">개인정보 수집 및 이용에 동의합니다. (필수)</label>
+						</span>
+
+						<a>자세히<span></span></a>
+					</dt>
+					<dd>
+						[개인정보 수집 및 이용 안내]<br>
+						1. 개인정보 수집이용 목적: 해커스영어 라이브방송 참여자 및 당첨자 확인, 상품의 제공, 문의사항 응대<br>
+						2. 수집하는 개인정보 항목 : (필수) 닉네임, 핸드폰번호, IP주소<br>
+						3. 개인정보의 보유/이용 기간 : 이용목적 달성시 또는 참여자의 삭제요청시까지<br>
+
+					</dd>
+					<dt>
+						<span class="check-area">
+							<input type="checkbox" id="agreeView2" name="">
+							<label for="agreeView2">개인정보 위탁에 동의합니다. (선택)</label>
+						</span>
+
+						<a>자세히<span></span></a>
+					</dt>
+					<dd>
+						[개인정보 위탁 안내 ]<br>
+						1.위탁받는 자: 비즈콘, 페이스북, 인스타그램<br>
+						2. 위탁사무: 기프티콘 발송 사무 위탁, 페이스북 및 인스타그램 플랫폼의 광고업무 위탁<br>
+						* 개인정보 위탁에 동의하지 않는 경우에도 이벤트 참여가 가능하나, 상품 제공에 어려움이 있을 수 있습니다.
+					</dd>
+
+					<dt>
+						<span class="check-area">
+							<input type="checkbox" id="agreeView3" name="">
+							<label for="agreeView3">개광고성 정보 수신에 동의합니다. (선택)</label>
+						</span>
+
+						<a>자세히<span></span></a>
+					</dt>
+					<dd>
+						[이벤트 및 강의정보 제공을 위한 개인정보 이용 안내]<br>
+						1. 목적: 해커스영어 및 해커스교육그룹 제휴사의 강의, 이벤트 등 광고성 정보 제공 ( 제휴사 : 해커스어학원 / 해커스인강 / 해커스톡 / 해커스중국어/해커스패스 / 해커스잡 / 해커스유학 / 위더스 / 해커스편입 )<br>
+						2. 항목: 이메일주소, 휴대전화번호<br>
+						3. 보유/이용기간: 동의 철회시<br>
+						*참여자는 선택 사항에 대하여 동의를 거부하실 수 있으며, 일부 혜택 제공 또는 각종 광고, 이벤트 등의 혜택정보 제공에 어려움이 있을 수 있습니다.
+					</dd>
+				</dl>
+			</div>
+
+			<div class="layer-button mt20">
+				<a href="javascript:layerClose(layerNiName);" class="btn_cencle">취소</a>
+				<a href="#" class="btn_ok">확인</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- 레이어 팝업 - 공유하기 -->
+	<div id="layerChatSns" class="layer-area">
+		<div class="layer-default" style="width:512px;">
+			<div class="layer-hd">
+				<strong>공유하기</strong>
+				<a href="javascript:layerClose(layerChatSns);"><img src="images/layer_close.gif" alt="닫기"></a>
+			</div>
+
+			<div class="layer-con">
+				<div class="layer_sns_area">
+					<ul class="icon_sns">
+						<li><a href="#"><img src="images/sns_kakao.gif" alt="카카오"></a></li>
+						<li><a href="#"><img src="images/sns_fascbook.gif" alt="페이스북"></a></li>
+						<li><a href="#"><img src="images/sns_twiter.gif" alt="트위터"></a></li>
+						<li><a href="#"><img src="images/sns_kakaostory.gif" alt="카카오스토리"></a></li>
+					</ul>
+					<ul class="btn_sns">
+						<li><input type="text" name="" placeholder=""> </li>
+						<li><button type="button" id="" class="btn_ok">URL 복사</button></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 레이어 팝업 - 방송종료 알림 -->
+	<div id="layerEndAllim" class="layer-area">
+		<div class="layer-default" style="width:510px;">
+			<div class="layer-hd">
+				<strong>방송종료 알림</strong>
+				<a href="javascript:layerClose(layerEndAllim);"><img src="images/layer_close.gif" alt="닫기"></a>
+			</div>
+
+			<div class="layer-con">
+				<p class="layer-end-txt">시청하신 방송이 종료되었습니다. <br>
+				시청해 주셔서 감사합니다.</p>
+			</div>
+
+			<div class="layer-button">
+				<a href="javascript:layerClose(layerEndAllim);" class="btn_ok">확인</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>

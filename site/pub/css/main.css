@@ -1,0 +1,153 @@
+@charset "euc-kr";
+@import url("base.css");
+@import url("common.css");
+@import url("popup.css");
+@import url("bxslider.css");
+@import url("swiper.min.css");
+/* 20180605 hackers LMSTim Publisher  kmp */
+
+
+/* container */
+#container{width:100%;}
+
+/* main slide top */
+.main_slide_top{width:100%;}
+.main_slide_top .bx-wrapper{width:100%;max-width:100% !important;}
+.main_slide_top .bx-wrapper .bx-viewport {overflow:hidden;}
+.main_slide_top .bx-wrapper .bx-viewport .bxslider li{width:100%  !important;min-height:225px;background-color:#fbfbfb; position: relative;}
+.main_slide_top .bx-wrapper .bx-viewport .bxslider li a{display:block;}
+.main_slide_top .bx-wrapper .bx-pager{position: absolute;bottom: 12px;right:12px;width:auto;}
+.main_slide_top .bx-wrapper .bx-pager.bx-default-pager a {width:8px;height:8px;margin: 0 2px;outline: 0;font-size: 0;background:#b5fad3;border-radius: 50%;}
+.main_slide_top .bx-wrapper .bx-pager.bx-default-pager a.active{background:#fff;}
+
+
+/* 바로가기 서비스 */
+.main_fast_link ul{overflow:hidden;width:100%;}
+.main_fast_link li{float:left;width:25%;text-align:center;}
+.main_fast_link li a{display:block;border-left:1px solid #e2e2e2;border-bottom:1px solid #e2e2e2;vertical-align:middle;padding:10% 5%;}
+
+.main_fast_link li.link_lecture a, .main_fast_link li.link_center a {border-left:0;}
+.main_fast_link li.link_center a, .main_fast_link li.link_tv a, .main_fast_link li.link_coupon a, .main_fast_link li.link_event a {border-bottom:0;}
+
+.main_fast_link li a span{display:inline-block;text-indent: -99999px;width:65px;height:61px;background-image:url(https://mpublic.hackers.com/images/main/main-fast-link.gif); background-repeat:no-repeat;background-size:520px auto}
+.main_fast_link li.link_lecture a span{background-position:0 0;}
+.main_fast_link li.link_textbook a span{background-position:-65px 0;}
+.main_fast_link li.link_attending a span{background-position:-130px 0;}
+.main_fast_link li.link_job a span{background-position:-195px 0;}
+.main_fast_link li.link_center a span{background-position:-260px 0;}
+.main_fast_link li.link_tv a span{background-position:-325px 0;}
+.main_fast_link li.link_coupon a span{background-position:-390px 0;}
+.main_fast_link li.link_event a span{background-position:-455px 0;}
+
+.main_fast_link li a:hover{background:#2864ca;}
+.main_fast_link li a:hover span{background-position-y:-64px}
+
+/* 베스트 강의 */
+.main_best_area{border-top:10px solid #ebebeb;}
+.main_best_area .tab_tit {overflow:hidden;width:100%;}
+.main_best_area .tab_tit li{float:left;text-align:center;position:relative;}
+.main_best_area .tab_tit li a{background:#dfdfdf;border-top:4px solid #dfdfdf;color:#757575;line-height:40px;height:40px;display:block;cursor:pointer;}
+.main_best_area .tab_tit li:first-child:before{display:none;}
+.main_best_area .tab_tit li:before{content: '';width: 1px;height: 43px;background-color:#fff;display:inline-block;position: absolute;left:0;top:0;}
+.main_best_area .tab_tit li a:first-child{border-left:0;}
+.main_best_area .tab_tit li.active a{background:#fff;border-top:4px solid #2864ca;color:#2864ca;font-weight:bold;}
+.main_best_area h3{padding:18px 0 14px 10px;color:#0f0f0f;font-size:1rem;}
+
+.main_best_area .main_best_list{padding:0 10px;}
+.main_best_list li{position:relative;border-top:1px solid #ccc;padding:20px 0;}
+.main_best_list li > a{display:block;display:table;}
+.main_best_list li:first-child{border-top:0;}
+.main_best_list li .img_load{display:table-cell;width:100px;vertical-align:middle;text-align:center;}
+.main_best_list li .img_load img{width: 85%;padding-right: 10px;}
+.main_best_list li dl {display:table-cell;}
+.main_best_list li dl dt{font-weight:bold;color:#1b1b1b;}
+.main_best_list li dl dd{color:#1b1b1b;margin-top:0.1rem;}
+.main_best_list li dl dd ul{position:relative;padding-left:50px;}
+.main_best_list li dl dd ul li{color:#909090;font-size:0.85rem;padding:0 11px 0 0;border-top:0;}
+.main_best_list li dl dd ul li:first-child:before {content: '';width: 1px;height: 12px;background-color: #909090;display: inline-block;position: absolute;top:5px;right:4px;}
+.main_best_list li dl dd ul li:first-child{padding-left:0;position:absolute;top:0;left:0;width:50px;}
+
+.main_best_area .main_best_list02{padding:0 10px;}
+.main_best_list02 li{position:relative;border-top:1px solid #ccc;padding:20px 5px;}
+.main_best_list02 li > a{display:block;}
+.main_best_list02 li:first-child{border-top:0;}
+
+.main_best_list02 li dl dt{font-weight:bold;color:#1b1b1b;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.main_best_list02 li dl dd{color:#1b1b1b;margin-top:0.1rem;width:100%;}
+.main_best_list02 li dl dd ul{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;width:100%;}
+.main_best_list02 li dl dd ul li{display:inline-block;color:#1b1b1b;padding:0 0 0 12px;border-top:0;}
+.main_best_list02 li dl dd ul li:before{content: '';width:1px;height:14px;background-color: #1b1b1b;display: inline-block;position: absolute;top:4px;left:4px;}
+.main_best_list02 li dl dd ul li:first-child:before {display:none}
+.main_best_list02 li dl dd ul li:first-child{padding-left:0;border-left:0;}
+.main_best_list02 li dl dd.txt{color:#2864ca;font-size:0.85rem;}
+
+/* main_slide_ben */
+.main_slide_ben{width:100%;}
+.main_slide_ben .bxslider-default{min-height:100px;}
+.main_slide_ben .bx-wrapper{width:100%;max-width:100% !important;}
+.main_slide_ben .bx-wrapper .bx-viewport .bxslider li{width:100%  !important;min-height:100px;background-color:#fbfbfb;}
+.main_slide_ben .bx-wrapper .bx-pager{position: absolute;bottom:8px;right:12px;width:auto;}
+.main_slide_ben .bx-wrapper .bx-pager.bx-default-pager a {width:8px;height:8px;margin: 0 2px;outline: 0;font-size: 0;background:#b5fad3;border-radius: 50%;}
+.main_slide_ben .bx-wrapper .bx-pager.bx-default-pager a.active{background:#fff;}
+
+/* 추천 사이트 */
+.main_site_area{border-top:10px solid #ebebeb;}
+.main_site_area h3{padding:18px 0 14px 0;margin:0 10px;color:#0f0f0f;font-size:1rem;border-bottom:1px solid #ccc;}
+.main_site_area ul{overflow:hidden;width:100%}
+.main_site_area li{float:left;width:25%;margin:15px 0;}
+.main_site_area li a{display:block;text-align:center;color:#0e0e0e;font-size:0.9rem;line-height:1.2rem;width:65px;padding-top:70px;margin:0 auto;background-image:url(//mpublic.hackersjob.comhttps://mpublic.hackers.com/images/main/main-best-site.gif); background-repeat:no-repeat;background-size:262px auto;}
+.main_site_area li.mobile_web a{background-position:0 0;}
+.main_site_area li.naver_tv a{background-position:-65px 0;}
+.main_site_area li.youtube a{background-position:-132px 0;}
+.main_site_area li.naver_blog a{background-position:-197px 0;}
+
+/* 최근 수강 내역 */
+/* 열기 이전 */
+.main_lect_open{cursor:pointer;position:fixed;left:0;bottom:0;width:100%;z-index:9;}
+.main_lect_open dl{position:relative;background:#2a6ee2;padding:10px 60px 10px 80px;color:#fff;}
+.main_lect_open dl dt{position:absolute;top:10px;left:0;width:80px;font-weight:bold;text-align:center;}
+.main_lect_open dl dd.txt{width:100%;position:relative;padding-left:10px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.main_lect_open dl dd.txt:first-child:before{display:none;}
+.main_lect_open dl dd.txt:before{content: '';width: 1px;height: 12px;background-color: #fff;display: inline-block;position: absolute;left:0;top:5px;}
+.main_lect_open dl dd.icon_lect_up{width:20px;position:absolute;top:7px;right:20px;}
+
+/* 열기 이후  */
+.main_lect_box{cursor:pointer;position:fixed;bottom:-1000px;left:0;width:100%;z-index:90;}
+.main_lect_box .layer_lect_close{width:50px;display:block;margin:0 auto;}
+.main_lect_box .lect_login_bg{border-top:3px solid #2a6ee2;background:#fff;}
+.main_lect_box .layer_lect_list{padding:0 10px;height:400px;overflow-y:auto;}
+.main_lect_box .layer_lect_list li{border-bottom:1px solid #cccccc;}
+.main_lect_box .layer_lect_list li a{display:block;position:relative;padding:15px 0 15px 40px;}
+.main_lect_box .layer_lect_list li .lect_num{font-family:Arial;font-size:1.4rem;position:absolute;top:50%;left:0;width:40px;text-align:center;margin-top:-12px;color:#2a6ee2;font-weight:bold;}
+.main_lect_box .layer_lect_list dl dt{color:#2a2a2a;font-weight:bold;}
+.main_lect_box .layer_lect_list dl dd{display:inline-block;font-size:0.9rem;position:relative;padding-left:10px;color:#909090;}
+.main_lect_box .layer_lect_list dl dd.txt{padding-left:0;}
+.main_lect_box .layer_lect_list dl dd.txt:before{display:none;}
+.main_lect_box .layer_lect_list dl dd:before{content: '';width: 1px;height: 12px;background-color: #909090;display: inline-block;position: absolute;top:5px;left:4px;}
+
+.layer_lect_no {padding:0 10px 15px 10px;}
+.layer_lect_no p{color:#929292;text-align:center;padding:60px 0;}
+.layer_lect_no a{display:block;background:#2a6ee2;padding:15px 0;text-align:center;color:#fff;font-weight:bold;border-radius:7px;}
+
+/* main slide top timer */
+.main_slide_ben .bx-wrapper .bx-viewport .bxslider li .mainEndDate{display: none;}
+.main_slide_top .bx-wrapper .bx-viewport .bxslider li .mainEndDate{display:block;position:absolute;top:6%;left:5%;padding: 2px 6px;background: #fff;font-size: 1rem;text-align: center;color: #333;vertical-align: middle;border:1px solid #ddd;}
+
+@media screen and (min-width: 770px) {
+ .main_slide_top .bx-wrapper .bx-viewport .bxslider li .mainEndDate{padding:1.2% 6%;font-size:2rem;display:block;}
+ }
+@media screen and (min-width: 490px) {
+ .main_slide_top .bx-wrapper .bx-viewport .bxslider li .mainEndDate{padding:0.9% 6%;font-size:1.5rem;display:block;}
+ }
+@media only screen and (max-width:480px) {
+    .main_lect_box .layer_lect_list{height:350px;}
+ }
+@media screen and (min-width: 440px) {
+	.main_slide_top .bx-wrapper .bx-viewport .bxslider li .mainEndDate{padding:0.9% 6%;font-size:1rem;display:block;}
+ }
+@media screen and (min-width: 380px) {
+.main_slide_top .bx-wrapper .bx-viewport .bxslider li .mainEndDate{padding:0.7% 6%;font-size:0.8rem;display:block;}
+ }
+@media only screen and (max-width:320px) {
+    .main_lect_box .layer_lect_list{height:272px;}
+ }

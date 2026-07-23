@@ -1,0 +1,98 @@
+@charset "euc-kr";
+/* 20200520 hackers 웹개발5 Publisher  kmp */
+
+#container{min-height:200px;}
+
+/* 메인 시험일정 */
+.main_ex_calender{background:#21352f;position:relative;padding:13px 14px;}
+.main_ex_calender strong{display:block;color:#fff;font-size:14px;font-weight:normal;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;padding-right:110px;}
+.main_ex_calender ul{position:absolute;top:12px;right:14px;}
+.main_ex_calender ul li{float:left;color:#ffcb75;font-weight:bold;padding:0 5px;font-family:'noto','tahoma'}
+.main_ex_calender ul li:last-child{color:#fff;background:url(../images/main/icon_r_bu.png) no-repeat right 50%;background-size:6px;position:relative;padding-right:15px;}
+.main_ex_calender ul li:last-child:before{content: '';width: 1px;height: 12px;background-color:#7a8682;display: inline-block;position: absolute;left:0;top: 4px;}
+
+/* 메인 빅배너 */
+.main_bnr_area{position:relative;overflow:hidden;}
+.main_bnr_top .swiper-pagination{bottom:inherit;top:20px;left:15px;background:url(../images/main/main_big_icon.png) no-repeat 0 0;background-size:60px;width:60px;height:22px;text-align:center;color:#fff;font-size:12px;line-height:22px;}
+
+
+/* 메인 타이틀 */
+.m_ptit{position:relative;padding-left:15px;}
+.m_ptit h3{font-size:20px;}
+.m_ptit p{font-size:13px;color:#747474;margin-top:5px;}
+.m_ptit .btn_more{position:absolute;top:4px;right:14px;width:20px;}
+.m_ptit .btn_more a{color:#0097a3;}
+
+.main_pass_tip, .main_star_teach{padding:30px 0 20px 0;}
+
+/* 선밴들의 합격 노하우 */
+.main_bnr_tip{margin-top:15px;overflow:hidden;padding:0 15px 10px 15px;}
+.main_bnr_tip li {box-shadow: 0px 4px 5px 0px rgba(153,153,153,0.6);border-radius:15px;background:#fff;}
+.main_bnr_star{margin-top:15px;overflow:hidden;padding:0 15px 10px 15px;}
+.main_bnr_star li{background:url(../images/main/main_star_bg.png) no-repeat 0 0;background-size:100%;text-align:right;}
+.main_bnr_star .star_tit{position:absolute;top:15%;left:5%;color:#fff;font-size:15px;}
+.main_bnr_star li img{width:66%;}
+.main_bnr_star dl{box-shadow: 0px 4px 5px 0px rgba(153,153,153,0.6);border-radius:0 0 8px 8px;background:#fff;padding:14px 13px;text-align:left;}
+.main_bnr_star dl dt{color:#000000;font-size:13px;font-weight:bold;}
+.main_bnr_star dl dd{color:#4c4c4c;font-size:13px;margin-top:5px;}
+.main_bnr_star dl dd.last{margin-top:10px;}
+.main_bnr_star dl dd.last a{color:#029da2;font-size:13px;font-weight:bold;border:1px solid #029da2;display:block;border-radius:20px;text-align:center;padding:7px 0;}
+
+/* 공지사항 */
+.main_notice {padding:30px 15px;border-top:5px solid #dddee0}
+.main_notice .m_ptit {padding-left:0;}
+.main_notice .m_ptit .btn_more{right:0;}
+.main_notice ul{margin-top:20px;}
+.main_notice ul li{width:100%;margin-top:7px;position:relative;}
+.main_notice ul li a{color:#373737;font-size:13px;line-height:18px;padding:0 80px 0 52px;display:block;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.main_notice ul li .m_noti_icon{position:absolute;top:0;left:0;border-radius:20px;width:42px;line-height:18px;text-align:center;font-size:11px;}
+.main_notice ul li .m_noti_day{position:absolute;top:0;right:0;color:#929292;line-height:18px;font-size:14px;letter-spacing:-0.6px;}
+
+.main_notice ul li.noti_type1 a{color:#232323;font-weight:bold;}
+.main_notice ul li.noti_type1 .m_noti_icon{background:#0097a3;border:1px solid #0097a3;color:#fff;}
+.main_notice ul li.noti_type1 .m_noti_day{color:#565656;font-weight:bold;letter-spacing:-1px;}
+
+.main_notice ul li.noti_type2 .m_noti_icon{background:#fff;border:1px solid #0097a3;color:#0097a3;}
+.main_notice ul li.noti_type3 .m_noti_icon{background:#fff;border:1px solid #8f69b2;color:#8f69b2;}
+
+/* 메인  */
+.m_ex_area #snb{background:#f3f4f6;color:#717171;}
+.m_ex_list{padding:0 15px 0 36px;}
+.m_ex_list ul{padding:25px 0;}
+.m_ex_list ul li{position:relative;padding-bottom:20px;}
+.m_ex_list dl:before{content:'';width:2px;height:98%;position:absolute;left:-17px;top:18px;}
+.m_ex_list dt{font-size:18px;color:#fff;background:#16b7c4;border-radius:4px;padding-left:15px;line-height:45px;font-weight:bold;position:relative;margin-bottom:5px;}
+.m_ex_list dt:before{content:'';width:8px;height:8px;position:absolute;left:-20px;top:18px;}
+.m_ex_list dt span{font-weight:normal;}
+
+.m_ex_list ul li:nth-of-type(1) dl:before{background:#45c5d0;}
+.m_ex_list ul li:nth-of-type(2) dl:before{background:#0097a3;}
+.m_ex_list ul li:nth-of-type(3) dl:before{background:#00727b;}
+.m_ex_list ul li:nth-of-type(4) dl:before{background: linear-gradient( to top, #fff 5%, #025157 );height:90%;}
+
+.m_ex_list ul li:nth-of-type(1) dt{background:#45c5d0;}
+.m_ex_list ul li:nth-of-type(2) dt{background:#0097a3;}
+.m_ex_list ul li:nth-of-type(3) dt{background:#00727b;}
+.m_ex_list ul li:nth-of-type(4) dt{background:#025157;}
+
+.m_ex_list ul li:nth-of-type(1) dt:before{background:url(../images/main/ex_tit_icon01.png) no-repeat 0 0;background-size:8px;}
+.m_ex_list ul li:nth-of-type(2) dt:before{background:url(../images/main/ex_tit_icon02.png) no-repeat 0 0;background-size:8px;}
+.m_ex_list ul li:nth-of-type(3) dt:before{background:url(../images/main/ex_tit_icon03.png) no-repeat 0 0;background-size:8px;}
+.m_ex_list ul li:nth-of-type(4) dt:before{background:url(../images/main/ex_tit_icon04.png) no-repeat 0 0;background-size:8px;}
+
+.m_ex_list dd{font-size:15px;color:#232323;background:url(../images/main/ex_list_icon.png) no-repeat 15px 50%;background-size:3px;padding:8px 0 8px 105px;position:relative;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;font-weight:bold;position:relative;}
+.m_ex_list dd span{color:#8a8a8a;display:inline-block;width:80px;position:absolute;top:10px;left:25px;font-weight:normal;}
+.m_ex_list dd:nth-of-type(3) {color:#0097a3;padding-bottom:8px;}
+.m_ex_list dd .btn_ok{position:absolute;top:2px;left:220px;border-radius:3px;background:#e9eaee url(../images/main/icon_m_glass.png) no-repeat 10px 50%;background-size:12px;padding:7px 15px 7px 28px;color:#000000;font-size:13px;}
+
+@media only screen and (min-width:320px){
+	.main_bnr_star .star_tit{font-size:15px;}
+}
+
+@media only screen and (min-width:480px){
+	.main_bnr_star .star_tit{font-size:20px;}
+}
+
+@media only screen and (min-width:640px){
+	.main_bnr_star .star_tit{font-size:30px;}
+}

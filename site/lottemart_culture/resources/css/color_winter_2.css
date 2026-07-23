@@ -1,0 +1,127 @@
+@charset "utf-8";
+
+/*** 겨울 테마 2 ****/
+.common-c{color:#395778 !important;}
+.bg-c{background-color:#395778 !important;}
+.tit-bul:after{background-color:#395778 !important;}
+.line-t8{border-top-width:8px; border-style:solid; border-color:#395778 !important;}
+.txt-c,
+.lst_txt-c a:hover,
+.lst_txt-c li.active,
+.lst_txt-c li.active a,
+.branch-menu a:hover,
+.branch-menu li.active a,
+.lst_gnb-area > li > ul a:hover,
+.lst_gnb-area > li > ul li.active a{color:#395778 !important;}
+.branch_find-area .branch-con li a:hover,
+.branch_find-area .branch-con li.active a{border-color:#395778 !important; color:#395778 !important;}
+
+.link:hover,
+.link:hover *,
+.link.active,
+.btn-type{background-color:#395778 !important;}
+.tab-menu1 li a:hover,
+.tab-menu1 li.active a{background-color:#395778 !important;}
+
+.list-filter li.active a{color:#395778 !important;}
+
+h3.tit:after{background-color:#395778 !important;}
+
+.tab-menu2{border-bottom-width:3px; border-style:solid; border-color:#395778 !important;}
+.tab-menu2 .item.active{border-width:3px; border-style:solid; border-color:#395778 !important; border-bottom:0;}
+.tab-menu2 .item.active a{color:#395778 !important;}
+.tab-menu2 .item.active a span{color:#395778 !important;}
+.branch_find-area .branch-menu li{border-bottom-color:#395778 !important;}
+.branch_find-area .branch-menu li.active{border-color:#395778 !important;}
+
+/* 마이페이지 상단 */
+.mypage-btn-wrap ul li a:hover,
+.mypage-btn-wrap ul li a:focus,
+.mypage-btn-wrap ul li.active a{background-color:#395778 !important;}
+
+.lecturer_desk-wrap .tab_menu-area:after{background-color:#395778 !important;}
+
+.mob-header .top_srch-area{background-color:#395778 !important;}
+
+.family_regist{background-color:#395778 !important; color:#fff;}
+.btn_family_regist{background-color:#395778 !important; color:#fff;}
+
+/* 메인 */
+.lst_srch-area a:hover p{background-color:#395778 !important;}
+
+/* 지점메인 */
+.bm_menu-wrap li.active a{background-color:#395778 !important;}
+.oneday_class-wrap .lst-oc li.active a{background-color:#395778 !important;}
+.oneday_class-wrap .lst-oc li a:after{border-left-color:#395778 !important;}
+
+/* 모바일 메뉴 */
+.mob-header .gnb-area .branch_srch-wrap h2,
+.mob-header .gnb-area .lst_gnb-area > li.active > a{background-color:#395778 !important;}
+
+/* 강사 메뉴 */
+.lct_menu-list li.active a{background-color:#395778 !important; color:#fff;}
+.mob-header .gnb-area .lst_gnb-area > li.active > a{background-color:#395778 !important;}
+.mob-header .gnb-area .lst_gnb-area > li.active > a{background-color:#395778 !important;}
+
+/* 강사지원 */
+.instructors-tabs > ul{border-bottom:3px solid #395778;}
+.instructors-tabs > ul > li.active span{border-right:3px solid #395778;border-left:3px solid #395778;border-top:3px solid #395778;color:#395778;}
+
+.mo-tab-box{border-bottom-width:3px; border-style:solid; border-color:#395778 !important;}
+.mo-tab-box .item.active{border-width:3px; border-style:solid; border-color:#395778 !important; border-bottom:0;}
+.mo-tab-box .item.active a{color:#395778 !important;}
+.mo-tab-box .item.active a span{color:#395778 !important;}
+
+/* 메인 #3 */
+.lst_sub-tit li.active a{background-color:#395778 !important; color:#fff;}
+.lst_view-area .btn_view-area .btn-status.finish:hover{border-color:#395778 !important;}
+
+/* 메인B - 오른쪽 문화센터 보기 */
+.mainB-right-open a{background:url(../images/mainB/season_main_img0402.png) no-repeat 0 0;}
+
+/* 메인B - 왼쪽메뉴 */
+.mainB-left li a{background:url(../images/mainB/benner_0402.png) no-repeat;}
+.mainB-left li.ben01 a{background-position:0 0;}
+.mainB-left li.ben02 a{background-position:-155px 0;}
+.mainB-left li.ben03 a{background-position:-310px 0;}
+.mainB-left li.ben04 a{background-position:-465px 0;}
+
+.mainB-left li.ben01 a:hover{background-position:0 -129px;}
+.mainB-left li.ben02 a:hover{background-position:-155px -129px;}
+.mainB-left li.ben03 a:hover{background-position:-310px -129px;}
+.mainB-left li.ben04 a:hover{background-position:-465px -129px;}
+
+
+/* 메인B - 오른쪽 탭 메뉴 */
+.conLine02 .mainB-tabs-menu > ul{border-bottom:3px solid #395779;}
+.conLine02 .mainB-tabs-menu > ul > li.active span{color:#395779;
+border-right:3px solid #395779;border-left:3px solid #395779;border-top:3px solid #395779;}
+
+/* 모바일 메인B - 문화센터 보기 버튼 */
+.main__btn-more{background-image:url(../images/mobile/main/img_btn_contsMore_winter2.png) !important;}
+
+/* 모바일 메인B - 오른쪽 탭 메뉴 */
+.l-conts__grid .main__tab li.active a{background-color:#395779 !important;}
+
+/* 모바일 지점선택 */
+.tablet .branch_find-area .branch-con ul{border-top:2px solid #395779;}
+.tablet .branch_find-area .branch-menu li.active{background-color:#395779 !important;}
+.tablet .branch_find-area .branch-con li.active a,
+.tablet .branch_find-area .branch-con li a:hover{color:#395779 !important; border-color:#395779 !important;}
+
+.mobile .branch_find-area .branch-con ul{border-top:2px solid #395779;}
+.mobile .branch_find-area .branch-menu li.active{background-color:#395779 !important;}
+.mobile .branch_find-area .branch-con li.active a,
+.mobile .branch_find-area .branch-con li a:hover{color:#395779 !important; border-color:#395779 !important;}
+.mob-adaptive .mob-header .branch_find-area .branch-menu li.active{background-color:#395779 !important;}
+.mob-header .branch_find-area .branch-con ul{border-top:2px solid #395779 !important;}
+.mob-header .gnb-area .branch_find-area .branch-con li.active a,
+.mob-header .gnb-area .branch_find-area .branch-con li a:hover{color:#395779 !important; border-color:#395779 !important;}
+.mob-adaptive .branch_find-area .branch-menu li.active{background-color:#395779 !important;}
+.mob-adaptive .mob-header .gnb-area .branch_find-area .branch-con li.active a,
+.mob-adaptive .mob-header .gnb-area .branch_find-area .branch-con li a:hover{color:#395779 !important; border-color:#395779 !important;}
+.mob-adaptive .branch_find-area .branch-con ul{border-top:2px solid #395779 !important;}
+
+
+/* 2017.11.16 추가 */
+.tab-history .tab-menu2 .item.active a{background-color:#395779 !important; color:#fff !important;}

@@ -1,0 +1,106 @@
+@charset "utf-8";
+/* 20170920 RightBrainM WebPublisher  P.K.Min */
+
+/* font-family */
+@font-face {
+   font-family: 'NotoSans-Regular';
+   font-style: normal;
+	src: local("font/NotoSans-Regular"),
+       local("font/NotoSans-Regular"),
+       url("font/NotoSans-Regular.eot?#iefix") format('embedded-opentype'),
+       url("font/NotoSans-Regular.woff") format('woff'),
+       url("font/NotoSans-Regular.ttf") format('truetype');
+ }
+
+@font-face {
+   font-family:'NotoSans-Medium';
+   font-style: normal;
+	src: local("font/NotoSans-Medium"),
+       local("font/NotoSans-Medium"),
+       url("font/NotoSans-Medium.eot?#iefix") format('embedded-opentype'),
+       url("font/NotoSans-Medium.woff") format('woff'),
+       url("font/NotoSans-Medium.ttf") format('truetype');
+ }
+
+/*기본태그 정의*/
+html, body {padding:0;margin:0;height:100%;box-sizing:border-box;}
+body, td, select, textarea, input {font-size:14px;font-family:'NotoSans-Regular','돋움','Dotum', 'verdana';color:#5c5c5c;}
+
+/* 마진과 패딩의 초기화 */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, p, th, td, span {margin:0;padding:0;box-sizing:border-box;}
+
+/* 헤더 폰트 사이즈 초기화 */
+h1, h2, h3, h4, h5, h6 {font-size:100%;}
+
+/* 리스트의 스타일 제거 */
+ol, ul {list-style:none;}
+
+/* 테이블 스타일 초기화 */
+table {border-collapse:collapse;border-spacing:0;table-layout:fixed;}
+
+/* 이미지 및 필드셋에서 보더 표시 초기화 */
+fieldset, img {border:0;}
+img{vertical-align:middle;}
+
+/* 캡션 텍스트 정렬 초기화 */
+caption {text-align:left;}
+
+/* 폼태그의 초기화 */
+select {font-size:12px;font-family:'NotoSans-Regular','돋움','Dotum', 'verdana';vertical-align:middle;color:#5c5c5c;}
+input {font-size:12px;font-family:'NotoSans-Regular','돋움','Dotum', 'verdana';vertical-align:middle;color:#5c5c5c;}
+textarea {font:12px;font-family:'NotoSans-Regular','돋움','Dotum', 'verdana';line-height:140%;color:#5c5c5c;}
+input[type="radio"] {vertical-align:middle;}
+
+a:link    {color:#5c5c5c; text-decoration:none;}
+a:active    {color:#5c5c5c; text-decoration:none;}
+a:visited    {color:#5c5c5c; text-decoration:none;}
+a:hover    {color:#5c5c5c; text-decoration:none;}
+
+/* hidden 처리 */
+hr,caption{width:0;height:0;font-size:0;line-height:0;overflow:hidden;visibility:hidden;}
+.hide{position:absolute;top:-9999px;width:0;height:0;font-size:0;line-height:0;overflow:hidden;visibility:hidden;}
+
+
+/* placeholder 처리 */
+.placeholder {color:#a9a9a9;}
+:-ms-input-placeholder {color:#a9a9a9;}		/* M$ */
+::-webkit-input-placeholder {color:#a9a9a9;} /* webkit */
+::-moz-placeholder{color:#a9a9a9;}				/* firefox */
+
+
+/* radio */
+.radio-box{display:inline-block; position:relative; height:20px; line-height:20px; padding-left:20px; cursor:pointer;overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.radio-box input[type="radio"]{
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity:0;
+
+}
+.radio-box label{display:inline-block; height:20px; line-height:20px; cursor:pointer;color:#acadae;}
+.radio-box label.active{color:#ff625a; font-family:'NotoSans-Medium';}
+.radio-box label:after{display:inline-block; content:''; position:absolute; top:0; left:0; width:20px; height:20px; background:url(../images/img-radio-off.png) no-repeat 0 0;
+    transition:all .1s linear;
+    -webkit-transition:all .1s linear;
+    -moz-transition:all .1s linear;
+    -ms-transition:all .1s linear;
+}
+.radio-box input[type="radio"]:checked + label:after{background-image:url(../images/img-radio-on.png);}
+.radio-box.no-label{padding-left:0;}
+
+
+/* selectbox */
+.sod_select select{display:none;}
+.sod_select{display:inline-block;position:relative; width:100%;font-size:16px; padding:5px 23px 5px 10px;background-color:#fff; border:1px solid #acadae;border-radius:3px;text-decoration:none; text-align:left; cursor:pointer; outline:none; -webkit-touch-callout:none;}
+.sod_select.touch select{-webkit-appearance:menulist-button; display:block !important; position:absolute; top:0; left:0; height:100%; width:100%; opacity:0; z-index:1;}
+.sod_select .sod_label{color:#5c5c5c;display:block; }
+.sod_select:after{content:''; position:absolute; top:10px; right:5px; width:14px; height:14px;background:url(../images/icon-selectbox.gif) 0 0 no-repeat;}
+
+.sod_select .sod_list_wrapper{display:none; position:absolute; top:32px; left:-1px; z-index:100; width:100%; height:auto; background:#fff;border-radius:0 0 3px 3px; border:1px solid #acadae; box-sizing:content-box;}
+.sod_select.open .sod_list_wrapper{display:block;width:100%;}
+.sod_select .sod_list{display:block; overflow-y:auto;width:100%;}
+.sod_select .sod_option{display:block;width:100%;color:#acadae; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; line-height:33px; padding:0 10px 0 10px;  cursor:pointer;}
+.sod_select .sod_option:hover{background-color:#f5f5f5;color:#5c5c5c;}
+
+/* input round */
+.r-input{border-radius:3px;border:1px solid #acadae;width:100%;font-size:16px;padding:5px 5px;}
+

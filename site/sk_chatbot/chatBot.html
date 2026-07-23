@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content=""/>
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>SKN A.I. Chatbot - WalkerHill</title>
+	<script type="text/javascript" src="js/jquery-1.12.3.js"></script>
+	<script type="text/javascript" src="js/slick.js"></script>
+	<script type="text/javascript" src="js/selectordie.js"></script>
+	<script type="text/javascript" src="js/jquery.placeholder.js"></script>
+	<script type="text/javascript" src="js/ui.common.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/chatbot.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick.css" />
+	<script type="text/javascript" >
+	$(document).ready(function(){
+
+		//갤러리 슬라이드 리스트
+		$('.gallery-wrap').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			speed : 300,
+			centerMode: false,
+			focusOnSelect: true,
+			dots: false,
+			arrows: true,
+			variableWidth: true,
+			infinite: false,
+			prevArrow:"<a href='#none' class='btnPrevArrow'><img class='prev slick-prev' src='images/silk-arrow-left.png'></a>",
+			nextArrow:"<a href='#none' class='btnNextArrow'><img class='prev slick-prev' src='images/silk-arrow-right.png'></a>",
+			responsive: [
+				{
+				  breakpoint: 640,
+				  settings: {
+					arrows : false
+				  }
+				}
+			 ]
+
+		});
+
+		//레이어 팝업 - 슬라이드 날짜선택
+		$('.weekday-moon').slick({
+			slidesToShow: 5,
+			slidesToScroll: 1,
+			speed : 300,
+			centerMode: true,
+			focusOnSelect: true,
+			dots: false,
+			arrows: false
+		});
+	});
+	</script>
+
+</head>
+<body>
+<!-- 챗봇  Start -->
+<div id="chatbot_popup">
+	<div class="chatbotWrap">
+		<!-- 챗봇 상단 -->
+		<div class="chatbotHead">
+			<p><img src="images/chat-title.png"alt="SK 챗봇"></p>
+			<ul>
+				<li class="btnPrev"><a href="#none"><img src="images/chat-btn-open.png" alt="왼쪽 추가옵션 열기"></a></li>
+				<li class="btnClose"><a href="#none"><img src="images/chat-btn-close.png" alt="챗봇 닫기"></a></li>
+			</ul>
+		</div>
+		<!--// 챗봇 하단 -->
+
+		<!-- 챗봇 대화 내용 -->
+		<div class="chatbotCon">
+			<div class="chatbotConInner" >
+
+				<!-- 타이머 -->
+				<div class="chatTimer">
+					<span class="bd-type"></span>
+					<span>2017년 9 월 5일 화요일</span>
+					<span class="bd-type"></span>
+				</div>
+				<!--// 타이머 -->
+
+				<!-- 챗봇 대화 왼쪽 대화일때 class = chat-left-box 추가 -->
+				<div class="chat-left-box">
+					<span class="img-profile"><img src="images/chat-icon-pImg.png" alt="프로필사진"></span>
+					<div class="chat-com">
+						<span class="top-bg"></span>
+						<p>안녕하세요. 고객님! <br>워커힐 챗봇 서비스입니다.<br><br>궁금하신 카테고리를 선택해 주세요.</p>
+					</div>
+				</div>
+				<!--// 챗봇 대화 -->
+
+				<!-- 챗봇 대화 왼쪽 대화 - 카테고리 선택 -->
+				<div class="category-select">
+					<p>카테고리선택</p>
+					<ul>
+						<li><span class="radio-box"><input type="radio" id="qna1" name="qna" checked><label for="qna1" class="active">다이닝 예약</label></span></li>
+						<li><span class="radio-box"><input type="radio" id="qna2" name="qna"><label for="qna2">프로모션 안내</label></span></li>
+						<li><span class="radio-box"><input type="radio" id="qna3" name="qna"><label for="qna3">워커힐 관련 문의</label></span></li>
+					</ul>
+				</div>
+				<!--// 챗봇 대화 왼쪽 대화 - 카테고리 선택 -->
+
+				<!-- 사용자 대화 오른쪽일때 class - chat-right-box 추가 -->
+				<div class="chat-right-box">
+					<div class="chat-com">
+						<span class="top-bg"></span>
+						<p>다이닝 예약합니다.</p>
+					</div>
+				</div>
+				<!--// 사용자 대화 -->
+
+				<!-- 챗봇 대화 왼쪽 대화일때 class = chat-left-box 추가 -->
+				<div class="chat-left-box">
+					<span class="img-profile"><img src="images/chat-icon-pImg.png" alt="프로필사진"></span>
+					<div class="chat-com">
+						<span class="top-bg"></span>
+						<p>어떤 식당을 원하시나요?</p>
+					</div>
+				</div>
+				<!--// 챗봇 대화 -->
+
+				<!-- 챗봇 대화 왼쪽 대화일때 - 갤러리 -->
+				<div class="galleryList">
+					<div class="slider gallery-wrap">
+						<div>
+							<span class="img-load"><img src="images/sample-img.png" alt="온달 한식당 - 조선시대 사대부 요리와 궁중음식의 친품단자를 재해석한 워커힐 대표 한식당 "></span>
+							<a href="http://www.naver.com" target="_blank" class="view-link">자세히 보기</a>
+						</div>
+
+						<div>
+							<span class="img-load"><img src="images/sample-img.png" alt="온달 한식당 - 조선시대 사대부 요리와 궁중음식의 친품단자를 재해석한 워커힐 대표 한식당 "></span>
+							<a href="http://www.daum.com" target="_blank" class="view-link">자세히 보기</a>
+						</div>
+
+						<div>
+							<span class="img-load"><img src="images/sample-img.png" alt="온달 한식당 - 조선시대 사대부 요리와 궁중음식의 친품단자를 재해석한 워커힐 대표 한식당 "></span>
+							<a href="http://www.yahoo.com" target="_blank" class="view-link">자세히 보기</a>
+						</div>
+					</div>
+				</div>
+				<!--// 챗봇 대화 -->
+
+				<!-- 사용자 대화 오른쪽일때 class - chat-right-box 추가 -->
+				<div class="chat-right-box">
+					<div class="chat-com">
+						<span class="top-bg"></span>
+						<p>온달 한식당</p>
+					</div>
+				</div>
+				<!--// 사용자 대화 -->
+
+				<!-- 챗봇 대화 - 날짜 선택 -->
+				<div class="chat-left-box box-select">
+					<span class="img-profile"><img src="images/chat-icon-pImg.png" alt="프로필사진"></span>
+					<div class="chat-com">
+						<span class="top-bg"></span>
+						<p>원하시는 예약 날짜를 선택해 주세요.</p>
+						<a href="javascript:layerPopup(layerDayPopup);" class="btn-select">날짜 선택</a>
+					</div>
+				</div>
+				<!--// 챗봇 대화 -->
+
+				<!-- 사용자 대화 오른쪽일때  -->
+				<div class="chat-right-box">
+					<div class="chat-com">
+						<span class="top-bg"></span>
+						<p>2017년 9월 6일 예약</p>
+					</div>
+				</div>
+				<!--// 사용자 대화 -->
+
+				<!-- 챗봇 대화 - 시간 선택 -->
+				<div class="chat-left-box box-select">
+					<span class="img-profile"><img src="images/chat-icon-pImg.png" alt="프로필사진"></span>
+					<div class="chat-com">
+						<span class="top-bg"></span>
+						<p>예약 시간을 선택해 주세요.</p>
+						<a href="javascript:layerPopup(layerTimePopup);" class="btn-select">시간 선택</a>
+					</div>
+				</div>
+				<!--// 챗봇 대화 -->
+
+				<!-- 사용자 대화 오른쪽일때  -->
+				<div class="chat-right-box">
+					<div class="chat-com">
+						<span class="top-bg"></span>
+						<p>오후 7시</p>
+					</div>
+				</div>
+				<!--// 사용자 대화 -->
+
+
+				<!-- 챗봇 대화 - 인원 수 선택 -->
+				<div class="chat-left-box box-select">
+					<span class="img-profile"><img src="images/chat-icon-pImg.png" alt="프로필사진"></span>
+					<div class="chat-com">
+						<span class="top-bg"></span>
+						<p>예약 인원 수를 선택해 주세요.</p>
+						<a href="javascript:layerPopup(layerNumPopup);" class="btn-select">인원 수 선택</a>
+					</div>
+				</div>
+				<!--// 챗봇 대화 -->
+
+				<!-- 사용자 대화 오른쪽일때  -->
+				<div class="chat-right-box">
+					<div class="chat-com">
+						<span class="top-bg"></span>
+						<p>성인 2명, 아이 1명</p>
+					</div>
+				</div>
+				<!--// 사용자 대화 -->
+
+				<!-- 챗봇 대화 -->
+				<div class="chat-left-box box-select">
+					<span class="img-profile"><img src="images/chat-icon-pImg.png" alt="프로필사진"></span>
+					<div class="chat-com">
+						<span class="top-bg"></span>
+						<p>예약자분 성함을 입력해 주세요.</p>
+					</div>
+				</div>
+				<!--// 챗봇 대화 -->
+
+				<!-- 사용자 대화 오른쪽일때  -->
+				<div class="chat-right-box">
+					<div class="chat-com">
+						<span class="top-bg"></span>
+						<p>홍길동</p>
+					</div>
+				</div>
+				<!--// 사용자 대화 -->
+
+				<!-- 챗봇 대화 - 연락처 선택 -->
+				<div class="chat-left-box box-select">
+					<span class="img-profile"><img src="images/chat-icon-pImg.png" alt="프로필사진"></span>
+					<div class="chat-com">
+						<span class="top-bg"></span>
+						<p>예약자분 연락처를 입력해 주세요.</p>
+						<a href="javascript:layerPopup(layerTellPopup);" class="btn-select">연락처 입력</a>
+					</div>
+				</div>
+				<!--// 챗봇 대화 -->
+
+				<!-- 사용자 대화 오른쪽일때  -->
+				<div class="chat-right-box">
+					<div class="chat-com">
+						<span class="top-bg"></span>
+						<p>010-1234-5678</p>
+					</div>
+				</div>
+				<!--// 사용자 대화 -->
+
+				<!-- 챗봇 대화 - 최종 선택 -->
+				<div class="chat-left-box box-select">
+					<span class="img-profile"><img src="images/chat-icon-pImg.png" alt="프로필사진"></span>
+					<div class="chat-com">
+						<span class="top-bg"></span>
+						<p>홍길동 고객님의 최종 예약 내용입니다.</p>
+
+						<ul class="list-wrap">
+							<li>식당 : 온달</li>
+							<li>예약 날짜 : 2017년 8월 22일</li>
+							<li>예약 시간 : 오후 7시</li>
+							<li>예약 인원 : 어른 2명, 아이 1명</li>
+							<li>추가 요청 사항: ……</li>
+						</ul>
+						<p>
+							위 내용이 맞습니까?<br>
+							‘예’를 누르시면 상담이 종료되고,<br>
+							‘아니오’를 누르시면 처음으로 돌아갑니다.
+						</p>
+
+						<ul class="btn-select-wrap">
+							<li><a href="#none" class="btn-select">예</a></li>
+							<li><a href="#none" class="btn-select">아니오</a></li>
+						</ul>
+					</div>
+				</div>
+				<!--// 챗봇 대화 -->
+
+				<!-- 사용자 대화 오른쪽일때  -->
+				<div class="chat-right-box">
+					<div class="chat-com">
+						<span class="top-bg"></span>
+						<p>예</p>
+					</div>
+				</div>
+				<!--// 사용자 대화 -->
+
+
+				<!-- 챗봇 대화 - 예약 완료 -->
+				<div class="chat-left-box">
+					<span class="img-profile"><img src="images/chat-icon-pImg.png" alt="프로필사진"></span>
+					<div class="chat-com">
+						<span class="top-bg"></span>
+						<p>홍길동 고객님의 예약이 완료되었습니다.<br>
+						감사합니다.</p>
+					</div>
+				</div>
+				<!--// 챗봇 대화 -->
+
+				<!-- 챗봇 대화 - 최종 선택 -->
+				<div class="chat-left-box box-select">
+					<span class="img-profile"><img src="images/chat-icon-pImg.png" alt="프로필사진"></span>
+					<div class="chat-com">
+						<span class="top-bg"></span>
+						<p>추가 요청 사항이 있으십니까?</p>
+
+						<ul class="btn-select-wrap">
+							<li><a href="#none" class="btn-select">예</a></li>
+							<li><a href="#none" class="btn-select">아니오</a></li>
+						</ul>
+					</div>
+				</div>
+				<!--// 챗봇 대화 -->
+
+				<!-- 사용자 대화 오른쪽일때  -->
+				<div class="chat-right-box">
+					<div class="chat-com">
+						<span class="top-bg"></span>
+						<p>예</p>
+					</div>
+				</div>
+				<!--// 사용자 대화 -->
+
+				<!-- 챗봇 대화 -->
+				<div class="chat-left-box">
+					<span class="img-profile"><img src="images/chat-icon-pImg.png" alt="프로필사진"></span>
+					<div class="chat-com">
+						<span class="top-bg"></span>
+						<p>네, 무엇이 궁금하신가요?</p>
+					</div>
+				</div>
+				<!--// 챗봇 대화 -->
+
+				<!-- 사용자 대화 오른쪽일때  -->
+				<div class="chat-right-box">
+					<div class="chat-com">
+						<span class="top-bg"></span>
+						<p>고객님 질문 입력</p>
+					</div>
+				</div>
+				<!--// 사용자 대화 -->
+
+
+				<!-- 타이머 -->
+				<div class="chatTimer">
+					<span class="bd-type"></span>
+					<span>2017년 9 월 5일 화요일</span>
+					<span class="bd-type"></span>
+				</div>
+				<!--// 타이머 -->
+
+				<!-- 챗봇 대화 왼쪽 대화일때 class = chat-left-box 추가 -->
+				<div class="chat-left-box">
+					<span class="img-profile"><img src="images/chat-icon-pImg.png" alt="프로필사진"></span>
+					<div class="chat-com">
+						<span class="top-bg"></span>
+						<p>안녕하세요. 고객님! <br>워커힐 챗봇 서비스입니다.<br><br>궁금하신 카테고리를 선택해 주세요.</p>
+					</div>
+				</div>
+				<!--// 챗봇 대화 -->
+
+				<!-- 챗봇 대화 왼쪽 대화 - 카테고리 선택 -->
+				<div class="category-select">
+					<p>카테고리선택</p>
+					<ul>
+						<li><span class="radio-box"><input type="radio" id="qna1" name="qna2"><label for="qna1">다이닝 예약</label></span></li>
+						<li><span class="radio-box"><input type="radio" id="qna2" name="qna2" checked><label for="qna2" class="active">프로모션 안내</label></span></li>
+						<li><span class="radio-box"><input type="radio" id="qna3" name="qna2"><label for="qna3">워커힐 관련 문의</label></span></li>
+					</ul>
+				</div>
+				<!--// 챗봇 대화 왼쪽 대화 - 카테고리 선택 -->
+
+				<!-- 사용자 대화 오른쪽일때 class - chat-right-box 추가 -->
+				<div class="chat-right-box">
+					<div class="chat-com">
+						<span class="top-bg"></span>
+						<p>프로모션 안내</p>
+					</div>
+				</div>
+				<!--// 사용자 대화 -->
+
+				<!-- 챗봇 대화 왼쪽 대화일때 class = chat-left-box 추가 -->
+				<div class="chat-left-box">
+					<span class="img-profile"><img src="images/chat-icon-pImg.png" alt="프로필사진"></span>
+					<div class="chat-com">
+						<span class="top-bg"></span>
+						<p>총 10건의 프로모션이 있습니다.<br>
+						이미지를 눌러 자세한 내용을 확인하세요.</p>
+					</div>
+				</div>
+				<!--// 챗봇 대화 -->
+
+				<!-- 챗봇 대화 왼쪽 대화일때 - 갤러리 -->
+				<div class="galleryList">
+					<div class="slider gallery-wrap">
+						<div>
+							<span class="img-load"><img src="images/sample2-img.png" alt="2017 Autumn Fest … - ￦ 12,000 ~ 워커힐의 다양한 레스토랑에서 소개하는 맛의 향연을 Walkerhill Autumn Fest에서 만나 보시기… "></span>
+							<a href="http://www.naver.com" target="_blank" class="view-link">자세히 보기</a>
+						</div>
+
+						<div>
+							<span class="img-load"><img src="images/sample2-img.png" alt="2017 Autumn Fest … - ￦ 12,000 ~ 워커힐의 다양한 레스토랑에서 소개하는 맛의 향연을 Walkerhill Autumn Fest에서 만나 보시기… "></span>
+							<a href="http://www.daum.com" target="_blank" class="view-link">자세히 보기</a>
+						</div>
+
+						<div>
+							<span class="img-load"><img src="images/sample2-img.png" alt="2017 Autumn Fest … - ￦ 12,000 ~ 워커힐의 다양한 레스토랑에서 소개하는 맛의 향연을 Walkerhill Autumn Fest에서 만나 보시기… "></span>
+							<a href="http://www.yahoo.com" target="_blank" class="view-link">자세히 보기</a>
+						</div>
+					</div>
+				</div>
+				<!--// 챗봇 대화 -->
+
+				<!-- 사용자 대화 오른쪽일때  -->
+				<div class="chat-right-box">
+					<div class="chat-com">
+						<span class="top-bg"></span>
+						<p>2017 Autumn Fest_Gourmet</p>
+					</div>
+				</div>
+				<!--// 사용자 대화 -->
+
+				<!-- 챗봇 대화 로딩중일때 -->
+				<div class="chat-left-box">
+					<span class="img-profile"><img src="images/chat-icon-pImg.png" alt="프로필사진"></span>
+					<div class="chat-com">
+						<span class="top-bg"></span>
+						<!--  class = write 추가 -->
+						<p class="write"></span>
+						<!--//  class 추가 -->
+					</div>
+				</div>
+				<!--// 챗봇 대화 로딩중일때 -->
+
+			</div>
+		</div>
+		<!--// 챗봇 대화 내용 -->
+
+		<!-- 챗봇 왼쪽 추가 레이어-->
+		<div class="chatbotLayerBox">
+			<div class="chatbotLayer">
+				<div class="chatbotLayerHead">
+					<p><img src="images/chat-title.png"alt="SK 챗봇"></p>
+					<a href="#none" class="chatbotLayer-close"><img src="images/chat-btn-close.png" alt="왼쪽 레이어 팝업 닫기"></a>
+				</div>
+
+				<div class="chatbotLayerCon">
+					<div class="chatbotLayerBg">
+						내용이 들어갑니다.
+					</div>
+				</div>
+			</div>
+			<span class="bd-triangle-right"></span>
+		</div>
+		<!--// 챗봇 왼쪽 추가 레이어 -->
+
+		<!-- 챗봇 하단 -->
+		<div class="chatbotFoot">
+			<!-- 대화 입력 -->
+			<div class="chat-send">
+				<ul>
+					<li><a href="#none"  class="counsel-option-open"><img src="images/chat-btn-plus.png" alt="상담 부가창 버튼 열기"></a></li>
+					<li><label for="Chatbar" class="hide">대화 내용 입력</label><input type="text" title="대화 내용 입력" id="Chatbar" placeholder="궁금하신 내용을 입력해 주세요."></li>
+				</ul>
+				<span class="btn-send"><a href="#none"><img src="images/chat-btn-send.png" alt="대화 전송"></a></span>
+			</div>
+			<!--// 대화 입력 -->
+
+			<!-- 바로가기 버튼 -->
+			<div class="counsel-option-layer">
+				<div class="counsel-option-bg">
+					<a href="#none" class="addClose-btn"><span class="hide">닫기</span></a>
+					<a href="#none" class="add-btn01"><span>상담원 연결하기</span></a>
+					<a href="#none" class="add-btn02"><span>새 상담 시작하기</span></a>
+				</div>
+			</div>
+			<!--// 바로가기 버튼 -->
+
+		</div>
+		<!--// 챗봇 하단 -->
+	</div>
+	<!--// 챗봇  Start -->
+
+	<!-- 레이어 팝업 - 날짜 선택 -->
+	<div id="layerDayPopup" class="layer-popup">
+		<div class="popLayerBox">
+			<div class="popLayerHead">
+				<p>2017 Jan</p>
+				<a href="javascript:layerPopupClose(layerDayPopup);" class="btn-layer-close"><img src="images/chat-btn-close.png" alt="팝업 닫기"></a>
+			</div>
+
+			<div class="popLayerConDay">
+				<div class="slider weekday-moon">
+					<div><a href="#none"><span>Jan</span>01</a></div>
+					<div><a href="#none"><span>Feb</span>02</a></div>
+					<div><a href="#none"><span>Mar</span>03</a></div>
+					<div><a href="#none"><span>Apr</span>04</a></div>
+					<div><a href="#none"><span>May</span>05</a></div>
+					<div><a href="#none"><span>Jun</span>06</a></div>
+					<div><a href="#none"><span>Jul</span>07</a></div>
+					<div><a href="#none"><span>Aug</span>08</a></div>
+					<div><a href="#none"><span>Sep</span>09</a></div>
+					<div><a href="#none"><span>Oct</span>10</a></div>
+					<div><a href="#none"><span>Nov</span>11</a></div>
+					<div><a href="#none"><span>Dec</span>12</a></div>
+				</div>
+
+				<table class="dayTableList">
+					<caption>달력 표시 - 한달 (월,화,수,목,금,토,일) 1일부터 최대 31일까지</caption>
+					<colgroup>
+						<col style="width:14%">
+						<col style="width:14%">
+						<col style="width:14%">
+						<col style="width:14%">
+						<col style="width:14%">
+						<col style="width:14%">
+						<col style="width:">
+					</colgroup>
+					<thead>
+						<tr>
+							<th class="sunDay">SUN</th>
+							<th>MON</th>
+							<th>TUE</th>
+							<th>WED</th>
+							<th>THU</th>
+							<th>FRI</th>
+							<th>SAT</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="sunDay"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td><a href="#none">01</a></td>
+							<td><a href="#none">02</a></td>
+						</tr>
+						<tr>
+							<td class="sunDay"><a href="#none" class="on">03</a></td>
+							<td><a href="#none">04</a></td>
+							<td><a href="#none">05</a></td>
+							<td><a href="#none" class="on">06</a></td>
+							<td><a href="#none">07</a></td>
+							<td><a href="#none">08</a></td>
+							<td><a href="#none">09</a></td>
+						</tr>
+						<tr>
+							<td class="sunDay"><a href="#none">10</a></td>
+							<td><a href="#none">11</a></td>
+							<td><a href="#none">12</a></td>
+							<td><a href="#none"  class="off">13</a></td>
+							<td><a href="#none">14</a></td>
+							<td><a href="#none">15</a></td>
+							<td><a href="#none">16</a></td>
+						</tr>
+						<tr>
+							<td class="sunDay"><a href="#none">17</a></td>
+							<td><a href="#none">18</a></td>
+							<td><a href="#none">19</a></td>
+							<td><a href="#none">20</a></td>
+							<td><a href="#none">21</a></td>
+							<td><a href="#none">22</a></td>
+							<td><a href="#none">23</a></td>
+						</tr>
+						<tr>
+							<td class="sunDay"><a href="#none">24</a></td>
+							<td><a href="#none">25</a></td>
+							<td><a href="#none">26</a></td>
+							<td><a href="#none">27</a></td>
+							<td><a href="#none">28</a></td>
+							<td><a href="#none">29</a></td>
+							<td><a href="#none">30</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="popLayerFoot">
+				<a href="javascript:layerPopupClose(layerDayPopup);" class="btn-ok-close">완 료</a>
+			</div>
+		</div>
+
+	</div>
+	<!--// 레이어 팝업 -->
+
+	<!-- 레이어 팝업 - 시간 선택 -->
+	<div id="layerTimePopup" class="layer-popup">
+		<div class="popLayerBox">
+			<div class="popLayerHead">
+				<p>시간 선택</p>
+				<a href="javascript:layerPopupClose(layerTimePopup);" class="btn-layer-close"><img src="images/chat-btn-close.png" alt="팝업 닫기"></a>
+			</div>
+
+			<div class="popLayerCon">
+				<dl class="reservation-time">
+					<dt>원하시는 예약 시간을 선택해 주세요.</dt>
+					<dd class="active">10:00</dd>
+					<dd>11:00</dd>
+					<dd>11:30</dd>
+					<dd>12:00</dd>
+					<dd>13:00</dd>
+					<dd>14:00</dd>
+					<dd>15:30</dd>
+					<dd>17:00</dd>
+					<dd>19:00</dd>
+				</dl>
+			</div>
+
+			<div class="popLayerFoot">
+				<a href="javascript:layerPopupClose(layerTimePopup);" class="btn-ok-close">완 료</a>
+			</div>
+		</div>
+	</div>
+	<!--// 레이어 팝업 -->
+
+	<!-- 레이어 팝업 - 인원 선택 -->
+	<div id="layerNumPopup" class="layer-popup">
+		<div class="popLayerBox">
+			<div class="popLayerHead">
+				<p>인원 선택</p>
+				<a href="javascript:layerPopupClose(layerNumPopup);" class="btn-layer-close"><img src="images/chat-btn-close.png" alt="팝업 닫기"></a>
+			</div>
+
+			<div class="popLayerCon">
+				<div class="numPeople">
+					<dl>
+						<dt>어른</dt>
+						<dd class="count-txt"><span class="numCount">0</span>명</dd>
+						<dd class="count-btn">
+							<a href="#none" class="numUp"><img src="images/icon-plus.gif" alt="1명 증가"></a>
+							<a href="#none" class="numDown"><img src="images/icon-minus.gif" alt="1명 감소"></a>
+						</dd>
+					</dl>
+					<dl>
+						<dt>아이</dt>
+						<dd class="count-txt"><span class="numCount">0</span>명</dd>
+						<dd class="count-btn">
+							<a href="#none" class="numUp"><img src="images/icon-plus.gif" alt="1명 증가"></a>
+							<a href="#none" class="numDown"><img src="images/icon-minus.gif" alt="1명 감소"></a>
+						</dd>
+					</dl>
+					<p>( 아이는 36개월~만12세를 기준으로 합니다. )</p>
+				</div>
+			</div>
+
+			<div class="popLayerFoot">
+				<a href="javascript:layerPopupClose(layerNumPopup);" class="btn-ok-close">완 료</a>
+			</div>
+		</div>
+	</div>
+	<!--// 레이어 팝업 -->
+
+	<!-- 레이어 팝업 - 연락처 정보 입력 선택 -->
+	<div id="layerTellPopup" class="layer-popup">
+		<div class="popLayerBox">
+			<div class="popLayerHead">
+				<p>연락처 정보 입력</p>
+				<a href="javascript:layerPopupClose(layerTellPopup);" class="btn-layer-close"><img src="images/chat-btn-close.png" alt="팝업 닫기"></a>
+			</div>
+
+			<div class="popLayerCon">
+				<ul class="tellPhone">
+					<li>
+						<select id="" title="통신사 선택">
+							<option value="" selected="selected">010</option>
+							<option value="">011</option>
+						</select>
+					</li>
+					<li class="hypen"> - </li>
+					<li><input type="text" id="" ></li>
+					<li class="hypen"> - </li>
+					<li><input type="text" id="" ></li>
+				</ul>
+			</div>
+
+			<div class="popLayerFoot">
+				<a href="javascript:layerPopupClose(layerTellPopup);" class="btn-ok-close">완 료</a>
+			</div>
+		</div>
+	</div>
+	<!--// 레이어 팝업 -->
+
+</div>
+
+</body>
+</html>

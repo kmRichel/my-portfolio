@@ -1,0 +1,211 @@
+@charset "euc-kr";
+/* 20180605 hackers LMSTim Publisher  kmp */
+
+/*기본태그 정의*/
+html, body {padding:0;margin:0;height:100%;box-sizing:border-box;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-tap-highlight-color:transparent;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;}
+body, td, select, textarea, input {font-size:15px;font-family:SDGothicNeoa,Malgun Gothic, Arial, Dotum, '돋움', sans-serif;color:#1b1b1b; word-break:break-all;letter-spacing:-1px}
+
+/* 마진과 패딩의 초기화 */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, p, th, td, span{margin:0;padding:0;box-sizing:border-box;}
+
+/* 헤더 폰트 사이즈 초기화 */
+h1, h2, h3, h4, h5, h6 {font-size:100%;}
+
+/* 리스트의 스타일 제거 */
+ol, ul {list-style:none;}
+
+/* 강조 구문 */
+em, i{font-style:normal;}
+
+/* 테이블 스타일 초기화 */
+table {border-collapse:collapse;border-spacing:0;table-layout:fixed;}
+
+/* 이미지 및 필드셋에서 보더 표시 초기화 */
+fieldset, img {border:0;}
+img{vertical-align:middle;max-width:100%;width:100%;}
+
+/* 캡션 텍스트 정렬 초기화 */
+caption {text-align:left;}
+
+/* 폼태그의 초기화 */
+select {font-size:0.85rem;font-family:SDGothicNeoa,NanumGothic,HelveticaNeue,Dotum,'돋움',sans-serif;;vertical-align:middle;color:#1b1b1b;background-color:#fff;height:35px;padding-left:5px;border:1px solid #d6d6d6;width:100%;}
+select:required:invalid {color:#a9a9a9}
+option[value=""][disabled] {display:none}
+option {color:#000}
+input[type="checkbox"], input[type="radio"] {vertical-align:middle;width:13px;height:13px;margin:3px 0 0 1px}
+input {font-size:0.85rem;font-family:SDGothicNeoa,NanumGothic,HelveticaNeue,Dotum,'돋움', sans-serif;vertical-align:middle;color:#1b1b1b;height:35px;border:1px solid #d6d6d6;padding:0 5px;width:100%;box-sizing:border-box;}
+input:disabled {background-color:#fff}
+textarea {font-size:0.85rem;font-family:SDGothicNeoa,NanumGothic,HelveticaNeue,Dotum,'돋움', sans-serif;line-height:140%;color:#1b1b1b;border:1px solid #e4e4e4;padding:10px;width:100%;box-sizing:border-box;vertical-align: middle;}
+button {background-color:transparent;border:0;margin:0;padding:0;overflow:visible;white-space:nowrap;cursor:pointer}
+:focus {outline: 0;}
+
+a:link    {color:#1b1b1b; text-decoration:none;}
+a:active    {color:#1b1b1b; text-decoration:none;}
+a:visited    {color:#1b1b1b; text-decoration:none;}
+a:hover    {color:#1b1b1b; text-decoration:none;}
+
+/* hidden 처리 */
+caption, .txt_hide{width:0;height:0;font-size:0;line-height:0;overflow:hidden;visibility:hidden;text-indent:-99999px}
+.hide{position:absolute;top:-9999px;width:0;height:0;font-size:0;line-height:0;overflow:hidden;visibility:hidden;}
+.hide-text {font-size: 1px;height: 1px;left: -9999px;line-height: 0;position: absolute;width: 1px;}
+hr{border:none;border-top:1px solid #ccc;}
+
+/* bd none */
+.bdt_none{border-top:0 !important;}
+.bdl_none{border-left:0 !important;}
+.bdr_none{border-right:0 !important;}
+.bdb_none{border-bottom:0 !important;}
+
+/* ..처리 */
+.txt_ellipsis{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+
+/* placeholder 처리 */
+.placeholder {color:#909090;font-size:0.8rem;}
+:-ms-input-placeholder {color:#909090;font-size:0.8rem;}		/* M$ */
+::-webkit-input-placeholder {color:#909090;font-size:0.8rem;} /* webkit */
+::-moz-placeholder{color:#909090;font-size:0.8rem;}				/* firefox */
+
+/* 단어별 글자 */
+.word_block{word-break:keep-all;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap;word-wrap:break-word;}
+
+/* radio */
+.radio-box{display:inline-block; position:relative;cursor:pointer;}
+.radio-box input[type="radio"]{-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";filter: alpha(opacity=0);opacity:0;width:0;height:0;margin:0;}
+.radio-box label{cursor:pointer;line-height:24px;}
+.radio-box label:after{display:inline-block; content:''; position:absolute; top:0; left:0; width:24px; height:24px;background:url(https://mpublic.hackers.com/images/contents/icon-radio-off.png) no-repeat 0 0;background-size:24px auto;}
+.radio-box input[type="radio"]:checked + label:after{background:url(https://mpublic.hackers.com/images/contents/icon-radio-on.png) no-repeat 0 0;background-size:24px auto;}
+
+.radio-box.radio-arc{width:20px;height:20px;}
+.radio-box.radio-arc label{cursor:pointer;line-height:20px;}
+.radio-box.radio-arc label:after{width:20px; height:20px;background:url(https://mpublic.hackers.com/images/contents/icon-radio-arc-off.gif) no-repeat 0 0;background-size:20px auto;}
+.radio-box.radio-arc input[type="radio"]:checked + label:after{background:url(https://mpublic.hackers.com/images/contents/icon-radio-arc-on.gif) no-repeat 0 0;background-size:20px auto;}
+
+.check-radio{display:inline-block; position:relative;cursor:pointer;line-height:24px;}
+.check-radio label{cursor:pointer}
+.check-radio input[type="checkbox"]{margin:0;position:absolute; top:0; left:0; z-index:1; width:24px; height:24px; cursor:pointer;-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";filter: alpha(opacity=0);opacity:0;}
+.check-radio:after{display:inline-block; content:''; position:absolute; top:0; left:0; width:24px; height:24px;background:url(https://mpublic.hackers.com/images/contents/icon-radio-off.png) no-repeat 0 0;background-size:24px auto;}
+.check-radio.active:after{background:url(https://mpublic.hackers.com/images/contents/icon-radio-on.png) no-repeat 0 0;background-size:24px auto;}
+
+.check-radio.right-check label{padding-right:30px;}
+.check-radio.right-check input[type="checkbox"]{left:initial; right:0; }
+.check-radio.right-check:after{left:initial; right:0; }
+
+.radio-box-arc{display:inline-block; position:relative;cursor:pointer;line-height:20px;}
+.radio-box-arc input[type="radio"]{-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";filter: alpha(opacity=0);opacity:0;width:0;height:0;margin:0;}
+.radio-box-arc label{cursor:pointer;padding-left:25px;line-height:20px;}
+.radio-box-arc label:after{display:inline-block; content:''; position:absolute; top:0; left:0; width:20px; height:20px;background:url(https://mpublic.hackers.com/images/contents/icon_check_arc.png) no-repeat 0 0;background-size:20px auto;}
+.radio-box-arc input[type="radio"]:checked + label:after{background-position:0 -21px;}
+
+/* check box */
+.radio-square{display:inline-block; position:relative;cursor:pointer;line-height:19px;}
+.radio-square input[type="radio"]{-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";filter: alpha(opacity=0);opacity:0;width:0;height:0;margin:0;}
+.radio-square label{cursor:pointer;padding-left:20px;font-size:0.9rem;color:#909090;}
+.radio-square label:after{display:inline-block; content:''; position:absolute; top:2px; left:0; width:18px; height:18px;background:url(https://mpublic.hackers.com/images/contents/icon-checkbox-off.png) no-repeat 0 0;background-size:18px auto;}
+.radio-square input[type="radio"]:checked + label:after{background:url(https://mpublic.hackers.com/images/contents/icon-checkbox-on.png) no-repeat 0 0;background-size:18px auto;}
+.radio-square label.active{color:#2a6ee2;}
+
+.checkbox{display:inline-block; position:relative;cursor:pointer;line-height:20px;}
+.checkbox label{cursor:pointer;padding-left:30px;}
+.checkbox input[type="checkbox"]{margin:0;position:absolute; top:0; left:0; z-index:1; width:20px; height:20px; cursor:pointer;-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";filter: alpha(opacity=0);opacity:0;}
+.checkbox:after{display:inline-block; content:''; position:absolute; top:0; left:0; width:20px; height:20px;background:url(https://mpublic.hackers.com/images/contents/icon-checkbox-off.png) no-repeat 0 0;background-size:20px auto;}
+.checkbox.active:after{background:url(https://mpublic.hackers.com/images/contents/icon-checkbox-on.png) no-repeat 0 0;background-size:20px auto;}
+
+.checkbox.acr2{display:inline-block; position:relative;cursor:pointer;line-height:20px;}
+.checkbox.acr2 label{cursor:pointer;padding-left:25px;}
+.checkbox.acr2 input[type="checkbox"]{margin:0;position:absolute; top:0; left:0; z-index:1; width:20px; height:20px; cursor:pointer;-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";filter: alpha(opacity=0);opacity:0;}
+.checkbox.acr2:after{display:inline-block; content:''; position:absolute; top:0; left:0; width:20px; height:20px;background:url(https://mpublic.hackers.com/images/contents/icon_check_arc.png) no-repeat 0 0;background-size:20px auto;}
+.acr2.active:after{background-position:0 -21px;}
+
+
+
+
+/* font */
+.font_n{font-weight:normal !important;}
+
+/* font-color */
+.color_blue{color:#2864ca !important;}
+.color_type_1{color:#2a6ee2 !important;}
+.color_gray{color:#909090 !important;}
+
+
+/* align */
+.align_left{text-align:left !important;}
+.align_cen{text-align:center !important;}
+.align_right{text-align:right !important;}
+
+/* margin */
+.mt0{margin-top:0 !important;}
+.mt05{margin-top:5px !important;}
+.mt10{margin-top:10px !important;}
+.mt15{margin-top:15px !important;}
+.mt20{margin-top:20px !important;}
+.mt25{margin-top:25px !important;}
+.mt30{margin-top:30px !important;}
+
+.mr0{margin-right:0 !important;}
+.mr05{margin-right:5px !important;}
+.mr10{margin-right:10px !important;}
+.mr15{margin-right:15px !important;}
+.mr20{margin-right:20px !important;}
+.mr25{margin-right:25px !important;}
+.mr30{margin-right:30px !important;}
+
+.mb0{margin-bottom:0 !important;}
+.mb05{margin-bottom:5px !important;}
+.mb10{margin-bottom:10px !important;}
+.mb15{margin-bottom:15px !important;}
+.mb20{margin-bottom:20px !important;}
+.mb25{margin-bottom:25px !important;}
+.mb30{margin-bottom:30px !important;}
+
+.ml0{margin-left:0 !important;}
+.ml05{margin-left:5px !important;}
+.ml10{margin-left:10px !important;}
+.ml15{margin-left:15px !important;}
+.ml20{margin-left:20px !important;}
+.ml25{margin-left:25px !important;}
+.ml30{margin-left:30px !important;}
+
+/* padding */
+.plr10{padding-left:10px !important;;padding-right:10px !important;;}
+.pt0{padding-top:0 !important;}
+.pt05{padding-top:5px !important;}
+.pt10{padding-top:10px !important;}
+.pt15{padding-top:15px !important;}
+.pt20{padding-top:20px !important;}
+.pt25{padding-top:25px !important;}
+.pt30{padding-top:30px !important;}
+
+.pr0{padding-right:0 !important;}
+.pr05{padding-right:5px !important;}
+.pr10{padding-right:10px !important;}
+.pr15{padding-right:15px !important;}
+.pr20{padding-right:20px !important;}
+.pr25{padding-right:25px !important;}
+.pr30{padding-right:30px !important;}
+
+.pb0{padding-bottom:0 !important;}
+.pb05{padding-bottom:5px !important;}
+.pb07{padding-bottom:7px !important;}
+.pb10{padding-bottom:10px !important;}
+.pb15{padding-bottom:15px !important;}
+.pb20{padding-bottom:20px !important;}
+.pb25{padding-bottom:25px !important;}
+.pb30{padding-bottom:30px !important;}
+.pb35{padding-bottom:35px !important;}
+.pb40{padding-bottom:40px !important;}
+.pb45{padding-bottom:45px !important;}
+.pb50{padding-bottom:50px !important;}
+.pb68{padding-bottom:68px !important;}
+
+.pl0{padding-left:0 !important;}
+.pl05{padding-left:5px !important;}
+.pl10{padding-left:10px !important;}
+.pl15{padding-left:15px !important;}
+.pl20{padding-left:20px !important;}
+.pl25{padding-left:25px !important;}
+.pl30{padding-left:30px !important;}
+.pl40{padding-left:40px !important;}
+.pl50{padding-left:50px !important;}
+
+

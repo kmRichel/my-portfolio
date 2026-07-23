@@ -1,0 +1,370 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/; charset=euc-kr" />
+<title>Project - 해커스 모바일 독학사</title>
+<style>
+* {font-family:font-family: "Nanum Gothic", sans-serif;;font-size:12px;color:#333;margin:0;padding:0;}
+ul,li{margin:0;padding:0;list-style:none;}
+h1 {position:relative;height:35px;font-size:26px; font-family: "Nanum Gothic", sans-serif;;padding:10px;margin-bottom:10px;border-bottom:2px solid #666;}
+h2 {font:bold 20px/24px font-family: "Nanum Gothic", sans-serif;;padding:30px 0 0 0;}
+dt {margin:0;padding:10px 0;border-top:1px solid #666;}
+dd {margin:0;padding:0;}
+.intro {position:absolute;top:0;right:20px;width:600px;text-align:right;line-height:14px;color:#999;}
+.menutree {border-collapse:collapse;width:100%;}
+.menutree thead th {background:#eee;}
+.menutree th {border:1px solid #999;padding:5px 0;vertical-align:middle; font-weight:normal;}
+.menutree tbody{border-bottom:2px soild blue;margin-bottom:3px;}
+.menutree tbody tr th { text-align:left; font-weight:bold; padding-left:10px;}
+.menutree td {border:1px solid #999;padding:5px 0;text-align:center;}
+.menutree td.url {text-align:left;padding-left:10px;}
+
+a {cursor:pointer; color:#02557b;}
+a:visited {color:#666;}
+.tit {background:#6b7bae; color:#fff; }
+.html {background:#feaea5;}
+
+
+.icon_wrap{position:absolute;top:84px;right:20px;}
+.icon_wrap li{float:left;padding-left:10px;color:#366efb;font-weight:bold;}
+
+.top_txt{overflow:hidden;padding-bottom:10px;width:100%;}
+.style_sys{float:left;}
+.color_sys{float:right;}
+.color_sys li{display:inline-block;margin:0 10px;}
+
+.asp_f {background:#ffa76f;}				/* 보류 */
+.dev_f {background:#fff71d;}				/* 진행중 */
+.complete_f {background:#b5b5b5;}		/*  */
+.question_f {background:red;}				/* 오류 */
+
+.asp {background:#ffa76f;}				/* 보류 */
+.dev {background:#fff71d;}				/* 진행중 */
+.complete {background:#b5b5b5;}		/*  */
+.question {background:red;}				/* 오류 */
+.question td,
+.question th{color:#fff;}
+
+.{background:#1a8f4c;color:#fff;}
+.psd-{background:#fdff2f;color:;font-weight:bold;}
+
+.intro{font-size:15px;padding:5px;line-height:22px;}
+.intro strong{font-size:15px;}
+</style>
+
+</head>
+
+<body>
+<div class="layout_wrap">
+	<div style="position:fixed;top:0;left:0;width:100%;background:#fff;">
+		<h1>
+			Project - 해커스 모바일 독학사(charset=euc-kr)
+		</h1>
+		<div class="top_txt">
+			<ul class="color_sys">
+				<li>보류 : <span class="asp_f">.asp</span> </li>
+				<li> : <span class="complete_f">.complete</span> </li>
+			</ul>
+		</div>
+		<table class="menutree" summary="메뉴구조도">
+			<colgroup>
+				<col width="15%" />
+				<col width="12%" />
+				<col width="8%" />
+				<col width="8%" />
+				<col width="10%" />
+				<col width="8%" />
+				<col width="*" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th>1depth</th>
+					<th>2depth</th>
+					<th>3depth</th>
+					<th>4depth</th>
+					<th>5depth</th>
+					<th>PageType</th>
+					<th>URL</th>
+				</tr>
+			</thead>
+		</table>
+	</div>
+
+	<div style="padding-top:138px;">
+	<table class="menutree" summary="메뉴구조도">
+		<colgroup>
+			<col width="15%" />
+			<col width="12%" />
+			<col width="8%" />
+			<col width="8%" />
+			<col width="10%" />
+			<col width="8%" />
+			<col width="*" />
+		</colgroup>
+		<tbody>
+			<tr>
+				<th colspan="11" class="tit">레이아웃</th>
+			</tr>
+
+			<tr class="complete">
+				<th>레이아웃</th>
+				<th>Gnb 포함</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="html/layout_gnb.html" target="_blank">layout_gnb.html</a></td>
+			</tr>
+
+			<tr class="complete">
+				<th>레이아웃</th>
+				<th>Gnb 미포함</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="html/layout.html" target="_blank">layout.html</a></td>
+			</tr>
+
+			<tr>
+				<th colspan="11" class="tit">메인</th>
+			</tr>
+
+			<tr class="complete">
+				<th>MAIN</th>
+				<th>메인</th>
+				<th>로그인</th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="html/main_login.html" target="_blank">main_login.html</a></td>
+			</tr>
+			<tr class="complete">
+				<th></th>
+				<th></th>
+				<th>로그아웃</th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="html/main_logout.html" target="_blank">main_logout.html</a></td>
+			</tr>
+
+			<tr class="complete">
+				<th></th>
+				<th>전체메뉴모음</th>
+				<th>로그인</th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="html/lnb_login.html" target="_blank">lnb_login.html</a></td>
+			</tr>
+
+			<tr class="complete">
+				<th></th>
+				<th></th>
+				<th>로그아웃</th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="html/lnb_logout.html" target="_blank">lnb_logout.html</a></td>
+			</tr>
+
+			<tr class="complete">
+				<th></th>
+				<th>패밀리 사이트(통합)</th>
+				<th>메인에 포함</th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="html/main_login.html" target="_blank">main_login.html</a></td>
+			</tr>
+
+			<tr class="complete">
+				<th></th>
+				<th>시험일정</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="html/main_ex_calender.html" target="_blank">main_ex_calender.html</a></td>
+			</tr>
+
+			<tr>
+				<th colspan="11" class="tit">강의신청</th>
+			</tr>
+
+			<tr class="complete">
+				<th></th>
+				<th>강의신청</th>
+				<th>목록</th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="html/book_list.html" target="_blank">book_list.html</a></td>
+			</tr>
+
+			<tr class="complete">
+				<th></th>
+				<th></th>
+				<th></th>
+				<th>검색결과</th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="html/book_list_no.html" target="_blank">book_list_no.html</a></td>
+			</tr>
+
+			<tr class="complete">
+				<th></th>
+				<th></th>
+				<th></th>
+				<th>로그인 알림</th>
+				<th></th>
+				<td>레이어팝업</td>
+				<td class="url"><a href="html/layer_login.html" target="_blank">layer_login.html</a></td>
+			</tr>
+
+			<tr class="complete">
+				<th></th>
+				<th></th>
+				<th></th>
+				<th>장바구니 알림</th>
+				<th></th>
+				<td>레이어팝업</td>
+				<td class="url"><a href="html/layer_basket.html" target="_blank">layer_basket.html</a></td>
+			</tr>
+
+			<tr class="complete">
+				<th></th>
+				<th></th>
+				<th>강의상세정보</th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="html/book_view.html" target="_blank">book_view.html</a></td>
+			</tr>
+
+			<tr class="complete">
+				<th></th>
+				<th></th>
+				<th></th>
+				<th>강의소개</th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="html/book_view_tab1.html" target="_blank">book_view_tab1.html</a></td>
+			</tr>
+
+			<tr class="complete">
+				<th></th>
+				<th></th>
+				<th></th>
+				<th>강의구성</th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="html/book_view_tab2.html" target="_blank">book_view_tab2.html</a></td>
+			</tr>
+
+			<tr class="complete">
+				<th></th>
+				<th>구매하기</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td>플로팅 배너</td>
+				<td class="url"><a href="html/book_view_buy.html" target="_blank">book_view_buy.html</a></td>
+			</tr>
+
+			<tr class="complete">
+				<th></th>
+				<th>교재신청</th>
+				<th>목록</th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="html/book_store_list.html" target="_blank">book_store_list.html</a></td>
+			</tr>
+
+			<tr class="complete">
+				<th></th>
+				<th></th>
+				<th>상세보기</th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="html/book_store_view.html" target="_blank">book_store_view.html</a></td>
+
+			</tr>
+
+			<tr class="complete">
+				<th></th>
+				<th>교재미리보기</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td>PC UI와 비슷</td>
+				<td class="url"><a href="html/book_preview.html" target="_blank">book_preview.html</a></td>
+
+			</tr>
+
+			<tr>
+				<th colspan="11" class="tit">학과페이지</th>
+			</tr>
+
+			<tr>
+				<th></th>
+				<th>전단계 패키지</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="" target="_blank"></a></td>
+
+			</tr>
+			<tr>
+				<th></th>
+				<th>공통교양</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="" target="_blank"></a></td>
+
+			</tr>
+			<tr>
+				<th></th>
+				<th>간호학과</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="" target="_blank"></a></td>
+
+			</tr>
+			<tr>
+				<th></th>
+				<th>경영학과</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="" target="_blank"></a></td>
+
+			</tr>
+
+			<tr>
+				<th></th>
+				<th>영어영문학과</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<td></td>
+				<td class="url"><a href="" target="_blank"></a></td>
+
+			</tr>
+
+		</tbody>
+	</table>
+	</div>
+</div>
+
+</body>
+</html>

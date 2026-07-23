@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="Author" content="해커스 독학사" />
+    <meta name="Keywords" content="해커스독학사, 독학학위제, 간호독학사, 간호학4단계, 독학사1단계, 독학사 교양공통, 독학사4단계, 독학사2단계, 독학사3단계, 독학사교재, 독학사인강" />
+	<meta name="Description" content="해커스독학사,독학학위제 간호독학사·독학사1단계 등 시험대비 독학사인강/모의고사교재" />
+    <title>해커스 독학사</title>
+	<link type="text/css" href="../css/base.css" rel="stylesheet"><!-- 초기화 css -->
+	<link type="text/css" href="../css/webfont.css" rel="stylesheet"><!-- 웹폰트 css -->
+	<link type="text/css" href="../css/common.css" rel="stylesheet"><!-- 공통 레이아웃 css -->
+	<link type="text/css" href="../css/bxslider.css" rel="stylesheet">
+	<link type="text/css" href="../css/swiper.min.css" rel="stylesheet">
+	<link type="text/css" href="../css/books.css" rel="stylesheet"><!-- books css -->
+	<script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="../js/auto_map.js"></script>
+	<script type="text/javascript" src="../js/bxSlider.min.js"></script>
+	<script type="text/javascript" src="../js/bxslider.js"></script>
+	<script type="text/javascript" src="../js/swiper.min.js"></script>
+	<script type="text/javascript" src="../js/common.ui.js"></script><!-- 공통 ui js -->
+</head>
+<body class="body_gray">
+
+<style type="text/css">
+.body_gray{background:#e9eaeb;}
+.view_books_area{position:relative;padding:57px 0 60px 0;}
+.view_books_top{position:fixed;top:0;left:0;right:0;background:#fff;border-bottom:1px solid #d7d7d7;}
+.view_books_top h2{text-align: center;padding: 16px 0;color: #585858;font-size: 18px;font-weight: normal;}
+.view_books_top .view_books_prev{position:absolute;top:16px;right:15px;width:18px;}
+
+.view_books_list{background:#e9eaeb;padding:5%;}
+.view_books_list li img{box-shadow: 3px 4px 5px 3px rgba(153,153,153,0.6);}
+
+.view_books_btn{background:#e9eaeb;padding:5%;position:relative;}
+.view_books_btn ul{display:table;width:100%;}
+.view_books_btn li{display:table-cell;text-align:center;}
+.view_books_btn li .prev_first,
+.view_books_btn li .next_last{width:20px;display:inline-block;}
+
+.view_books_btn li .prev,
+.view_books_btn li .next{width:10px;display:inline-block;}
+
+.books_btn_go  input{width:50px;text-align:center;}
+
+
+
+</style>
+<div class="view_books_area">
+	<div class="view_books_top">
+		<h2>교재 미리보기</h2>
+		<span class="view_books_prev">
+			<a href="#;"><img src="../images/books/book_btn_prev.png" alt="이전" ></a>
+		</span>
+	</div>
+
+	<!-- 책 정보 -->
+	<div class="view_books_list">
+		<ul>
+			<li><img src="https://www.haksa2080.com/zfiles/book_img/preview/123/korealanguage_page_(1).jpg" /></li>
+		</ul>
+	</div>
+
+	<!-- 버튼 -->
+	<div class="view_books_btn">
+		<ul>
+			<li><a href="/site/book/book_preview.php?book_id=123&page=1" class="prev_first"><img src="../images/books/preview_first.png" alt="처음"></a></li>
+			<li><a class="prev"><img src="../images/books/preview_prev.png" alt="이전"></a></li>
+			<li><!-- 카운트 -->
+				<div class="books_btn_go">
+					<span class="first_cnt">1</span>
+					<span class="slush">/</span>
+					<span class="last_cnt">20</span>
+				</div>
+			</li>
+			<li><a href="/site/book/book_preview.php?book_id=123&page=3" class="next"><img src="../images/books/preview_next.png" alt="다음"></a></li>
+			<li><a href="/site/book/book_preview.php?book_id=123&page=20" class="next_last"><img src="../images/books/preview_last.png" alt="마지막"></a></li>
+		</ul>
+	</div>
+
+	<!-- 구매하기 버튼 -->
+	<div class="fixed_buy">
+		<button type="button" class="btn_green" onclick="">구매하기</button>
+	</div>
+</div>
+
+
+<script>
+    function goto_page() {
+        var total_view_page = $("#total_view_page").val();
+        var now_view_page = $("#now_view_page").val();
+
+        if (now_view_page == "") {
+            alert("이동할 페이지 번호를 입력하세요.");
+            $("#now_view_page").focus();
+            return;
+        }
+
+        if ( parseInt(now_view_page) > parseInt(total_view_page) ) {
+            alert("잘못된 페이지 번호 입니다.");
+            return;
+        }
+
+        ch_page = now_view_page % 2 ;
+
+        if (ch_page == "0") {
+            page = now_view_page - 1;
+        } else {
+            page = now_view_page;
+        }
+
+        window.location.href = "/site/book/book_preview.php?book_id=<?=$book_id?>&page=" + page;
+    }
+
+</script>
+
+
+</body>
+</html>
+

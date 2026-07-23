@@ -1,0 +1,256 @@
+@charset "utf-8";
+
+/* margin */
+.mt5{margin-top:5px !important;}
+.mt6{margin-top:6px !important;}
+.mt10{margin-top:10px !important;}
+.mt20{margin-top:20px !important;}
+.mt30{margin-top:30px !important;}
+.mt40{margin-top:40px !important;}
+.ml10{margin-left:10px !important;}
+.ml20{margin-left:20px !important;}
+.ml30{margin-left:30px !important;}
+.ml40{margin-left:40px !important;}
+.mr10{margin-right:10px !important;}
+.mr20{margin-right:20px !important;}
+.mr30{margin-right:30px !important;}
+.mr40{margin-right:40px !important;}
+.mb10{margin-bottom:10px !important;}
+.mb20{margin-bottom:20px !important;}
+.mb30{margin-bottom:30px !important;}
+.mb40{margin-bottom:40px !important;}
+
+/* align */
+.box-l, .btn-l{float:left;}
+.box-r, .btn-r{float:right;}
+.float-wrap{*zoom:1;}
+.float-wrap:after{display:block; content:''; clear:both;}
+
+.txt-l{text-align:left !important;}
+.txt-c{text-align:center !important;}
+.txt-r{text-align:right !important;}
+
+.verti-top{vertical-align:top !important;;}
+.verti-mid{vertical-align:middle !important;;}
+.verti-bot{vertical-align:bottom !important;;}
+
+/* color-r */
+.color-r{color:#ed1c24 !important;}
+
+/* line */
+.line-through{text-decoration:line-through;}
+
+.selectbox{vertical-align:middle;}
+
+/* button */
+.btn-arrow-d{background:url(../images/btn/btn_arrow_down.png) no-repeat 0 0;}
+.btn-arrow-u{background:url(../images/btn/btn_arrow_up.png) no-repeat 0 0;}
+.btn-close {background:url(../images/btn/btn_gnb_close.png) no-repeat 50% 50%;}
+
+/* popup btn */
+.btn-lct_popup{float:right; display:inline-block; width:100px; height:35px; background-color:#333; text-align:center;
+    box-sizing:border-box;
+    border-radius:2px;
+    -webkit-border-radius:2px;
+    -moz-border-radius:2px;
+    -ms-border-radius:2px;
+}
+.btn-lct_popup:after{display:block; content:''; clear:both;}
+.btn-lct_popup a{line-height:35px; color:#fff; font-size:16px;}
+
+/* 리류 리스트 */
+.review-list{margin-top:15px;}
+.review-list .list-table{border-top:1px solid #ddd;}
+.review-list td{position:relative; padding:16px 20px;}
+.review-list .review-head .review_name{padding-left:24px; line-height:14px; color:#777; background:url(../images/icon/ico_logout.png) no-repeat 0 50%; font-size:14px;}
+.review-list .review-head .rivew_date{line-height:14px; color:#777; font-size:14px;}
+.review-list .review-head .review_edit{display:none; line-height:14px; margin-left:12px;}
+.review-list .review-head .review_edit a{line-height:14px; color:#eb1c24; font-size:14px;}
+#cul-course .review-list .on .review-head .review_name{background:url(../images/icon/ico_login.png) no-repeat 0 50%;}
+.review-list .on .review-head .review_edit{display:block;}
+.review-list .review_editor{display:none; position:absolute; top:40px; height:; background-color:#fff;}
+.review-list .review_editor form{position:relative;}
+.review-list .review_editor p{position:absolute; top:13px; right:13px;}
+.review-list .review_editor p em{color:#eb1c24;}
+.review-txt{line-height:22px; margin-top:10px; font-size:16px;}
+
+
+.tab-area{margin-top:13px;}
+.srch-inner{margin-top:10px;}
+.tab_conts-box{display:none;}
+.tab_conts-box.active{display:block;}
+
+.branch-spot{display:inline-block; margin:50px 0 9px 0px; line-height:20px; font-size:20px; letter-spacing:-.025em;}
+
+
+
+/*
+@media screen and (min-width:200px) and (max-width:657px){
+    .mobile .btn.btn-back,
+    .mobile .btn.btn-submit{width:82px; height:40px; line-height:40px;}
+    .mobile .btn.btn-bl{width:154px; height:40px; line-height:40px;}
+
+    .mobile .list-table .line-through{display:inline-block; margin-right:5px; font-size:1rem;}
+
+    .mobile .table.list .srch_rslt-list .lct-name a{font-size:1.07rem;}
+    .mobile .srch_rslt-list .info-ico{display:block; position:absolute; top:6px; left:0; height:22px; margin-left:13px;}
+    .mobile .srch_rslt-list .info-txt p{font-size:0.92em;}
+    .mobile .course-info p{float:none; margin-left:0;}
+    .mobile .course-info{display:block;}
+    .mobile .status-select{display:block;}
+    .mobile .color-r{font-size:.98rem;}
+
+    .mobile .srch_rslt-list .btn-status{width:60px; height:30px; line-height:30px; font-size:0.92em !important;}
+    .mobile .srch_rslt-list .btn-cart{width:30px; height:30px; margin-top:7px; background-size:30px 30px;}
+
+    .mobile .srch_rslt-box .filter li{padding:0 6px;}
+    .mobile .srch_rslt-box .filter li a{font-size:0.92rem;}
+    .mobile .srch_rslt-box .filter li.active a{color:#ef3239;}
+
+    .mobile .table.list .th,
+    .mobile .table.list .td{padding:12px 12px 13px 12px;}
+    .mobile .table.list .th{font-size:1.08rem;}
+    .mobile .table.list .th .txt{display:none;}
+    .mobile .table.list .td{font-size:.98rem;}
+    .mobile .course-inform dt span.spot,
+    .mobile .course-inform dt span{font-size:1.23rem;}
+    .mobile .txt-table th,
+    .mobile .txt-table td,
+    .mobile .list-table th,
+    .mobile .list-table td{font-size:.98rem;}
+    .mobile .breadcrumb{display:none;}
+    .mobile .lct_tit-area h2.lct-tit{margin-top:10px; font-size:18px; line-height:30px;}
+    .mobile .lct_tit-area h2.lct-tit span{display:none;}
+    .mobile input[type="text"],
+    .mobile input[type="password"],
+    .mobile select{font-size:1.07rem !important;}
+
+    .mobile .lct-view-col4{width:100%; overflow:hidden;}
+    .mobile .viewtype{width:100%; box-sizing:border-box;}
+    .mobile .viewtype > li{width:48%; height:auto; margin:0 0 20px 2%; box-sizing:border-box;}
+    .mobile .viewtype .box-lct a{display:block; width:100%;}
+    .mobile .viewtype .box-lct a img{width:100%;}
+    .mobile .viewtype .box-lct a .lct-name p{font-size:1.12rem;}
+    .mobile .viewtype .box-lct a .lct-info li{font-size:.88rem;}
+    .mobile .viewtype .box-lct > a{height:auto}
+    .mobile .viewtype .btn_get-area .btn-like{width:35px; height:35px; background-position:50% 50%; background-size:contain;}
+    .mobile .viewtype .btn_get-area .btn-cart{width:35px; height:35px; background-position:50% 50%; background-size:contain;}
+
+    .mobile .viewtype .btn_get-area .btn-like .like-num{font-size:12px;}
+    .mobile .lct-view-col4 .viewtype .btn_get-area a{width:58px; height:33px; line-height:35px; font-size:12px; border:1px solid #aaa; color:#222 !important; background-color:#fff;}
+    .mobile .lct-view-col4 .viewtype .btn_get-area a:hover{width:calc(100% - 76px); height:35px; border:0 none; color:#fff !important;}
+    .mobile .lct-view-col4 .viewtype .btn_get-area a.btn-call:hover,
+    .mobile .lct-view-col4 .viewtype .btn_get-area a.btn-visit:hover,
+    .mobile .lct-view-col4 .viewtype .btn_get-area a.btn-apply:hover{background-color:#eb1c24;}
+    .mobile .lct-view-col4 .viewtype .btn_get-area a.btn-wait:hover{background-color:#333;}
+    .mobile .lct-view-col4 .viewtype .btn_get-area a.btn-finish:hover{background-color:#aaa;}
+
+    .mobile .lct-view-col3 .btn-prev{width:30px; height:43px; background-size:30px 43px;}
+    .mobile .lct-view-col3 .btn-next{width:30px; height:43px; background-size:30px 43px;}
+
+    .mobile .no_data-box p{font-size:16px;}
+
+    /* 금액 계산 영역
+    .mobile .calc-area{width:100%; box-sizing:border-box;}
+    .mobile .calc-area dl{width:33.33%; height:115px;}
+    .mobile .calc-area dl.discount{width:33.33%;}
+    .mobile .calc-area dl.total{width:33.34%}
+    .mobile .calc-area dl.receipt{display:none;}
+    .mobile .calc-area dt{font-size:.92rem;}
+    .mobile .calc-area dd{font-size:1.02rem;}
+    .mobile .calc-area dl.discount dd:after{top:63px; left:-12px; width:23px; height:22px; background-size:23px 22px;}
+    .mobile .calc-area dl.total dd:after{top:63px; left:-12px; width:23px; height:22px; background-size:23px 22px;}
+    .mobile .course_info-words{height:102px; padding:0 7px; box-sizing:border-box;}
+    .mobile .course_info-words strong{padding-top:20px; font-size:1.28rem;}
+    .mobile .course_info-words span{margin-top:11px; font-size:1.02rem;}
+
+
+    /* 제목 영역
+    .mobile .breadcrumb{display:none;}
+    .mobile .lct_tit-area h2.lct-tit{margin-top:10px; font-size:18px; line-height:30px;}
+    .mobile .lct_tit-area h2.lct-tit span{display:none;}
+    .mobile input[type="text"],
+    .mobile input[type="password"],
+    .mobile select{font-size:1.07rem !important; padding:0 9px 0 12px;}
+
+    .datepicker{background-position:93% 7px; background-size:16px 16px;}
+
+    /* Tab 영역
+    .mobile .tab-area{margin-top:0;}
+    .mobile .tab-menu{bottom:3px; width:100%; height:40px;}
+    .mobile .tab-area .tab-menu li{width:30%; font-size:14px; height:35px; line-height:35px;}
+    .mobile .tab-area .tab-menu li a{font-size:14px;}
+    .mobile .tab-area .tab-menu li.active{height:45px;}
+    .mobile .tab-area .tab-menu li.active a{font-size:15px; height:40px; line-height:40px;}
+
+
+    .mobile .btn_sns-area .btn-l a{width:28px; height:28px; background-size:140px; height:28px;}
+
+    .mobile .btn_sns-area .btn-l .twitter{background-position:-28px 0;}
+    .mobile .btn_sns-area .btn-l .kakaostory{background-position:-56px 0;}
+    .mobile .btn_sns-area .btn-l .kakaotalk{background-position:-84px 0;}
+    .mobile .btn_sns-area .btn-l .urlcopy{background-position:-112px 0;}
+
+    .mobile .btm_btn-area a{width:68px; height:36px; line-height:36px; font-size:1.12rem;}
+    .mobile .lct-view-col4 .box-wrap .btn_get-area a.btn-apply,
+    .mobile .lct-view-col4 .box-wrap .btn_get-area a.btn-visit,
+    .mobile .lct-view-col4 .box-wrap .btn_get-area a.btn-call,
+    .mobile .lct-view-col4 .box-wrap .btn_get-area a.btn-wait,
+    .mobile .lct-view-col4 .box-wrap .btn_get-area a.btn-finish{width:calc(100% - 76px); height:35px; line-height:35px; margin-left:3px; font-size:.98rem; box-sizing:border-box;}
+    .mobile .course-info,
+    .mobile .course-info .sub-info2{display:block;}
+
+    .mobile .inner_btn-area{margin-top:5px;}
+    .mobile .inner_btn-area a{width:60px !important; height:30px; line-height:30px; text-align:center;}
+    .mobile .lct-view-col4 .btn_get-area{height:auto;}
+
+    .mobile .sod_select{padding:0 19px 0 9px}
+    .mobile .sod_select .sod_option{padding-left:9px; font-size:1.12rem;}
+}
+
+@media screen and (min-width:640px) and (max-width:1280px){
+    .tablet .list-table .line-through{display:inline-block; margin-right:5px; font-size:1rem;}
+
+    .tablet #cul-course .status_tab-area li a{font-size:1.38rem;}
+
+    .tablet .lct-view-col4{width:100%; overflow:hidden;}
+    .tablet .viewtype{width:100%; box-sizing:border-box;}
+    .tablet .viewtype > li{width:33.3%; height:auto; margin:0 0 20px 0; box-sizing:border-box;}
+    .tablet .viewtype > li > .box-wrap{width:90%; min-width:208px; margin-bottom:20px; padding:0 5%;}
+    .tablet .viewtype .box-lct a{width:100%;}
+    .tablet .viewtype .box-lct a img{width:100%; max-height:223px;}
+    .tablet .viewtype .box-lct a .lct-name p{max-width:230px; font-size:16px;}
+    .tablet .viewtype .box-lct a .lct-info li{font-size:14px;}
+    .tablet .viewtype .box-lct > a{height:auto}
+    .tablet .viewtype .btn_get-area .btn-like{width:45px; height:45px; background-position:50% 50%; background-size:contain;}
+    .tablet #cul-course .viewtype .btn_get-area .btn-cart{width:45px; height:45px; background-position:50% 50%; background-size:contain;}
+
+    .tablet .lct-view-col4 .viewtype .box-wrap .btn_get-area a{width:88px; height:43px; line-height:45px; font-size:16px; border:1px solid #aaa; color:#222 !important; background-color:#fff;}
+    .tablet .lct-view-col4 .viewtype .box-wrap .btn_get-area a:hover{width:90px; height:45px; border:0 none; color:#fff !important;}
+    .tablet .lct-view-col4 .viewtype .box-wrap .btn_get-area a.btn-call:hover,
+    .tablet .lct-view-col4 .viewtype .box-wrap .btn_get-area a.btn-visit:hover,
+    .tablet .lct-view-col4 .viewtype .box-wrap .btn_get-area a.btn-apply:hover{background-color:#eb1c24;}
+    .tablet .lct-view-col4 .viewtype .box-wrap .btn_get-area a.btn-wait:hover{background-color:#333;}
+    .tablet .lct-view-col4 .viewtype .box-wrap .btn_get-area a.btn-finish:hover{background-color:#aaa;}
+
+    .tablet .lct-view-col3{height:auto;}
+
+    .tablet .no_data-box p{font-size:18px;}
+    .tablet .srch_rslt-list .like-this{margin-left:0;}
+
+    /* tab-type
+    .tablet .tab-type li,
+    .tablet .tab-type li.active{padding-top:12px;}
+    .tablet .tab-type li span{display:inline-block; line-height:1.3; font-size:1.58rem;}
+    .tablet .tab-type li span.num{top:7px; width:34px; height:31px; background-size:34px 31px;}
+    .tablet .tab-type li.active span.num{top:7px;}
+
+    /* 금액 계산 영역
+    .tablet .calc-area{width:100%;}
+    .tablet .calc-area dl{width:25%;}
+
+    .tablet .course-info,
+    .tablet .course-info .sub-info{display:block;}
+    .tablet .course-info .inner_btn-area{display:none;}
+}
+*/

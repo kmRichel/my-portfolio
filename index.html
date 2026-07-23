@@ -1,0 +1,150 @@
+﻿<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="박경민 - 15년 경력 UI/프론트엔드 개발자. Vue, TypeScript, AI/GenAI 플랫폼 전문."
+    />
+    <title>KM.Park | Frontend & UI Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav class="nav" id="nav">
+      <div class="nav__inner">
+        <a href="#hero" class="nav__logo">
+          <span class="nav__logo-bracket">&lt;</span>
+          <span class="nav__logo-text">KM.Park</span>
+          <span class="nav__logo-bracket">/&gt;</span>
+        </a>
+        <ul class="nav__links">
+          <li><a href="#about" class="nav__link">About</a></li>
+          <li><a href="#skills" class="nav__link">Skills</a></li>
+          <li><a href="#projects" class="nav__link">Projects</a></li>
+          <li><a href="#experience" class="nav__link">Experience</a></li>
+          <li><a href="#contact" class="nav__link">Contact</a></li>
+        </ul>
+        <button class="nav__hamburger" id="navToggle" aria-label="메뉴 열기">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- HERO (JS가 내용 채움) -->
+    <section class="hero" id="hero">
+      <div class="hero__bg-grid"></div>
+      <div class="hero__content">
+        <p class="hero__greeting animate-fade-up"></p>
+        <h1 class="hero__name animate-fade-up delay-1"></h1>
+        <h2 class="hero__title animate-fade-up delay-2"></h2>
+        <p class="hero__desc animate-fade-up delay-3"></p>
+        <div class="hero__stats animate-fade-up delay-4"></div>
+        <div class="hero__cta animate-fade-up delay-4">
+          <a href="#projects" class="btn btn--primary">프로젝트 보기</a>
+          <a href="#contact" class="btn btn--ghost">연락하기</a>
+        </div>
+      </div>
+      <div class="hero__scroll"><div class="hero__scroll-line"></div></div>
+    </section>
+
+    <!-- ABOUT (JS가 내용 채움) -->
+    <section class="section about" id="about">
+      <div class="container">
+        <h2 class="section__title">About Me</h2>
+        <div class="about__grid">
+          <div class="about__photo">
+            <img src="images/photo_me01.jpg" alt="박경민" class="about__img" />
+            <div class="about__photo-border"></div>
+          </div>
+          <div class="about__info">
+            <div id="aboutText"></div>
+            <div class="about__focus">
+              <h3 class="about__focus-title">현재 관심 분야</h3>
+              <ul class="about__focus-list" id="focusList"></ul>
+            </div>
+            <ul class="about__details" id="aboutDetails"></ul>
+            <a href="#contact" class="btn btn--primary mt-24">Let's Talk</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS (JS가 내용 채움) -->
+    <section class="section skills" id="skills">
+      <div class="container">
+        <h2 class="section__title">Tech Stack</h2>
+        <p class="section__subtitle">UI 개발 전문성과 다양한 도구 활용 역량</p>
+        <div class="skills__grid">
+          <div class="skill-card skill-card--front">
+            <div class="skill-card__header">
+              <i class="fa fa-code skill-card__icon"></i>
+              <h3 class="skill-card__title">Frontend</h3>
+            </div>
+            <ul class="skill-card__list" id="skillsFrontend"></ul>
+          </div>
+          <div class="skill-card skill-card--tools">
+            <div class="skill-card__header">
+              <i class="fa fa-wrench skill-card__icon"></i>
+              <h3 class="skill-card__title">AI & Tools</h3>
+            </div>
+            <ul class="skill-card__list" id="skillsTools"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- PROJECTS (JS가 내용 채움) -->
+    <section class="section projects" id="projects">
+      <div class="container">
+        <h2 class="section__title">Featured Projects</h2>
+        <p class="section__subtitle">
+          최근 주요 프로젝트 (Vue, AI, 반응형, 웹 표준)
+        </p>
+        <div class="projects__grid" id="projectsGrid"></div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE (JS가 내용 채움) -->
+    <section class="section experience" id="experience">
+      <div class="container">
+        <h2 class="section__title">Experience</h2>
+        <p class="section__subtitle">
+          11개 기업에서 쌓은 총 14년 2개월의 실무 경력
+        </p>
+        <div class="experience__timeline" id="experienceTimeline"></div>
+      </div>
+    </section>
+
+    <!-- CONTACT (JS가 내용 채움) -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <h2 class="section__title">Get In Touch</h2>
+        <p class="section__subtitle">
+          새로운 프로젝트나 협업 기회를 환영합니다
+        </p>
+        <div class="contact__grid" id="contactGrid"></div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <p class="footer__text">
+          Designed & Built by <strong>박경민</strong> &copy; 2025
+        </p>
+      </div>
+    </footer>
+
+    <!-- JS: data.js 먼저, main.js가 렌더링 -->
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,133 @@
+@charset "euc-kr";
+/* 20200520 hackers 웹개발5 Publisher  kmp */
+
+#wrap.scroll_fixed #header{display:none;}
+#wrap.scroll_fixed #gnb{position:fixed;top:0;left:0;right:0;z-index:11;}
+
+/* wrap */
+#wrap{position:relative;width:100%;height:100%;}
+#wrap img {vertical-align:middle !important;}
+.familysite_dim{position: fixed;left:0;top:0;width: 100%;height: 100%;z-index: 1;background: #000;opacity:.7;}
+
+/* header */
+#header{width:100%;z-index:10;background:#fff;position:relative;}
+#header.active{border-bottom:1px solid #e2e2e2;}
+#header h1 {padding-top:19px;text-align:center;position:relative;height:60px;border-bottom:1px solid #d7d7d7;}
+#header h1 img{width:auto;height:19px;}
+#header h1 a{display:inline-block;}
+#header .btn-family-site {height:20px;width:20px;position:relative;cursor:pointer;}
+#header .btn-family-site .icon_family{width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-top:5px solid #000;display:inline-block;}
+#header .btn-family-site.active .icon_family {border-top:0;border-bottom:5px solid #000;}
+
+/* header - 패밀리 사이트 */
+.fam_site_dim{display:none;position:fixed;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.8);z-index:9;}
+.fam_slide_area{display:none;position:absolute;top:60px;left:0;z-index:11;width:100%;box-sizing:border-box;overflow:hidden}
+.fam_slide_area .fam_slide {background: #fff;}
+.fam_slide_area .sw_menu{padding:0 3px;}
+.fam_slide_area .sw_menu li {width:auto !important;color:#333; font-size:18px;padding:0 3%;height:42px;line-height: 42px;  text-align:center;cursor:pointer;position:relative;font-weight:bold;}
+.fam_slide_area .sw_menu li.active{color:#0097a3;}
+.fam_slide_area .sw_menu li.active:after{content: '';display: block;position: absolute;bottom: 0;left: 0;width: 100%;height: 3px;background-color: #0097a3;}
+.fam_slide_area .fam_category {overflow: hidden; width:100%;}
+.fam_slide_area .fam_category .swiper-slide{background: #fff;}
+.fam_slide_area .fam_category .swiper-slide ul li{float:left;width:calc(50% - 1px);color:#333;font-size:14px;letter-spacing: -1px;}
+.fam_slide_area .fam_category .swiper-slide ul li strong{color:#333;}
+.fam_slide_area .fam_category .swiper-slide ul li a{display:block;line-height: 43px;padding-left:10px;height: 43px;border-top:1px solid #e2e2e2;font-size:16px;}
+.fam_slide_area .fam_category .swiper-slide ul li.bd_left a{border-left:1px solid #e2e2e2}
+
+
+/* header - lnb rnb */
+#header .lnb_menu{width:22px;position:absolute;top:21px;left:15px;cursor:pointer;}
+#header .lnb_menu img{vertical-align:top !important;}
+#header .rnb_menu{position:absolute;top:50%;right:15px;cursor:pointer;margin-top:-9px;}
+#header .rnb_menu img{width:24px;}
+
+/* 전체 메뉴 */
+.lnb_all_menu {position:fixed; top:0px; left:-100%; display:none; width:100%; height:100%; z-index:99;background:#fff;overflow-y:auto;}
+.lnb_menu_close{position:absolute;top:17px;right:15px;width:20px;}
+.all_menu_top{background:#0092a3 url(../images/common/lnb_bg.jpg) no-repeat 0 bottom;background-size:100%;padding:0 25px 28px 25px;}
+.all_menu_top .am_login h2{font-size:20px;padding-top:50px;}
+.all_menu_top .am_login h2 a{display:inline-block;background:url(../images/common/lnb_login_icon.png) no-repeat right 50%;background-size:7px;padding-right:18px;color:#fff;}
+.all_menu_top .am_login p{color:#fff;font-size:14px;margin-top:10px;}
+
+.am_myInfo h2{width:76px;padding-top:18px;}
+.am_myInfo .am_name{display:block;color:#fff;font-size:21px;margin-top:18px;}
+.am_myInfo .am_benefits{margin-top:5px;}
+.am_myInfo .am_benefits li{display:inline-block;position:relative;color:#fff;padding:0 8px;}
+.am_myInfo .am_benefits li:first-child{padding-left:0;}
+.am_myInfo .am_benefits li:first-child:before{display:none;}
+.am_myInfo .am_benefits li:before{content: '';width: 1px;height: 12px;background-color:#80d1d8;display: inline-block;position: absolute;left:0;top: 5px;}
+
+.am_myInfo .am_fast_link{margin-top:18px;width:100%;}
+.am_myInfo .am_fast_link:after{clear:both;display:block;content:'';}
+.am_myInfo .am_fast_link li{float:left;width:25%;}
+.am_myInfo .am_fast_link li a{display:block;background:url(../images/common/lnb_menu_info.png) no-repeat 0 0;background-size:250px 62px;width:62px;padding-top:68px;text-align:center;color:#fff;}
+.am_myInfo .am_fast_link li:nth-child(1) a{background-position:0 0;}
+.am_myInfo .am_fast_link li:nth-child(2n) a{background-position:-63px 0;}
+.am_myInfo .am_fast_link li:nth-child(3n) a{background-position:-125px 0;}
+.am_myInfo .am_fast_link li:nth-child(4n) a{background-position:-188px 0;}
+
+.all_menu_list .am_menu:after{display:block;clear:both;content:''}
+.all_menu_list .am_menu li{width:100%;float:left;border-bottom:1px solid #e8e8e8;}
+.all_menu_list .am_menu li:first-child{border-top:0;}
+.all_menu_list .am_menu li a{display:block;font-weight:bold;color:#0097a3;padding:16px 20px;font-size:17px;background:url(../images/common/lnb_login_icon2.png) no-repeat 96% 50%;background-size:16px;}
+.all_menu_list .am_menu li ul{float:left;background:#f6f7f9;border-top:1px solid #e8e8e8;width:100%;padding-bottom:16px;}
+.all_menu_list .am_menu li ul li{width:50%;border-bottom:0;}
+.all_menu_list .am_menu li ul li a{font-weight:normal;color:#333333;padding:16px 0 0 20px;font-size:14px;background:none;}
+.all_menu_list .am_menu li:last-child > a{background:none;}
+
+.all_menu_list .am_menu_etc{border-top:5px solid #dddee0}
+.all_menu_list .am_menu_etc:after{display:block;clear:both;content:''}
+.all_menu_list .am_menu_etc li{width:50%;float:left;}
+.all_menu_list .am_menu_etc li a{border-left:1px solid #e8e8e8;display:block;color:#585858;padding:12px 20px;font-size:15px;background:url(../images/common/lnb_login_icon3.png) no-repeat 92% 50%;background-size:16px;}
+.all_menu_list .am_menu_etc li:first-child a{border-left:0;}
+.all_menu_btm{background:#585858;text-align:center;padding:20px 0;}
+.all_menu_btm dt{font-size:15px;color:#fff;background:url(../images/common/lnb_login_icon4.png) no-repeat 0 0;background-size:16px;padding-left:24px;display:inline-block;}
+.all_menu_btm dd{color:#c7c7c7;font-size:12px;margin-top:10px;}
+.all_menu_btm dd:last-child a{display:inline-block;font-size:14px;width:120px;text-align:center;border:1px solid #a8a8a8;border-radius:20px;padding:5px 0;color:#fff;margin:0 5px;}
+
+/* gnb */
+#gnb{background:#fff;}
+#gnb ul{width:100%;background:url(https://mpublic.hackers.com/images/common/bd-line.gif) repeat-x 0 bottom;}
+#gnb ul:after{clear:both;display:block;content:'';}
+#gnb li{float:left;width:50%;text-align:center;}
+#gnb li a{display:block;font-weight:bold;border-bottom:4px solid #dddee0;line-height:46px;color:#585858;font-size:17px;}
+#gnb li.active a,
+#gnb li a:hover{color:#0097a3;border-bottom:4px solid #0097a3;}
+
+/* gsnb */
+#gnb .gsnb.on{display:block;}
+#gnb .gsnb{display:none;}
+#gnb .gsnb li{position:relative;text-align:left;}
+#gnb .gsnb li a{border-bottom:0;font-size:15px;padding-left:30px;position:relative;color:#717171;}
+#gnb .gsnb li a:before{content: '';width: 4px;height: 4px;background-color: #717171;display: inline-block;position: absolute;left:20px;top:48%;border-radius:4px;}
+#gnb .gsnb li.active a,
+#gnb .gsnb li a:hover{color:#0097a3;}
+#gnb .gsnb li.active a:before,
+#gnb .gsnb li a:hover:before{background:#0097a3;}
+
+
+
+
+
+/* snb */
+#snb{position:relative;border-bottom:1px solid #d7d7d7;}
+#snb.snb_bg{background:#f3f4f6;}
+#snb h2{text-align:center;padding:16px 0;color:#585858;font-size:16px;font-weight:normal;}
+#snb .snb_prev{position:absolute;top:15px;left:15px;width:20px;}
+
+/* contetns */
+#container{width:100%;}
+
+/* footer */
+#footer{width:100%;}
+.foot_info_area{background:#414141;}
+.foot_menu {text-align:center;padding:15px 0;border-bottom:1px solid #4c4c4c;margin:0 3%;}
+.foot_menu:after{clear:both;display:block;content:'';}
+.foot_menu li{width:20%;float:left;position:relative;}
+.foot_menu li a{color:#b1b1b1;font-size:13px;}
+.foot_menu li:first-child:before{display:none;}
+.foot_menu li:before{content: '';width: 2px;height: 12px;background-color: #797979;display: inline-block;position: absolute;left:0;top: 5px;}
+.foot_copy{text-align: center;font-size:12px;line-height:20px;color:#828282;padding:20px 0;}
+.foot_copy span{margin:0 5px;}
+
+

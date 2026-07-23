@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>롯데마트 문화센터</title>
+    <link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/swiper.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/color_winter_1.css" />
+    <script type="text/javascript" src="resources/js/jquery-1.12.3.js"></script>
+    <script type="text/javascript" src="resources/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="resources/js/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="resources/js/jquery.easing.1.3.min.js"></script>
+    <script type="text/javascript" src="resources/js/swiper.js"></script>
+    <script type="text/javascript" src="resources/js/jquery.placeholder.min.js"></script>
+    <script type="text/javascript" src="resources/js/jquery.selectBox.js"></script>
+    <script type="text/javascript" src="resources/js/ui.common.js"></script>
+    <script type="text/javascript" src="resources/js/ui.js"></script>
+    <script type="text/javascript" src="resources/js/slick.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $(".main_cont-wrap").slick({
+            draggable: false,
+            touchMove: false,
+            prevArrow: '.btn_slide-area > .btn-prev',
+            nextArrow: '.btn_slide-area > .btn-next',
+            initialSlide: 0
+        });
+        
+        $('.main_visual-area > ul').slick({
+            arrows: false,
+            slide: 'li',
+            dots: true,
+            dotsClass: 'visual_dot'
+        });
+        
+        $('.main_branch-slide > ul').slick({
+            arrows: false,
+            slide: 'li',
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            dots: true,
+            dotsClass: 'list-dot branch-dot'
+        });
+        
+        $('.review_list-area ul').slick({
+            arrows: false,
+            rows: 2,
+            slidesPerRow: 1,
+            slidesToShow: 1,
+            dots: true,
+            dotsClass: 'list-dot review-dot'
+        });
+        
+        $('.lecture-info > ul').slick({
+            arrows: false,
+            slide: 'li',
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+            dotsClass: 'list-dot lecture-dot'
+        });
+        
+        main_pop_cls();
+        
+        review_txt_length();
+        notice_txt_length();
+    });
+        
+    function main_pop_cls(){
+        var btn_cls = $('.btn_pop-cls');
+        var btn_cls2 = $('.main_quick-pop').find('.btn-area').find('a');
+        
+        btn_cls.bind({
+            click : function(event){
+                event.preventDefault();
+                $(this).closest('.quick-pop').removeClass('on');
+            }
+        });
+        
+        btn_cls2.bind({
+            click : function(event){
+                event.preventDefault();
+                $(this).closest('.quick-pop').removeClass('on');
+            }
+        });
+    }
+        
+    /* 2017.11.07 스크립트 추가 */
+        
+    // 수강후기 width 조절
+    function review_txt_length(){
+        var review_list = $('.review_list-area ul');
+        var rItem = review_list.find('li');
+        
+        rItem.each(function(index){
+            var txt_length = rItem.eq(index).find('span').text().length;
+            if(txt_length >= 6){
+                rItem.eq(index).find('em').css({width:'73%'});
+            }
+        });
+    }
+     
+    // 공지사항 width 조절
+    function notice_txt_length(){
+        var notice_list = $('.main_notice-area ul');
+        var nItem = notice_list.children('li');
+        
+        nItem.each(function(index){
+            var txt_length = nItem.eq(index).find('span:first').text().length;
+            if(txt_length >= 6){
+                nItem.eq(index).find('span.ellipsis').css({width:'70%'});
+            }
+        });
+    }
+    </script>
+</head>
+<body class="adaptive">
+    <!-- wrap -->
+    <div id="wrap" class="theme1"> <!-- [D] 상단 버튼이 있는 테마 일 경우 theme1 추가 -->
+        <!-- 2017.11.07 수정 -->
+        <div class="quick-pop pop-banner on" style="height:97px; background-color:#fff;"> <!-- [D] on 이 있을시 팝업 노출, 배경색도 변경이 가능한 여부 확인 -->
+            <div class="banner-cont">
+                <div class="cont-area">
+                    <img src="resources/images/template/popup.jpg" alt="2017년 겨울학기 회원 모집 안내" />
+                </div>
+                <div class="btn-area">
+                    <span class="checkbox v2">
+                        <input type="checkbox" id="today" name="" />
+                        <label for="today">오늘 하루 열지 않음</label>
+                    </span>
+                    <a href="#" class="btn_pop-cls"><span class="blind">팝업 배너 닫기</span></a>
+                </div>
+            </div>
+        </div>
+        <!-- //2017.11.07 수정 -->
+        <!-- header -->
+        <div id="header">
+            <!-- pc-header -->
+            <div class="pc-header">
+                <!-- top_menu-area -->
+                <div class="top_menu-area">
+                    <div class="inner">
+                        <ul class="lst-login">
+                            <!-- <li><a href="javascript:;">로그인</a></li>  [D] 로그아웃시 로그인 노출 -->
+                            <!-- <li><a href="javascript:;">회원가입</a></li> [D] 로그아웃시 회원가입 노출 -->
+                            <li><a href="javascript:;">로그아웃</a></li>
+                            <li class="mypage"><a href="마이페이지/01나의 20수강정보_수강내역.html">My페이지</a></li>
+                            <!-- [D] 버튼이 있는 테마 -->
+                            <li class="last cart"><a href="javascript:;">강좌바구니 <span>3</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- //top_menu-area -->
+
+                <!-- gnb-area -->
+                <div class="gnb-area">
+                    <!-- logo-area -->
+                    <div class="logo-area inner">
+                        <h1><a href="#none"><img src="resources/images/common/logo.png" alt="롯데마트 문화센터" /></a></h1>
+                        <button type="button" class="btn-gnb">전체메뉴</button>
+                        <!-- 강좌바구니 갯수 -->
+                        <a href="javascript:;" class="btn_cart-cnt"><span class="blind">강좌바구니 갯수</span><span>3</span></a>
+                        <!-- 강좌바구니 갯수 -->
+                    </div>
+                    <!-- //logo-area -->
+
+                    <!-- menu-area -->
+                    <div class="menu-area">
+                        <!-- menu-inner -->
+                        <div class="menu-inner">
+                            <!-- gnb-wrap -->
+                            <div class="gnb-wrap">
+                                <div class="inner">
+                                    <h2 class="blind">메뉴</h2>
+                                    <ul class="lst_gnb-area">
+                                        <li class="menu1">
+                                            <a href="수강신청/01강좌검색.html">수강신청</a>
+                                            <ul>
+                                                <li><a href="수강신청/01강좌검색.html">수강신청</a></li>
+                                                <li><a href="javascript:;">이벤트특강</a></li>
+                                                <li><a href="javascript:;">강좌시간표</a></li>
+                                                <li><a href="javascript:;">수강신청가이드</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu2">
+                                            <a href="javascript:;">문센커뮤니티</a>
+                                            <ul>
+                                                <li><a href="javascript:;">수강후기</a></li>
+                                                <li><a href="javascript:;">강좌PR</a></li>
+                                                <li><a href="javascript:;">강좌Talk</a></li>
+                                                <li><a href="javascript:;">참여이벤트</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu3">
+                                            <a href="javascript:;">온라인 전단</a>
+                                            <ul>
+                                                <li><a href="javascript:;">온라인전단</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu4">
+                                            <a href="javascript:;">고객센터</a>
+                                            <ul>
+                                                <li><a href="javascript:;">공지사항</a></li>
+                                                <li><a href="javascript:;">지점소식</a></li>
+                                                <li><a href="javascript:;">이용문의</a></li>
+                                                <li><a href="javascript:;">고객의소리</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu5">
+                                            <a href="javascript:;">강사데스크</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- //gnb-wrap -->
+
+                            <!-- branch_srch-wrap -->
+                            <div class="branch_srch-wrap">
+                                <div class="inner">
+                                    <h2><a href="javascript:;" class="btn_branch-srch">지점찾기</a></h2><!-- 활성화시 active 추가 -->
+                                    <!-- branch_find-area -->
+                                    <div class="branch_find-area">
+                                        <!-- 지역별 메뉴 -->
+                                        <ul class="branch-menu lst_txt-c">
+                                            <li>서울</li> <!-- [D] 활성화시 active 추가 -->
+                                            <li>경기도</li>
+                                            <li>인천권</li>
+                                            <li>충천권</li>
+                                            <li>영남권</li>
+                                            <li>호남권</li>
+                                            <li>강원도</li>
+                                            <li>제주도</li>
+                                        </ul>
+                                        <!-- // 지역별 메뉴 -->
+
+                                        <!-- 서울 지역별 메뉴 상세 -->
+                                        <div class="branch-con">
+                                            <strong class="blind">서울</strong>
+                                            <ul>
+                                                <li class="active"><a href="지점메인/지점메인.html">vic영등포점</a></li><!-- [D] 활성화시 active 추가 -->
+                                                <li><a href="지점메인/지점메인.html">구로점</a></li>
+                                                <li><a href="지점메인/지점메인.html">송파점</a></li>
+                                                <li><a href="지점메인/지점메인.html">양평점</a></li>
+                                                <li><a href="지점메인/지점메인.html">은평점</a></li>
+                                                <li><a href="지점메인/지점메인.html">중계점</a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- // 서울 지역별 메뉴 상세 -->
+
+                                        <!-- 경기도 지역별 메뉴 상세 -->
+                                        <div class="branch-con">
+                                            <strong class="blind">경기도</strong>
+                                            <ul>
+                                                <li><a href="지점메인/지점메인.html">고양점</a></li>
+                                                <li><a href="지점메인/지점메인.html">광교점</a></li>
+                                                <li><a href="지점메인/지점메인.html">구리점</a></li>
+                                                <li><a href="지점메인/지점메인.html">권선점</a></li>
+                                                <li><a href="지점메인/지점메인.html">동두천점</a></li>
+                                                <li><a href="지점메인/지점메인.html">수지점</a></li>
+                                                <li><a href="지점메인/지점메인.html">시흥배곧점</a></li>
+                                                <li><a href="지점메인/지점메인.html">신갈점</a></li>
+                                                <li><a href="지점메인/지점메인.html">안산점</a></li>
+                                                <li><a href="지점메인/지점메인.html">안성점</a></li>
+                                                <li><a href="지점메인/지점메인.html">양주점</a></li>
+                                                <li><a href="지점메인/지점메인.html">영통점</a></li>
+                                                <li><a href="지점메인/지점메인.html">오산점</a></li>
+                                                <li><a href="지점메인/지점메인.html">의정부점</a></li>
+                                                <li><a href="지점메인/지점메인.html">주엽점</a></li>
+                                                <li><a href="지점메인/지점메인.html">평택점</a></li>
+                                            </ul>
+                                        </div>
+                                        <!--// 경기도 지역별 메뉴 상세 -->
+
+                                        <!-- 인천권 지역별 메뉴 상세 -->
+                                        <div class="branch-con">
+                                            <strong class="blind">인천권</strong>
+                                            <ul>
+                                                <li><a href="지점메인/지점메인.html">검단점</a></li>
+                                                <li><a href="지점메인/지점메인.html">계양점</a></li>
+                                                <li><a href="지점메인/지점메인.html">부평점(산곡)</a></li>
+                                                <li><a href="지점메인/지점메인.html">삼산점</a></li>
+                                                <li><a href="지점메인/지점메인.html">송도점</a></li>
+                                                <li><a href="지점메인/지점메인.html">영종도점</a></li>
+                                                <li><a href="지점메인/지점메인.html">청라점</a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- // 인천권 지역별 메뉴 상세 -->
+
+                                        <!-- 충청권 지역별 메뉴 상세 -->
+                                        <div class="branch-con">
+                                            <strong class="blind">충청권</strong>
+                                            <ul>
+                                                <li><a href="지점메인/지점메인.html">노은점</a></li>
+                                                <li><a href="지점메인/지점메인.html">당진점</a></li>
+                                                <li><a href="지점메인/지점메인.html">대덕점</a></li>
+                                                <li><a href="지점메인/지점메인.html">상당점</a></li>
+                                                <li><a href="지점메인/지점메인.html">서대전점</a></li>
+                                                <li><a href="지점메인/지점메인.html">서산점</a></li>
+                                                <li><a href="지점메인/지점메인.html">성정점</a></li>
+                                                <li><a href="지점메인/지점메인.html">천안점(쌍용)</a></li>
+                                                <li><a href="지점메인/지점메인.html">충주점</a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- // 충청권 지역별 메뉴 상세 -->
+
+                                        <!-- 영남권 지역별 메뉴 상세 -->
+                                        <div class="branch-con">
+                                            <strong class="blind">영남권</strong>
+                                            <ul>
+                                                <li><a href="지점메인/지점메인.html">거제점</a></li>
+                                                <li><a href="지점메인/지점메인.html">구미점</a></li>
+                                                <li><a href="지점메인/지점메인.html">금정점</a></li>
+                                                <li><a href="지점메인/지점메인.html">김천점</a></li>
+                                                <li><a href="지점메인/지점메인.html">대구율하점</a></li>
+                                                <li><a href="지점메인/지점메인.html">부산점</a></li>
+                                                <li><a href="지점메인/지점메인.html">사상점</a></li>
+                                                <li><a href="지점메인/지점메인.html">사하점</a></li>
+                                                <li><a href="지점메인/지점메인.html">양덕점</a></li>
+                                                <li><a href="지점메인/지점메인.html">울산점</a></li>
+                                                <li><a href="지점메인/지점메인.html">웅상점</a></li>
+                                                <li><a href="지점메인/지점메인.html">장유점</a></li>
+                                                <li><a href="지점메인/지점메인.html">진장점</a></li>
+                                                <li><a href="지점메인/지점메인.html">진해점</a></li>
+                                                <li><a href="지점메인/지점메인.html">창원중앙점</a></li>
+                                                <li><a href="지점메인/지점메인.html">통영점</a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- // 영남권 지역별 메뉴 상세 -->
+
+                                        <!-- 호남권 지역별 메뉴 상세 -->
+                                        <div class="branch-con">
+                                            <strong class="blind">호남권</strong>
+                                            <ul>
+                                                <li><a href="지점메인/지점메인.html">군산점</a></li>
+                                                <li><a href="지점메인/지점메인.html">목포점</a></li>
+                                                <li><a href="지점메인/지점메인.html">상무점</a></li>
+                                                <li><a href="지점메인/지점메인.html">송천점(전주)</a></li>
+                                                <li><a href="지점메인/지점메인.html">수완점</a></li>
+                                                <li><a href="지점메인/지점메인.html">여수점</a></li>
+                                                <li><a href="지점메인/지점메인.html">월드컵점</a></li>
+                                                <li><a href="지점메인/지점메인.html">익산점</a></li>
+                                                <li><a href="지점메인/지점메인.html">전주점</a></li>
+                                                <li><a href="지점메인/지점메인.html">첨단점</a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- // 호남권 지역별 메뉴 상세 -->
+
+                                        <!-- 강원도 지역별 메뉴 상세 -->
+                                        <div class="branch-con">
+                                            <strong class="blind">강원도</strong>
+                                            <ul>
+                                                <li><a href="지점메인/지점메인.html">석사점</a></li>
+                                                <li><a href="지점메인/지점메인.html">춘천점</a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- // 강원도 지역별 메뉴 상세 -->
+
+                                        <!-- 제주도 지역별 메뉴 상세 -->
+                                        <div class="branch-con">
+                                            <strong class="blind">제주도</strong>
+                                            <ul>
+                                                <li><a href="지점메인/지점메인.html">석사점</a></li>
+                                                <li><a href="지점메인/지점메인.html">춘천점</a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- // 제주도 지역별 메뉴 상세 -->
+                                    </div>
+                                    <!-- //branch_find-area -->
+                                </div>
+                            </div>
+                            <!-- branch_srch-wrap -->
+
+                            <!-- word_srch-wrap -->
+                            <div class="word_srch-wrap">
+                                <div class="inner">
+                                    <h2>
+                                        <a href="javascript:;" class="btn_word-srch">
+                                            <img src="resources/images/btn/btn_search_1.png" alt="검색하기">
+                                        </a>
+                                    </h2>
+                                    <!-- word_srch-area -->
+                                    <div class="word_srch-area">
+                                        <form>
+                                            <fieldset>
+                                                <legend>검색영역</legend>
+                                                <div class="word_srch-form">
+                                                    <input type="text" id="" class="" title="검색어" placeholder="검색어를 입력하세요.">
+                                                    <input type="image" src="resources/images/btn/btn_search_2.png" alt="검색">
+                                                </div>
+                                            </fieldset>
+                                        </form>
+                                    </div>
+                                    <!-- word_srch-area -->
+                                </div>
+                            </div>
+                            <!-- //word_srch-wrap -->
+                        </div>
+                        <!-- // menu-inner -->
+                        <!-- gnb-bg -->
+                        <div class="gnb-bg">
+                            <div class="bg1 bg-c"></div>
+                            <div class="bg2"></div>
+                            <div class="bg3"></div>
+                        </div>
+                        <!-- gnb-bg -->
+                    </div>
+                    <!-- //menu-area -->
+                </div>
+                <!-- //gnb-area -->
+            </div>
+            <!-- //pc-header -->
+
+            <!-- mob-header -->
+            <div class="mob-header bg-c">
+                <!-- gnb-area -->
+                <div class="gnb-area">
+                    <!-- logo-area -->
+                    <div class="logo-area inner">
+                        <h1><a href="#none"><img src="resources/images/mobile/common/logo.png" alt="롯데마트 문화센터" /></a></h1>
+                        <button type="button" class="btn-mgnb">전체메뉴</button>
+
+                        <!-- top_srch-area -->
+                        <div class="top_srch-area">
+                            <input type="text" id="" name="" title="검색어" />
+                            <button type="button"><span class="blind">검색</span></button>
+                        </div>
+                        <!-- //top_srch-area -->
+
+                        <!-- 강좌바구니 갯수 -->
+                        <a href="javascript:;" class="btn_cart-cnt"><span class="blind">강좌바구니 갯수</span><span>3</span></a>
+                        <!-- 강좌바구니 갯수 -->
+                    </div>
+                    <!-- //logo-area -->
+
+                    <!-- menu-area -->
+                    <div class="menu-area">
+                        <!-- menu-inner -->
+                        <div class="menu-inner">
+                            <div class="mob_login-area">
+                                <a href="#" class="btn_login">로그인</a>
+                                <a href="#" class="btn_join">회원가입</a>
+                            </div>
+                            <!-- gnb-wrap -->
+                            <div class="gnb-wrap">
+                                <h2 class="blind">메뉴</h2>
+                                <ul class="lst_gnb-area">
+                                    <li class="menu1">
+                                        <a href="javascript:;"><span>수강신청</span></a>
+                                        <ul>
+                                            <li><a href="javascript:;">수강신청</a></li>
+                                            <li><a href="javascript:;">이벤트특강</a></li>
+                                            <li><a href="javascript:;">강좌시간표</a></li>
+                                            <li><a href="javascript:;">수강신청가이드</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu2">
+                                        <a href="javascript:;"><span>문센커뮤니티</span></a>
+                                        <ul>
+                                            <li><a href="javascript:;">수강후기</a></li>
+                                            <li><a href="javascript:;">강좌PR</a></li>
+                                            <li><a href="javascript:;">강좌Talk</a></li>
+                                            <li><a href="javascript:;">참여이벤트</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu3">
+                                        <a href="javascript:;"><span>온라인 전단</span></a>
+                                    </li>
+                                    <li class="menu4">
+                                        <a href="javascript:;"><span>고객센터</span></a>
+                                        <ul>
+                                            <li><a href="javascript:;">공지사항</a></li>
+                                            <li><a href="javascript:;">지점소식</a></li>
+                                            <li><a href="javascript:;">이용문의</a></li>
+                                            <li><a href="javascript:;">고객의소리</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu5">
+                                        <a href="javascript:;"><span>강사데스크</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- //gnb-wrap -->
+
+                            <!-- branch_srch-wrap -->
+                            <div class="branch_srch-wrap">
+                                <h2><a href="javascript:;" class="btn_branch-srch">지점찾기</a></h2><!-- 활성화시 active 추가 -->
+                                <!-- branch_find-area -->
+                                <div class="branch_find-area">
+                                    <!-- 지역별 메뉴 -->
+                                    <ul class="branch-menu lst_txt-c">
+                                        <li>서울</li> <!-- [D] 활성화시 active 추가 -->
+                                        <li>경기도</li>
+                                        <li>인천권</li>
+                                        <li>충천권</li>
+                                        <li>영남권</li>
+                                        <li>호남권</li>
+                                        <li>강원도</li>
+                                        <li>제주도</li>
+                                    </ul>
+                                    <!-- // 지역별 메뉴 -->
+
+                                    <!-- 서울 지역별 메뉴 상세 -->
+                                    <div class="branch-con">
+                                        <strong class="blind">서울</strong>
+                                        <ul>
+                                            <li class="active"><a href="지점메인/지점메인.html">vic영등포점</a></li><!-- [D] 활성화시 active 추가 -->
+                                            <li><a href="지점메인/지점메인.html">구로점</a></li>
+                                            <li><a href="지점메인/지점메인.html">송파점</a></li>
+                                            <li><a href="지점메인/지점메인.html">양평점</a></li>
+                                            <li><a href="지점메인/지점메인.html">은평점</a></li>
+                                            <li><a href="지점메인/지점메인.html">중계점</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- // 서울 지역별 메뉴 상세 -->
+
+                                    <!-- 경기도 지역별 메뉴 상세 -->
+                                    <div class="branch-con">
+                                        <strong class="blind">경기도</strong>
+                                        <ul>
+                                            <li><a href="지점메인/지점메인.html">고양점</a></li>
+                                            <li><a href="지점메인/지점메인.html">광교점</a></li>
+                                            <li><a href="지점메인/지점메인.html">구리점</a></li>
+                                            <li><a href="지점메인/지점메인.html">권선점</a></li>
+                                            <li><a href="지점메인/지점메인.html">동두천점</a></li>
+                                            <li><a href="지점메인/지점메인.html">수지점</a></li>
+                                            <li><a href="지점메인/지점메인.html">시흥배곧점</a></li>
+                                            <li><a href="지점메인/지점메인.html">신갈점</a></li>
+                                            <li><a href="지점메인/지점메인.html">안산점</a></li>
+                                            <li><a href="지점메인/지점메인.html">안성점</a></li>
+                                            <li><a href="지점메인/지점메인.html">양주점</a></li>
+                                            <li><a href="지점메인/지점메인.html">영통점</a></li>
+                                            <li><a href="지점메인/지점메인.html">오산점</a></li>
+                                            <li><a href="지점메인/지점메인.html">의정부점</a></li>
+                                            <li><a href="지점메인/지점메인.html">주엽점</a></li>
+                                            <li><a href="지점메인/지점메인.html">평택점</a></li>
+                                        </ul>
+                                    </div>
+                                    <!--// 경기도 지역별 메뉴 상세 -->
+
+                                    <!-- 인천권 지역별 메뉴 상세 -->
+                                    <div class="branch-con">
+                                        <strong class="blind">인천권</strong>
+                                        <ul>
+                                            <li><a href="지점메인/지점메인.html">검단점</a></li>
+                                            <li><a href="지점메인/지점메인.html">계양점</a></li>
+                                            <li><a href="지점메인/지점메인.html">부평점(산곡)</a></li>
+                                            <li><a href="지점메인/지점메인.html">삼산점</a></li>
+                                            <li><a href="지점메인/지점메인.html">송도점</a></li>
+                                            <li><a href="지점메인/지점메인.html">영종도점</a></li>
+                                            <li><a href="지점메인/지점메인.html">청라점</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- // 인천권 지역별 메뉴 상세 -->
+
+                                    <!-- 충청권 지역별 메뉴 상세 -->
+                                    <div class="branch-con">
+                                        <strong class="blind">충청권</strong>
+                                        <ul>
+                                            <li><a href="지점메인/지점메인.html">노은점</a></li>
+                                            <li><a href="지점메인/지점메인.html">당진점</a></li>
+                                            <li><a href="지점메인/지점메인.html">대덕점</a></li>
+                                            <li><a href="지점메인/지점메인.html">상당점</a></li>
+                                            <li><a href="지점메인/지점메인.html">서대전점</a></li>
+                                            <li><a href="지점메인/지점메인.html">서산점</a></li>
+                                            <li><a href="지점메인/지점메인.html">성정점</a></li>
+                                            <li><a href="지점메인/지점메인.html">천안점(쌍용)</a></li>
+                                            <li><a href="지점메인/지점메인.html">충주점</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- // 충청권 지역별 메뉴 상세 -->
+
+                                    <!-- 영남권 지역별 메뉴 상세 -->
+                                    <div class="branch-con">
+                                        <strong class="blind">영남권</strong>
+                                        <ul>
+                                            <li><a href="지점메인/지점메인.html">거제점</a></li>
+                                            <li><a href="지점메인/지점메인.html">구미점</a></li>
+                                            <li><a href="지점메인/지점메인.html">금정점</a></li>
+                                            <li><a href="지점메인/지점메인.html">김천점</a></li>
+                                            <li><a href="지점메인/지점메인.html">대구율하점</a></li>
+                                            <li><a href="지점메인/지점메인.html">부산점</a></li>
+                                            <li><a href="지점메인/지점메인.html">사상점</a></li>
+                                            <li><a href="지점메인/지점메인.html">사하점</a></li>
+                                            <li><a href="지점메인/지점메인.html">양덕점</a></li>
+                                            <li><a href="지점메인/지점메인.html">울산점</a></li>
+                                            <li><a href="지점메인/지점메인.html">웅상점</a></li>
+                                            <li><a href="지점메인/지점메인.html">장유점</a></li>
+                                            <li><a href="지점메인/지점메인.html">진장점</a></li>
+                                            <li><a href="지점메인/지점메인.html">진해점</a></li>
+                                            <li><a href="지점메인/지점메인.html">창원중앙점</a></li>
+                                            <li><a href="지점메인/지점메인.html">통영점</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- // 영남권 지역별 메뉴 상세 -->
+
+                                    <!-- 호남권 지역별 메뉴 상세 -->
+                                    <div class="branch-con">
+                                        <strong class="blind">호남권</strong>
+                                        <ul>
+                                            <li><a href="지점메인/지점메인.html">군산점</a></li>
+                                            <li><a href="지점메인/지점메인.html">목포점</a></li>
+                                            <li><a href="지점메인/지점메인.html">상무점</a></li>
+                                            <li><a href="지점메인/지점메인.html">송천점(전주)</a></li>
+                                            <li><a href="지점메인/지점메인.html">수완점</a></li>
+                                            <li><a href="지점메인/지점메인.html">여수점</a></li>
+                                            <li><a href="지점메인/지점메인.html">월드컵점</a></li>
+                                            <li><a href="지점메인/지점메인.html">익산점</a></li>
+                                            <li><a href="지점메인/지점메인.html">전주점</a></li>
+                                            <li><a href="지점메인/지점메인.html">첨단점</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- // 호남권 지역별 메뉴 상세 -->
+
+                                    <!-- 강원도 지역별 메뉴 상세 -->
+                                    <div class="branch-con">
+                                        <strong class="blind">강원도</strong>
+                                        <ul>
+                                            <li><a href="지점메인/지점메인.html">석사점</a></li>
+                                            <li><a href="지점메인/지점메인.html">춘천점</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- // 강원도 지역별 메뉴 상세 -->
+
+                                    <!-- 제주도 지역별 메뉴 상세 -->
+                                    <div class="branch-con">
+                                        <strong class="blind">제주도</strong>
+                                        <ul>
+                                            <li><a href="지점메인/지점메인.html">석사점</a></li>
+                                            <li><a href="지점메인/지점메인.html">춘천점</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- // 제주도 지역별 메뉴 상세 -->
+                                </div>
+                                <!-- //branch_find-area -->
+                            </div>
+                            <!-- branch_srch-wrap -->
+                        </div>
+                        <!-- // menu-inner -->
+                    </div>
+                    <!-- //menu-area -->
+                </div>
+                <!-- //gnb-area -->
+            </div>
+            <!-- //mob-header -->
+        </div>
+        <!-- //header -->
+
+        <!-- container -->
+        <div id="container" class="pd0">
+            <!-- main-contents -->
+            <div id="contents" class="main-contents" style="background:url(resources/images/main/img_main.jpg) no-repeat 50% 50%; background-size:cover;">
+                <div class="quick-pop main_quick-pop on" style="width:590px; top:100px; right:300px;">  <!-- [D] on 이 있을시 팝업 노출 -->
+                    <div class="pop-tit">
+                        <span>제목</span>
+                        <a href="#" class="btn_pop-cls"><span class="blind">팝업 닫기</span></a>
+                    </div>
+                    <!-- 2017.11.16 텍스트일때만 txt-cont 추가 -->
+                    <div class="pop-cont txt-cont">
+                        <p>
+                            긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업긴급팝업
+                        </p>
+                        <p>
+                            긴급팝업
+                        </p>
+                        <p>
+                            긴급팝업
+                        </p>
+                        <p>
+                            긴급팝업
+                        </p>
+                        <p>
+                            긴급팝업
+                        </p>
+                        <p>
+                            긴급팝업
+                        </p>
+                        <p>
+                            긴급팝업
+                        </p>
+                    </div>
+                    <div class="btn-area">
+                        <span class="checkbox v1">
+                            <input type="checkbox" id="q_today_1" name="" />
+                            <label for="q_today_1">오늘 하루 열지 않음</label>
+                        </span>
+                        <!-- [D] 2017.11.03 닫기버튼 추가-->
+                        <a href="#">[ 닫기 ]</a>
+                    </div>
+                </div>
+                
+                <!-- main_cont-wrap -->
+                <div class="main_cont-wrap">
+                    <!-- 메인 슬라이드 영역 -->
+                    <div>
+                        <!-- section 1 -->
+                        <div class="section sect1">
+                            <div class="left-area">
+                                <div class="main_visual-area">
+                                    <ul>
+                                        <li><img src="resources/images/visual_p/main_visual_d.jpg" alt="2017 겨울학기 회원모집" /></li>
+                                        <li><img src="resources/images/visual_p/main_visual_a.jpg" alt="2017 봄학기 회원모집" /></li>
+                                        <li><img src="resources/images/visual_p/main_visual_b.jpg" alt="2017 여름학기 회원모집" /></li>
+                                        <li><img src="resources/images/visual_p/main_visual_c.jpg" alt="2017 가을학기 회원모집" /></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="right-area">
+                                <ul class="lst_srch-area">
+                                    <li class="item1">
+                                        <a href="수강신청/01강좌검색.html">
+                                            <p><img src="resources/images/main/img_application.png" alt="" /></p>
+                                            <!-- 2017.11.15 강좌 검색 추가 -->
+                                            <strong>수강신청 <span>- 강좌 검색</span></strong>
+                                            <span>온라인을 통해 빠르고 간편하게<br>수강신청을 하실 수 있습니다.</span>
+                                        </a>
+                                    </li>
+                                    <li class="item2">
+                                        <a href="javascript:;">
+                                            <p><img src="resources/images/main/img_branch.png" alt="" /></p>
+                                            <strong>지점찾기</strong>
+                                            <span>고객님 위치에서 가장 가까운<br>지점을 알려드립니다.</span>
+                                        </a>
+                                    </li>
+                                    <li class="item3">
+                                        <a href="javascript:;">
+                                            <p><img src="resources/images/main/img_online.png" alt="" /></p>
+                                            <strong>온라인 전단</strong>
+                                            <span>롯데마트 문화센터의 다양한<br>강좌 정보를 확인해 보세요.</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- //section 1 -->
+                    </div>
+                    <!-- //메인 슬라이드 영역 -->
+
+                    <!-- 메인 슬라이드 영역 -->
+                    <div>
+                        <!-- section 2 -->
+                        <div class="section sect2 swiper-slide">
+                            <div class="left-area">
+                                <h3 class="blind">하위메뉴</h3>
+                                <div class="sublink-area">
+                                    <ul>
+                                        <li class="item1"><a href="javascript:;"><span>강좌Talk</span></a></li>
+                                        <li class="item2"><a href="javascript:;"><span>강좌PR</span></a></li>
+                                        <li class="item3"><a href="javascript:;"><span>이벤트 &amp;특강</span></a></li>
+                                        <li class="item4"><a href="javascript:;"><span>수강후기</span></a></li>
+                                        <li class="item5"><a href="javascript:;"><span>고객센터</span></a></li>
+                                        <li class="item6"><a href="javascript:;"><span>강사지원</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="right-area">
+                                <h3 class="blind">강좌TALK</h3>
+                                <div class="lecture_talk-wrap slide_dot-type">
+                                    <div class="img-area">
+                                        <img src="resources/images/main/img_talk.jpg" alt="우리끼리! 강좌 Talk 우리들의 다양한 이야기로 소통의 공간을 만들어주세요!" />
+                                    </div>
+                                    <div class="lecture_info-wrap">
+                                        <div class="lecture-info">
+                                            <ul>
+                                                <li>
+                                                    <em>주엽점</em>
+                                                    <p class="ellipsis">금요 5TOUCH 오감 발달코칭 (5~10개월)</p>
+                                                    <ul class="lst-info">
+                                                        <li>강사: 정영권</li>
+                                                        <li>대화글: 110개</li>
+                                                        <li class="last"><a href="javascript:;" class="btn-ptcp">참여하기</a></li>
+                                                    </ul>
+
+                                                </li>
+                                                <li>
+                                                    <em>주엽점</em>
+                                                    <p class="ellipsis">금요 5TOUCH 오감 발달코칭 (5~10개월)</p>
+                                                    <ul class="lst-info">
+                                                        <li>강사: 정영권</li>
+                                                        <li>대화글: 110개</li>
+                                                        <li class="last"><a href="javascript:;" class="btn-ptcp">참여하기</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <em>주엽점</em>
+                                                    <p class="ellipsis">금요 5TOUCH 오감 발달코칭 (5~10개월)</p>
+                                                    <ul class="lst-info">
+                                                        <li>강사: 정영권</li>
+                                                        <li>대화글: 110개</li>
+                                                        <li class="last"><a href="javascript:;" class="btn-ptcp">참여하기</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <em>주엽점</em>
+                                                    <p class="ellipsis">금요 5TOUCH 오감 발달코칭 (5~10개월)</p>
+                                                    <ul class="lst-info">
+                                                        <li>강사: 정영권</li>
+                                                        <li>대화글: 110개</li>
+                                                        <li class="last"><a href="javascript:;" class="btn-ptcp">참여하기</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //section 2 -->
+                    </div>
+                    <!-- //메인 슬라이드 영역 -->
+
+                    <!-- 메인 슬라이드 영역 -->
+                    <div>
+                        <!-- section 3 -->
+                        <div class="section sect3 swiper-slide">
+                            <h3 class="blind">강좌PR</h3>
+                            <div class="left-area">
+                                <div class="pr-area">
+                                    <a href="javascript:;"><img src="resources/images/main/img_pr.jpg" alt="강좌PR 더보기" /></a>
+                                </div>
+                            </div>
+                            <div class="right-area">
+                                <ul class="lst_lecture-info">
+                                    <li class="item1">
+                                        <a href="javascript:;">
+                                            <img src="resources/images/main/img_lecture_1.png" alt="오감 쑥쑥 베베플레이쿡" />
+                                            <ul class="lst_inner-info">
+                                                <li>양평점</li>
+                                                <li>강사칼럼</li>
+                                            </ul>
+                                            <p>오감 쑥쑥 베베플레이쿡</p>
+                                            <span>강사명 : 심영애(플레이쿡 대표)</span>
+                                        </a>
+                                    </li>
+                                    <li class="item2">
+                                        <a href="javascript:;">
+                                            <img src="resources/images/main/img_lecture_2.png" alt="감성 가득한 손그림 강좌를 소개합니다." />
+                                            <ul class="lst_inner-info">
+                                                <li>구로점</li>
+                                                <li>강사인터뷰</li>
+                                            </ul>
+                                            <p>감성 가득한 손그림<br>강좌를 소개합니다.</p>
+                                            <span>강사명 : 강정화,김은영</span>
+                                        </a>
+                                    </li>
+                                    <li class="item3">
+                                        <a href="javascript:;">
+                                            <img src="resources/images/main/img_lecture_3.png" alt="아이들이 행복한 음악놀이 도로시 뮤직" />
+                                            <ul class="lst_inner-info">
+                                                <li>삼산점</li>
+                                                <li>지점갤러리</li>
+                                            </ul>
+                                            <p>아이들이 행복한<br>음악놀이 도로시 뮤직</p>
+                                            <span>강사명 : 이지혜</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- //section 3 -->
+                    </div>
+                    <!-- //메인 슬라이드 영역 -->
+
+                    <!-- 메인 슬라이드 영역 -->
+                    <div>
+                        <!-- section 4 -->
+                        <div class="section sect4 swiper-slide">
+                            <div class="left-area">
+                                <div class="review-wrap slide_dot-type">
+                                    <h3 class="blind">수강후기</h3>
+                                    <div class="review-visual">
+                                        <img src="resources/images/main/img_best_review.png" alt="수강후기" />
+                                        <div>
+                                            <p>
+                                                수강생들의 살아 있는 수강활동 이야기.<br>
+                                                다양하고 재미있는 수강 후기를 확인해보세요.
+                                            </p>
+                                            <a href="javascript:;">더보기</a>
+                                        </div>
+                                    </div>
+                                    <div class="review_list-wrap">
+                                        <div class="review_list-area">
+                                            <ul>
+                                                <li>
+                                                    <a href="javascript:;">
+                                                        <p><span>VIC 영등포점</span><em>아이앤쿡 솔직후기</em></p>
+                                                        <p class="ellipsis">[신설,50%할인] 오감플레이 아이앤쿡 (8~13개월)</p>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;">
+                                                        <p><span>오산점</span><em>꼬꼬마 여름학기 수강 대만족</em></p>
+                                                        <p class="ellipsis">[30%할인] 오감쑥쑥 감성가득 꼬꼬마 Baby&amp;Kid(10~18개월)</p>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;">
+                                                        <p><span>오산점</span><em>아이앤쿡 솔직후기</em></p>
+                                                        <p class="ellipsis">[신설,50%할인] 오감플레이 아이앤쿡 (8~13개월)</p>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;">
+                                                        <p><span>오산점</span><em>꼬꼬마 여름학기 수강 대만족</em></p>
+                                                        <p class="ellipsis">[30%할인] 오감쑥쑥 감성가득 꼬꼬마 Baby&amp;Kid(10~18개월)</p>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right-area">
+                                <div class="news-wrap">
+                                    <!-- 공지사항 -->
+                                    <div class="main_notice-wrap slide_dot-type">
+                                        <div class="main_notice-area">
+                                            <h3>공지사항</h3>
+                                            <ul>
+                                                <li>
+                                                    <a href="javascript:;">
+                                                        <span>전체</span>
+                                                        <span class="ellipsis">17년 서포터즈 이벤트 대상자 안내</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;">
+                                                        <span>VIC 영등포점</span>
+                                                        <span class="ellipsis">어린이날 맞이 아빠랑 생크림 케이크대회</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;">
+                                                        <span>전체</span>
+                                                        <span class="ellipsis">서울 양평점 문화센터 OPEN</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <a href="#" class="btn_news-more">더보기</a>
+                                        </div>
+                                    </div>
+                                    <!-- //공지사항 -->
+
+                                    <!-- 지점소식 -->
+                                    <div class="main_branch-wrap slide_dot-type">
+                                        <div class="main_branch-area">
+                                            <h3>지점소식</h3>
+                                            <div class="main_branch-inner">
+                                                <div class="main_branch-slide">
+                                                    <ul>
+                                                        <li>
+                                                            <a href="#">
+                                                                <img src="resources/images/main/img_branch.jpg" alt="내일은 발명왕~ 기계 장치 만들기(7~9세)" />
+                                                                <span>영등포점</span>
+                                                                <p>내일은 발명왕~ 기계<br>장치 만들기(7~9세)</p>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <img src="resources/images/main/img_branch_2.jpg" alt="" />
+                                                                <span>권선점</span>
+                                                                <p>색다른 즐거움 드로잉<br>매직쇼(4세이상)</p>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <img src="resources/images/main/img_branch.jpg" alt="내일은 발명왕~ 기계 장치 만들기(7~9세)" />
+                                                                <span>영등포점</span>
+                                                                <p>내일은 발명왕~ 기계<br>장치 만들기(7~9세)</p>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <img src="resources/images/main/img_branch_2.jpg" alt="" />
+                                                                <span>권선점</span>
+                                                                <p>색다른 즐거움 드로잉<br>매직쇼(4세이상)</p>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <a href="#" class="btn_news-more">더보기</a>
+                                        </div>
+                                    </div>
+                                    <!-- //지점소식 -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //section 4 -->
+                    </div>
+                    <!-- //메인 슬라이드 영역 -->
+                </div>
+                <!-- //main_cont-wrap -->
+
+                <!-- 메인 슬라이드 버튼 영역 -->
+                <div class="btn_slide-area">
+                    <button type="button" class="btn-prev"><img src="resources/images/btn/btn_slide_left.png" alt="왼쪽으로 이동" /></button>
+                    <button type="button" class="btn-next"><img src="resources/images/btn/btn_slide_right.png" alt="오른쪽으로 이동" /></button>
+                </div>
+                <!-- //메인 슬라이드 버튼 영역 -->
+            </div>
+            <!-- //main-contents -->
+        </div>
+        <!-- //container -->
+
+        <!-- footer -->
+        <div id="footer">
+            <!-- lst_direct-wrap -->
+            <div class="lst_direct-wrap">
+                <ul class="lst-direct">
+                    <li class="item1"><a href="javascript:;" target="_blank" title="새창열기"><span class="blind">롯데마트몰 바로가기</span></a></li>
+                    <li class="item2"><a href="javascript:;" target="_blank" title="새창열기"><span class="blind">롯데마트 바로가기</span></a></li>
+                    <li class="item3"><a href="javascript:;" target="_blank" title="새창열기"><span class="blind">하이마트 바로가기</span></a></li>
+                    <li class="item4"><a href="javascript:;" target="_blank" title="새창열기"><span class="blind">토이저러스 바로가기</span></a></li>
+                    <li class="item5"><a href="javascript:;" target="_blank" title="새창열기"><span class="blind">빅마켓 바로가기</span></a></li>
+                    <li class="item6"><a href="javascript:;" target="_blank" title="새창열기"><span class="blind">동반성장 바로가기</span></a></li>
+                </ul>
+            </div>
+            <!-- //lst_direct-wrap -->
+
+            <!-- foot-wrap -->
+            <div id="foot-wrap">
+                <div class="foot">
+                    <div class="foot-line01">
+                        <ul>
+                            <li><a href="javascript:;">문화센터소개</a></li>
+                            <li><a href="javascript:;">강사지원</a></li>
+                            <li><a href="javascript:;">이용약관</a></li>
+                            <li><a href="javascript:;">개인정보처리방침</a></li>
+                            <li><a href="javascript:;">영상정보관리방침</a></li>
+                            <li><a href="javascript:;">사이트맵</a></li>
+                        </ul>
+                        <div class="family">
+                            <a href="javascript:;">FAMILY SITE</a>
+                            <ul>
+                                <li><a href="javascript:;">관계사 사이트1</a></li>
+                                <li><a href="javascript:;">관계사 사이트2</a></li>
+                                <li><a href="javascript:;">관계사 사이트3</a></li>
+                            </ul>
+                        </div>
+                        <select id="" name="" class="fm-select" title="관계사 사이트 이동">
+                            <option value="">FAMILY SITE</option>
+                            <option value="">관계사 사이트1</option>
+                            <option value="">관계사 사이트2</option>
+                            <option value="">관계사 사이트3</option>
+                        </select>
+                    </div>
+                    <div class="foot-line02">
+                        <span class="foot-logo"><img src="resources/images/common/foot_logo.gif"></span>
+                        <ul class="foot-address">
+                            <li>롯데쇼핑(주) 롯데마트사업본부 대표이사 : 이원준</li>
+                            <li>주소 : 서울시 송파구 올림픽로 269 (신천동 롯데캐슬골드) 6, 7층 <span>통신판매업 신고 : 송파 제 3366호</span>     TEL : 02.2145.8000</li>
+                            <li>COPYRIGHT ⓒ LOTTEMART. ALL RIGHTS RESERVED</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- //foot-wrap -->
+        </div>
+        <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+</body>
+</html>

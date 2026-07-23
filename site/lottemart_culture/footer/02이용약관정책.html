@@ -1,0 +1,3327 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>롯데마트 문화센터</title>
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/swiper.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/slick.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/color_winter_1.css" />
+    <script type="text/javascript" src="../resources/js/jquery-1.12.3.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.easing.1.3.min.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.placeholder.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.selectBox.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="../resources/js/slick.js"></script>
+	<script type="text/javascript" src="../resources/js/swiper.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../resources/js/ui.common.js"></script>
+    <script type="text/javascript" src="../resources/js/ui.js"></script>
+    <script type="text/javascript" src="../resources/js/pkm.js"></script>
+</head>
+<body>
+    <!-- wrap -->
+    <div id="wrap"> <!-- [D] 상단 버튼이 있는 테마 일 경우 theme1 추가 -->
+            <!-- header -->
+        <div id="header">
+            <!-- pc-header -->
+            <div class="pc-header">
+                <!-- top_menu-area -->
+                <div class="top_menu-area">
+                    <div class="inner">
+                        <ul class="lst-login">
+                            <!-- <li><a href="javascript:;">로그인</a></li>  [D] 로그아웃시 로그인 노출 -->
+                            <!-- <li><a href="javascript:;">회원가입</a></li> [D] 로그아웃시 회원가입 노출 -->
+                            <li><a href="javascript:;">로그아웃</a></li>
+                            <li class="mypage"><a href="javascript:;">My페이지</a></li>
+                            <!-- [D] 버튼이 있는 테마 -->
+                            <li class="last cart"><a href="javascript:;">강좌바구니 <span>3</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- //top_menu-area -->
+
+                <!-- gnb-area -->
+                <div class="gnb-area">
+                    <!-- logo-area -->
+                    <div class="logo-area inner">
+                        <h1><a href="#none"><img src="../resources/images/common/logo.png" alt="롯데마트 문화센터" /></a></h1>
+                        <button type="button" class="btn-gnb"><span class="blind">목록버튼</span></button>
+                        <!-- 강좌바구니 갯수 -->
+                        <a href="javascript:;" class="btn_cart-cnt"><span class="blind">강좌바구니 갯수</span><span>3</span></a>
+                        <!-- 강좌바구니 갯수 -->
+                    </div>
+                    <!-- //logo-area -->
+
+                    <!-- menu-area -->
+                    <div class="menu-area">
+                        <!-- menu-inner -->
+                        <div class="menu-inner">
+                            <!-- gnb-wrap -->
+                            <div class="gnb-wrap">
+                                <div class="inner">
+                                    <h2 class="blind">메뉴</h2>
+                                    <ul class="lst_gnb-area">
+                                        <li class="menu1">
+                                            <a href="javascript:;">수강신청</a>
+                                            <ul>
+                                                <li><a href="javascript:;">수강신청</a></li>
+                                                <li><a href="javascript:;">이벤트특강</a></li>
+                                                <li><a href="javascript:;">강좌시간표</a></li>
+                                                <li><a href="javascript:;">수강신청가이드</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu2">
+                                            <a href="javascript:;">문센커뮤니티</a>
+                                            <ul>
+                                                <li><a href="javascript:;">수강후기</a></li>
+                                                <li><a href="javascript:;">강좌PR</a></li>
+                                                <li><a href="javascript:;">강좌Talk</a></li>
+                                                <li><a href="javascript:;">참여이벤트</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu3">
+                                            <a href="javascript:;">온라인 전단</a>
+                                        </li>
+                                        <li class="menu4">
+                                            <a href="javascript:;">고객센터</a>
+                                            <ul>
+                                                <li><a href="javascript:;">공지사항</a></li>
+                                                <li><a href="javascript:;">지점소식</a></li>
+                                                <li><a href="javascript:;">이용문의</a></li>
+                                                <li><a href="javascript:;">고객의소리</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu5">
+                                            <a href="javascript:;">강사데스크</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- //gnb-wrap -->
+
+                            <!-- branch_srch-wrap -->
+                            <div class="branch_srch-wrap">
+                                <div class="inner">
+                                    <h2><a href="javascript:;" class="btn_branch-srch">지점찾기</a></h2><!-- 활성화시 active 추가 -->
+                                    <!-- branch_find-area -->
+                                    <div class="branch_find-area">
+                                        <!-- 지역별 메뉴 -->
+                                        <ul class="branch-menu lst_txt-c">
+                                            <li>서울</li> <!-- [D] 활성화시 active 추가 -->
+                                            <li>경기도</li>
+                                            <li>인천권</li>
+                                            <li>충천권</li>
+                                            <li>영남권</li>
+                                            <li>호남권</li>
+                                            <li>강원도</li>
+                                            <li>제주도</li>
+                                        </ul>
+                                        <!-- // 지역별 메뉴 -->
+
+                                        <!-- 서울 지역별 메뉴 상세 -->
+                                        <div class="branch-con">
+                                            <strong class="blind">서울</strong>
+                                            <ul>
+                                                <li class="active"><a href="sub/지점메인.html">vic영등포점</a></li><!-- [D] 활성화시 active 추가 -->
+                                                <li><a href="sub/지점메인.html">구로점</a></li>
+                                                <li><a href="sub/지점메인.html">송파점</a></li>
+                                                <li><a href="sub/지점메인.html">양평점</a></li>
+                                                <li><a href="sub/지점메인.html">은평점</a></li>
+                                                <li><a href="sub/지점메인.html">중계점</a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- // 서울 지역별 메뉴 상세 -->
+
+                                        <!-- 경기도 지역별 메뉴 상세 -->
+                                        <div class="branch-con">
+                                            <strong class="blind">경기도</strong>
+                                            <ul>
+                                                <li><a href="sub/지점메인.html">고양점</a></li>
+                                                <li><a href="sub/지점메인.html">광교점</a></li>
+                                                <li><a href="sub/지점메인.html">구리점</a></li>
+                                                <li><a href="sub/지점메인.html">권선점</a></li>
+                                                <li><a href="sub/지점메인.html">동두천점</a></li>
+                                                <li><a href="sub/지점메인.html">수지점</a></li>
+                                                <li><a href="sub/지점메인.html">시흥배곧점</a></li>
+                                                <li><a href="sub/지점메인.html">신갈점</a></li>
+                                                <li><a href="sub/지점메인.html">안산점</a></li>
+                                                <li><a href="sub/지점메인.html">안성점</a></li>
+                                                <li><a href="sub/지점메인.html">양주점</a></li>
+                                                <li><a href="sub/지점메인.html">영통점</a></li>
+                                                <li><a href="sub/지점메인.html">오산점</a></li>
+                                                <li><a href="sub/지점메인.html">의정부점</a></li>
+                                                <li><a href="sub/지점메인.html">주엽점</a></li>
+                                                <li><a href="sub/지점메인.html">평택점</a></li>
+                                            </ul>
+                                        </div>
+                                        <!--// 경기도 지역별 메뉴 상세 -->
+
+                                        <!-- 인천권 지역별 메뉴 상세 -->
+                                        <div class="branch-con">
+                                            <strong class="blind">인천권</strong>
+                                            <ul>
+                                                <li><a href="sub/지점메인.html">검단점</a></li>
+                                                <li><a href="sub/지점메인.html">계양점</a></li>
+                                                <li><a href="sub/지점메인.html">부평점(산곡)</a></li>
+                                                <li><a href="sub/지점메인.html">삼산점</a></li>
+                                                <li><a href="sub/지점메인.html">송도점</a></li>
+                                                <li><a href="sub/지점메인.html">영종도점</a></li>
+                                                <li><a href="sub/지점메인.html">청라점</a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- // 인천권 지역별 메뉴 상세 -->
+
+                                        <!-- 충청권 지역별 메뉴 상세 -->
+                                        <div class="branch-con">
+                                            <strong class="blind">충청권</strong>
+                                            <ul>
+                                                <li><a href="sub/지점메인.html">노은점</a></li>
+                                                <li><a href="sub/지점메인.html">당진점</a></li>
+                                                <li><a href="sub/지점메인.html">대덕점</a></li>
+                                                <li><a href="sub/지점메인.html">상당점</a></li>
+                                                <li><a href="sub/지점메인.html">서대전점</a></li>
+                                                <li><a href="sub/지점메인.html">서산점</a></li>
+                                                <li><a href="sub/지점메인.html">성정점</a></li>
+                                                <li><a href="sub/지점메인.html">천안점(쌍용)</a></li>
+                                                <li><a href="sub/지점메인.html">충주점</a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- // 충청권 지역별 메뉴 상세 -->
+
+                                        <!-- 영남권 지역별 메뉴 상세 -->
+                                        <div class="branch-con">
+                                            <strong class="blind">영남권</strong>
+                                            <ul>
+                                                <li><a href="sub/지점메인.html">거제점</a></li>
+                                                <li><a href="sub/지점메인.html">구미점</a></li>
+                                                <li><a href="sub/지점메인.html">금정점</a></li>
+                                                <li><a href="sub/지점메인.html">김천점</a></li>
+                                                <li><a href="sub/지점메인.html">대구율하점</a></li>
+                                                <li><a href="sub/지점메인.html">부산점</a></li>
+                                                <li><a href="sub/지점메인.html">사상점</a></li>
+                                                <li><a href="sub/지점메인.html">사하점</a></li>
+                                                <li><a href="sub/지점메인.html">양덕점</a></li>
+                                                <li><a href="sub/지점메인.html">울산점</a></li>
+                                                <li><a href="sub/지점메인.html">웅상점</a></li>
+                                                <li><a href="sub/지점메인.html">장유점</a></li>
+                                                <li><a href="sub/지점메인.html">진장점</a></li>
+                                                <li><a href="sub/지점메인.html">진해점</a></li>
+                                                <li><a href="sub/지점메인.html">창원중앙점</a></li>
+                                                <li><a href="sub/지점메인.html">통영점</a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- // 영남권 지역별 메뉴 상세 -->
+
+                                        <!-- 호남권 지역별 메뉴 상세 -->
+                                        <div class="branch-con">
+                                            <strong class="blind">호남권</strong>
+                                            <ul>
+                                                <li><a href="sub/지점메인.html">군산점</a></li>
+                                                <li><a href="sub/지점메인.html">목포점</a></li>
+                                                <li><a href="sub/지점메인.html">상무점</a></li>
+                                                <li><a href="sub/지점메인.html">송천점(전주)</a></li>
+                                                <li><a href="sub/지점메인.html">수완점</a></li>
+                                                <li><a href="sub/지점메인.html">여수점</a></li>
+                                                <li><a href="sub/지점메인.html">월드컵점</a></li>
+                                                <li><a href="sub/지점메인.html">익산점</a></li>
+                                                <li><a href="sub/지점메인.html">전주점</a></li>
+                                                <li><a href="sub/지점메인.html">첨단점</a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- // 호남권 지역별 메뉴 상세 -->
+
+                                        <!-- 강원도 지역별 메뉴 상세 -->
+                                        <div class="branch-con">
+                                            <strong class="blind">강원도</strong>
+                                            <ul>
+                                                <li><a href="sub/지점메인.html">석사점</a></li>
+                                                <li><a href="sub/지점메인.html">춘천점</a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- // 강원도 지역별 메뉴 상세 -->
+
+                                        <!-- 제주도 지역별 메뉴 상세 -->
+                                        <div class="branch-con">
+                                            <strong class="blind">제주도</strong>
+                                            <ul>
+                                                <li><a href="sub/지점메인.html">석사점</a></li>
+                                                <li><a href="sub/지점메인.html">춘천점</a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- // 제주도 지역별 메뉴 상세 -->
+                                    </div>
+                                    <!-- //branch_find-area -->
+                                </div>
+                            </div>
+                            <!-- branch_srch-wrap -->
+
+                            <!-- word_srch-wrap -->
+                            <div class="word_srch-wrap">
+                                <div class="inner">
+                                    <h2>
+                                        <a href="javascript:;" class="btn_word-srch">
+                                            <img src="../resources/images/btn/btn_search_1.png" alt="검색하기">
+                                        </a>
+                                    </h2>
+                                    <!-- word_srch-area -->
+                                    <div class="word_srch-area">
+                                        <form>
+                                            <fieldset>
+                                                <legend>검색영역</legend>
+                                                <div class="word_srch-form">
+                                                    <input type="text" id="" class="" title="검색어" placeholder="검색어를 입력하세요.">
+                                                    <input type="image" src="../resources/images/btn/btn_search_2.png" alt="검색">
+                                                </div>
+                                            </fieldset>
+                                        </form>
+                                    </div>
+                                    <!-- word_srch-area -->
+                                </div>
+                            </div>
+                            <!-- //word_srch-wrap -->
+                        </div>
+                        <!-- // menu-inner -->
+                        <!-- gnb-bg -->
+                        <div class="gnb-bg">
+                            <div class="bg1 bg-c"></div>
+                            <div class="bg2"></div>
+                            <div class="bg3"></div>
+                        </div>
+                        <!-- gnb-bg -->
+                    </div>
+                    <!-- //menu-area -->
+                </div>
+                <!-- //gnb-area -->
+            </div>
+            <!-- //pc-header -->
+
+            <!-- mob-header -->
+            <div class="mob-header bg-c">
+                <!-- gnb-area -->
+                <div class="gnb-area">
+                    <!-- logo-area -->
+                    <div class="logo-area inner">
+                        <h1><a href="#none"><img src="../resources/images/mobile/common/logo.png" alt="롯데마트 문화센터" /></a></h1>
+                        <button type="button" class="btn-mgnb">전체메뉴</button>
+
+                        <!-- btn_top_srch -->
+                        <button type="button" class="btn_top_srch">검색</button>
+                        <!-- //btn_top_srch -->
+                        
+                        <!-- 로그인버튼 -->
+                        <a href="javascript:;" class="btn-login">로그인</a>
+                        <!-- //로그인버튼 -->
+                        <!-- 강좌바구니 갯수
+                        <a href="javascript:;" class="btn_cart-cnt"><span class="blind">강좌바구니 갯수</span><span>3</span></a>
+                        강좌바구니 갯수 -->
+                        
+                        <div class="top_srch-area">
+                            <input type="text" id="" name="" title="검색어 입력" />
+                            <a href="#" class="btn">검색</a>
+                        </div>
+                    </div>
+                    <!-- //logo-area -->
+                    
+                    <!-- menu-area -->
+                    <div class="menu-area">
+                        <!-- menu-inner -->
+                        <div class="menu-inner">
+                            <div class="mob_login-area">
+                                <a href="#" class="btn_login">마이페이지</a>
+                                <a href="#" class="btn_join">장바구니</a>
+                            </div>
+                            <!-- gnb-wrap -->
+                            <div class="gnb-wrap">
+                                <h2 class="blind">메뉴</h2>
+                                <ul class="lst_gnb-area">
+                                    <li class="menu1">
+                                        <a href="javascript:;"><span>수강신청</span></a>
+                                        <ul>
+                                            <li><a href="javascript:;">수강신청</a></li>
+                                            <li><a href="javascript:;">이벤트특강</a></li>
+                                            <li><a href="javascript:;">강좌시간표</a></li>
+                                            <li><a href="javascript:;">수강신청가이드</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu2">
+                                        <a href="javascript:;"><span>문센커뮤니티</span></a>
+                                        <ul>
+                                            <li><a href="javascript:;">수강후기</a></li>
+                                            <li><a href="javascript:;">강좌PR</a></li>
+                                            <li><a href="javascript:;">강좌Talk</a></li>
+                                            <li><a href="javascript:;">참여이벤트</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu3">
+                                        <a href="javascript:;"><span>온라인 전단</span></a>
+                                    </li>
+                                    <li class="menu4">
+                                        <a href="javascript:;"><span>고객센터</span></a>
+                                        <ul>
+                                            <li><a href="javascript:;">공지사항</a></li>
+                                            <li><a href="javascript:;">지점소식</a></li>
+                                            <li><a href="javascript:;">이용문의</a></li>
+                                            <li><a href="javascript:;">고객의소리</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu5">
+                                        <a href="javascript:;"><span>강사지원</span></a>
+                                    </li>
+                                    <li class="menu6 setup">
+                                        <a href="javascript:;"><span>설정</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- //gnb-wrap -->
+
+                            <!-- branch_srch-wrap -->
+                            <div class="branch_srch-wrap">
+                                <h2><a href="javascript:;" class="btn_branch-srch">지점찾기</a></h2><!-- 활성화시 active 추가 -->
+                                <!-- branch_find-area -->
+                                <div class="branch_find-area">
+                                    <!-- 지역별 메뉴 -->
+                                    <ul class="branch-menu lst_txt-c">
+                                        <li>서울</li> <!-- [D] 활성화시 active 추가 -->
+                                        <li>경기도</li>
+                                        <li>인천권</li>
+                                        <li>충천권</li>
+                                        <li>영남권</li>
+                                        <li>호남권</li>
+                                        <li>강원도</li>
+                                        <li>제주도</li>
+                                    </ul>
+                                    <!-- // 지역별 메뉴 -->
+
+                                    <!-- 서울 지역별 메뉴 상세 -->
+                                    <div class="branch-con">
+                                        <strong class="blind">서울</strong>
+                                        <ul>
+                                            <li class="active"><a href="지점메인/지점메인.html">vic영등포점</a></li><!-- [D] 활성화시 active 추가 -->
+                                            <li><a href="지점메인/지점메인.html">구로점</a></li>
+                                            <li><a href="지점메인/지점메인.html">송파점</a></li>
+                                            <li><a href="지점메인/지점메인.html">양평점</a></li>
+                                            <li><a href="지점메인/지점메인.html">은평점</a></li>
+                                            <li><a href="지점메인/지점메인.html">중계점</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- // 서울 지역별 메뉴 상세 -->
+
+                                    <!-- 경기도 지역별 메뉴 상세 -->
+                                    <div class="branch-con">
+                                        <strong class="blind">경기도</strong>
+                                        <ul>
+                                            <li><a href="지점메인/지점메인.html">고양점</a></li>
+                                            <li><a href="지점메인/지점메인.html">광교점</a></li>
+                                            <li><a href="지점메인/지점메인.html">구리점</a></li>
+                                            <li><a href="지점메인/지점메인.html">권선점</a></li>
+                                            <li><a href="지점메인/지점메인.html">동두천점</a></li>
+                                            <li><a href="지점메인/지점메인.html">수지점</a></li>
+                                            <li><a href="지점메인/지점메인.html">시흥배곧점</a></li>
+                                            <li><a href="지점메인/지점메인.html">신갈점</a></li>
+                                            <li><a href="지점메인/지점메인.html">안산점</a></li>
+                                            <li><a href="지점메인/지점메인.html">안성점</a></li>
+                                            <li><a href="지점메인/지점메인.html">양주점</a></li>
+                                            <li><a href="지점메인/지점메인.html">영통점</a></li>
+                                            <li><a href="지점메인/지점메인.html">오산점</a></li>
+                                            <li><a href="지점메인/지점메인.html">의정부점</a></li>
+                                            <li><a href="지점메인/지점메인.html">주엽점</a></li>
+                                            <li><a href="지점메인/지점메인.html">평택점</a></li>
+                                        </ul>
+                                    </div>
+                                    <!--// 경기도 지역별 메뉴 상세 -->
+
+                                    <!-- 인천권 지역별 메뉴 상세 -->
+                                    <div class="branch-con">
+                                        <strong class="blind">인천권</strong>
+                                        <ul>
+                                            <li><a href="지점메인/지점메인.html">검단점</a></li>
+                                            <li><a href="지점메인/지점메인.html">계양점</a></li>
+                                            <li><a href="지점메인/지점메인.html">부평점(산곡)</a></li>
+                                            <li><a href="지점메인/지점메인.html">삼산점</a></li>
+                                            <li><a href="지점메인/지점메인.html">송도점</a></li>
+                                            <li><a href="지점메인/지점메인.html">영종도점</a></li>
+                                            <li><a href="지점메인/지점메인.html">청라점</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- // 인천권 지역별 메뉴 상세 -->
+
+                                    <!-- 충청권 지역별 메뉴 상세 -->
+                                    <div class="branch-con">
+                                        <strong class="blind">충청권</strong>
+                                        <ul>
+                                            <li><a href="지점메인/지점메인.html">노은점</a></li>
+                                            <li><a href="지점메인/지점메인.html">당진점</a></li>
+                                            <li><a href="지점메인/지점메인.html">대덕점</a></li>
+                                            <li><a href="지점메인/지점메인.html">상당점</a></li>
+                                            <li><a href="지점메인/지점메인.html">서대전점</a></li>
+                                            <li><a href="지점메인/지점메인.html">서산점</a></li>
+                                            <li><a href="지점메인/지점메인.html">성정점</a></li>
+                                            <li><a href="지점메인/지점메인.html">천안점(쌍용)</a></li>
+                                            <li><a href="지점메인/지점메인.html">충주점</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- // 충청권 지역별 메뉴 상세 -->
+
+                                    <!-- 영남권 지역별 메뉴 상세 -->
+                                    <div class="branch-con">
+                                        <strong class="blind">영남권</strong>
+                                        <ul>
+                                            <li><a href="지점메인/지점메인.html">거제점</a></li>
+                                            <li><a href="지점메인/지점메인.html">구미점</a></li>
+                                            <li><a href="지점메인/지점메인.html">금정점</a></li>
+                                            <li><a href="지점메인/지점메인.html">김천점</a></li>
+                                            <li><a href="지점메인/지점메인.html">대구율하점</a></li>
+                                            <li><a href="지점메인/지점메인.html">부산점</a></li>
+                                            <li><a href="지점메인/지점메인.html">사상점</a></li>
+                                            <li><a href="지점메인/지점메인.html">사하점</a></li>
+                                            <li><a href="지점메인/지점메인.html">양덕점</a></li>
+                                            <li><a href="지점메인/지점메인.html">울산점</a></li>
+                                            <li><a href="지점메인/지점메인.html">웅상점</a></li>
+                                            <li><a href="지점메인/지점메인.html">장유점</a></li>
+                                            <li><a href="지점메인/지점메인.html">진장점</a></li>
+                                            <li><a href="지점메인/지점메인.html">진해점</a></li>
+                                            <li><a href="지점메인/지점메인.html">창원중앙점</a></li>
+                                            <li><a href="지점메인/지점메인.html">통영점</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- // 영남권 지역별 메뉴 상세 -->
+
+                                    <!-- 호남권 지역별 메뉴 상세 -->
+                                    <div class="branch-con">
+                                        <strong class="blind">호남권</strong>
+                                        <ul>
+                                            <li><a href="지점메인/지점메인.html">군산점</a></li>
+                                            <li><a href="지점메인/지점메인.html">목포점</a></li>
+                                            <li><a href="지점메인/지점메인.html">상무점</a></li>
+                                            <li><a href="지점메인/지점메인.html">송천점(전주)</a></li>
+                                            <li><a href="지점메인/지점메인.html">수완점</a></li>
+                                            <li><a href="지점메인/지점메인.html">여수점</a></li>
+                                            <li><a href="지점메인/지점메인.html">월드컵점</a></li>
+                                            <li><a href="지점메인/지점메인.html">익산점</a></li>
+                                            <li><a href="지점메인/지점메인.html">전주점</a></li>
+                                            <li><a href="지점메인/지점메인.html">첨단점</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- // 호남권 지역별 메뉴 상세 -->
+
+                                    <!-- 강원도 지역별 메뉴 상세 -->
+                                    <div class="branch-con">
+                                        <strong class="blind">강원도</strong>
+                                        <ul>
+                                            <li><a href="지점메인/지점메인.html">석사점</a></li>
+                                            <li><a href="지점메인/지점메인.html">춘천점</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- // 강원도 지역별 메뉴 상세 -->
+
+                                    <!-- 제주도 지역별 메뉴 상세 -->
+                                    <div class="branch-con">
+                                        <strong class="blind">제주도</strong>
+                                        <ul>
+                                            <li><a href="지점메인/지점메인.html">석사점</a></li>
+                                            <li><a href="지점메인/지점메인.html">춘천점</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- // 제주도 지역별 메뉴 상세 -->
+                                </div>
+                                <!-- //branch_find-area -->
+                            </div>
+                            <!-- branch_srch-wrap -->
+                        </div>
+                        <!-- // menu-inner -->
+                        <a href="#" class="btn_menu_cls"><span class="blind">메뉴 닫기</span></a>
+                    </div>
+                    <!-- //menu-area -->
+                    
+                    <!-- setup-area -->
+                    <div class="setup-area">
+                        <h3><a href="#">설정</a></h3>
+                        <div class="lst_setup-area">
+                            <ul>
+                                <li>
+                                    <div class="inner-setup">
+                                        <span>자동 로그인</span>
+                                        <div class="btn_setup-area">
+                                            <div>
+                                                <span class="txt on">on</span>
+                                                <span class="txt off">off</span>
+                                                <span class="ico"></span>
+                                                <input type="checkbox" id="" name="" title="자동 로그인" checked />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="inner-setup">
+                                        <span>알림 설정</span>
+                                        <div class="btn_setup-area">
+                                            <div>
+                                                <span class="txt on">on</span>
+                                                <span class="txt off">off</span>
+                                                <span class="ico"></span>
+                                                <input type="checkbox" id="" name="" title="알림 설정" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="inner-setup">
+                                        <span>블루투스 설정</span>
+                                        <div class="btn_setup-area">
+                                            <div>
+                                                <span class="txt on">on</span>
+                                                <span class="txt off">off</span>
+                                                <span class="ico"></span>
+                                                <input type="checkbox" id="" name="" title="블루투스 설정" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="inner-setup">
+                                        <span>버전 정보</span>
+                                        <span class="version">최신버전 0.0.0</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="inner-setup setup_inner-list">
+                                        <a href="#">약관 및 정책</a>
+                                        <ul>
+                                            <li><a href="#">- 이용약관정책</a></li>
+                                            <li><a href="#">- 개인정보처리방침</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="inner-setup">
+                                        <a href="#">문화센터 소개</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- //setup-area -->
+                </div>
+                <!-- //gnb-area -->
+            </div>
+            <!-- //mob-header -->
+        </div>
+        <!-- //header -->
+
+        <!-- container -->
+        <div id="container">
+            <div id="contents" class="inner center-provision">
+				<!-- title -->
+                <div class="tit-area">
+                    <h2 class="tit">이용약관정책</h2>
+                </div>
+				<!-- //title -->
+
+				<!-- navigator -->
+				<div class="breadcrumb">
+					<ul>
+						<li><a href="#" title="롯데마트 문화센터 홈">홈</a><span>&gt;</span></li>
+						<li>이용약관정책</li>
+					</ul>
+                </div>
+				<!-- //navigator -->
+
+                <div class="conts-box">
+                    <dl class="table-header">
+                        <dt>이용약관정책 상세 내역보기</dt>
+                        <dd>
+                            <div class="provision_list-box">
+                                <div class="selectbox">
+                                    <select name="" id="provision-list" title="이용약관정책 선택">
+                                        <option value="" >항목 선택</option>
+                                        <option value="ag1">제1조 목적</option>
+                                        <option value="ag2">제2조 정의</option>
+                                        <option value="ag3">제3조 (약관의 게시와 개정)</option>
+                                        <option value="ag4">제4조 (약관의 해석)</option>
+                                        <option value="ag5">제5조 (서비스의 제공 및 변경)</option>
+                                        <option value="ag6">제6조 (서비스의 중단)</option>
+                                        <option value="ag7">제7조 (이용계약의 체결)</option>
+                                        <option value="ag8">제8조 (회원정보의 변경)</option>
+                                        <option value="ag9">제9조 (회원탈퇴 및 자격 상실 등)</option>
+                                        <option value="ag10">제10조 (회원에 대한 통지)</option>
+                                        <option value="ag11">제11조 (구매신청)</option>
+                                        <option value="ag12">제12조 (계약의 성립)</option>
+                                        <option value="ag13">제13조 (지급방법)</option>
+                                        <option value="ag14">제14조 (수신확인통지, 구매신청 변경 및 취소)</option>
+                                        <option value="ag15">제15조 (배송)</option>
+                                        <option value="ag16">제16조 (환급)</option>
+                                        <option value="ag17">제17조 (청약철회 등)</option>
+                                        <option value="ag18">제18조 (청약철회 등의 효과)</option>
+                                        <option value="ag19">제19조 (개인정보보호)</option>
+                                        <option value="ag20">제20조 (회사의 의무)</option>
+                                        <option value="ag21">제21조 분쟁해결</option>
+                                        <option value="ag22">제22조 (이용자의 의무)</option>
+                                        <option value="ag23">제23조 (회사의 웹사이트와 "타사"의 웹사이트간의 연결)</option>
+                                        <option value="ag24">제24조 (저작권의 귀속 및 이용제한)</option>
+                                        <option value="ag25">제25조 (게시물의 관리)</option>
+                                        <option value="ag26">제26조 (면책)</option>
+                                        <option value="ag27">제27조 (통합회원제)</option>
+                                        <option value="ag28">제28조 (분쟁해결)</option>
+                                        <option value="ag29">제29조 (준거법 및 재판관할)</option>
+                                    </select>
+                                </div>
+                                <a href="#none" class="btn btn-provision_go">이동</a>
+                            </div>
+                        </dd>
+                    </dl>
+                    <table class="view-table">
+                        <caption>이용약관정책 상세보기 표 - 항목, 이용약관정책</caption>
+                        <colgroup>
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <td class="conts-cell">
+                                    <div class="provision">
+                                        <h4 id="ag1" class="ag-tit">제1조 (목적)</h4>
+                                            <p>1. 이 약관은 롯데쇼핑 주식회사 롯데마트(이하 '회사')가 운영하는 '인터넷 웹사이트 및 모바일 서비스(이하 통칭하여 '사이트')'에서 제공하는 인터넷 웹사이트 또는 모바일 관련 서비스(이하 '서비스') 등을 이용함에 있어 회사와 이용자의 권리 의무 및 책임 사항, 기타 필요한 사항을 규정하는데 목적이 있습니다.</p>
+
+                                        <h4 id="ag2" class="ag-tit">제2조 (정의)</h4>
+                                            <ol class="depth1">
+                                                <li>1.<strong>  '사이트'</strong>란 회사가 재화 또는 용역(이하 '재화 등')을 이용자에게 제공하기 위하여 컴퓨터 등 정보통신설비를 이용하여 재화 등을 거래할 수 있도록 설정한 가상의 영업장을 말하며, 아울러 사이트를 운영하는 사업자의 의미로도 사용합니다.
+                                                    <ol class = "depth2">
+                                                        <li>- 롯데마트 인터넷 쇼핑몰 : http://www.lottemart.com</li>
+                                                        <li>- 롯데마트 인터넷 쇼핑몰(모바일) : http://m.lottemart.com</li>
+                                                        <li>- 롯데마트 홍보사이트 : http://company.lottemart.com</li>
+                                                        <li>- 토이저러스 : http://www.toysrus.co.kr</li>
+                                                        <li>- 롯데마트 문화센터 : http://culture.lottemart.com</li>
+                                                        <li>- 롯데마트 문화센터(모바일) : http://m.culture.lottemart.com</li>
+                                                    </ol>
+                                                <li>2.<strong> '이용자'</strong>란 사이트에 접속하여 이 약관에 따라 사이트가 제공하는 서비스를 받는 회원 및 비회원을 말합니다.</li>
+                                                <li>3.<strong> '회원'</strong>이란 회사에 개인정보를 제공하여 회원등록을 하고 회원 ID를 부여 받은 회원 또는 그 회원전체를 의미하며, 회원 등록 시 부여 받은 ID로 회사 사이트에 자유롭게 접속할 수 있습니다.</li>
+                                                <li>4.<strong> '비회원'</strong> 이라 함은 회원으로 가입하지 않고 회사가 제공하는 정보 및 서비스를 이용하는 자를 말합니다.</li>
+                                                <li>5.<strong> '인터넷 웹사이트'</strong>란 회사에 회원으로 등록한 이용자가 다양한 정보와 서비스를 제공 받을 수 있도록 롯데마트몰, 문화센터, 토이저러스 등 회사가 제작하여 운영하는 사이트를 의미하며, '모바일 서비스'라 함은 회사에 회원 등록한 이용자가 다양한 정보와 서비스를 제공 받을 수 있도록 회사가 제작하여 운영하는 모바일 웹사이트 및 어플리케이션 서비스를 의미합니다.</li>
+                                                <li>6.<strong> '아이디(ID)'</strong>란 회원 식별과 회원의 서비스 이용을 위하여 회원이 선정하고 회사가 승인한 문자와 숫자의 조합을 말합니다. </li>
+                                                <li>7.<strong> '비밀번호(PASSWORD)'</strong>란 회원의 부여 받은 회원ID와 일치된 회원임을 확인하고 개인 정보 및 거래정보의 보호를 위하여 회원 자신이 설정한 문자와 숫자의 조합을 말합니다.</li>
+                                                <li>8.<strong> 'L-POINT'</strong>란 L-POINT 회원이 L-POINT 제휴사를 이용할 때 마다 L-POINT 제휴사에서 정하는 바에 따라 결제금액의 일정비율을 적립해드리는 포인트를 말합니다. </li>
+                                                <li>9.<strong> '롯데마트 마일리지'</strong>란 사이트의 회원에게 회사에서 정하는 바에 따라 사이트에서 결제한 금액의 일정비율을 지급해드리는 롯데마트몰의 자체포인트 제도로, 상품 구매 시 사이트에서 회사에서 정하는 바에 따라 결제 수단으로 사용할 수 있는 포인트를 말합니다.</li>
+                                               <li>10.<strong> '예치금'</strong>이란 이용자가 주문/결제한 금액에서 금액의 차이나 교환/환불이 발생되었을 경우, 해당 금액 또는 차액을 적립해 드리는 제도를 말합니다. </li>
+                                               <li>11.<strong> '상품권 전환금'</strong>이란 이용자의 요청이 있는 경우 롯데상품권을 롯데마트몰 에서 사용할 수 있도록 상품권 전환금으로 전환해드리는 서비스로, 회원은 회사가 운영하는 오프라인 각 매장(롯데마트 전점)의 고객만족센터에서 회원 본인에 대한 확인 절차(신분증 필참) 등을 포함한 회사 내규에 규정된 소정의 절차를 거친 경우 롯데상품권 권면 기재금액을 상품권 전환금으로 전환할 수 있습니다.</li>
+                                               <li>12.<strong> '휴대폰 결제'</strong>란 이용자 명의의 휴대폰 인증을 통해서 이동통신사별로 과금되는 소액결제 제도를 말합니다. 회사에서는 모바일 서비스를 이용하는 이용자에 한하여 휴대폰 결제시스템을 제공하고 있습니다. </li>
+                                               <li>13.<strong> '해지'</strong>라 함은 회사 또는 회원이 이용계약을 해약하는 것을 말합니다.</li>
+                                            </ol>
+
+                                        <h4 id="ag3" class="ag-tit">제3조 (약관의 게시와 개정)</h4>
+                                            <ol class="depth1">
+                                                <li>1. 사이트는 이 약관 및 개인정보취급방침의 내용과 상호, 영업소 소재지, 대표자의 성명, 사업자등록번호, 연락처(전화, 팩스, 전자우편 주소 등), 사업자등록번호, 통신판매업신고번호, 개인정보관리책임자 등을 이용자가 쉽게 알 수 있도록 사이트의 초기 서비스화면(전면)에 게시합니다. 다만, 약관 및 개인정보취급방침의 내용은 이용자가 연결화면을 통하여 볼 수 있도록 할 수 있습니다.</li>
+                                                <li>2. 사이트는 「전자상거래 등에서의 소비자 보호에 관한 법률」, 「약관의 규제에 관한 법률」, 「전자문서 및 전자거래기본법」, 「전자서명법」, 「정보통신망 이용촉진 및 정보보호 등에 관한 법률」, 「개인정보보호법」, 「방문판매 등에 관한 법률」, 「소비자보호법」 등 관련법령을 위배하지 않는 범위에서 이 약관을 개정할 수 있습니다. </li>
+                                                <li>3. 사이트가 약관을 개정할 경우에는 적용일자 및 개정사유를 명시하여 현행약관과 함께 사이트의 초기화면에 그 적용일자 7일 전부터 적용일자 전일까지 공지합니다. 다만, 회원에게 불리한 약관의 개정의 경우에는 공지 외에 일정기간 서비스내 전자우편, 전자쪽지, 로그인시 동의창 등의 전자적 수단을 통해 따로 명확히 통지하도록 합니다.</li>
+                                                <li>4. 회사가 전항에 따라 개정약관을 공지 또는 통지하면서 회원에게 7일 기간 내에 의사표시를 하지 않으면 의사표시가 표명된 것으로 본다는 뜻을 명확하게 공지 또는 통지하였음에도 회원이 명시적으로 거부의 의사표시를 하지 아니한 경우 회원이 개정약관에 동의한 것으로 봅니다.</li>
+                                                <li>5. 전항에 따른 개정약관은 그 적용일자 이후에 체결되는 계약에만 적용되고 그 이전에 이미 체결된 계약에 대해서는 개정 전의 약관조항이 그대로 적용됩니다. 다만 이미 계약을 체결한 이용자가 개정약관 조항의 적용을 받기를 원하는 뜻을 제3항에 의한 개정약관의 공지기간 내에 사이트에 송신하여 사이트의 동의를 받은 경우에는 개정약관 조항이 적용됩니다.</li>
+                                                <li>6. 회원이 개정약관의 적용에 동의하지 않는 경우 회사는 개정 약관의 내용을 적용할 수 없으며, 이 경우 회원은 이용계약을 해지할 수 있습니다. 다만, 기존 약관을 적용할 수 없는 특별한 사정이 있는 경우에는 회사는 이용계약을 해지할 수 있습니다.</li>
+                                            </ol>
+
+                                        <h4 id="ag4" class="ag-tit">제4조 (약관의 해석)</h4>
+                                            <ol class="depth1">
+                                                <li>1. 이 약관에서 정하지 아니한 사항이나 해석에 관하여는 관계법령 또는 상관례에 따릅니다.</li>
+                                            </ol>
+
+                                        <h4 id="ag5" class="ag-tit">제5조 (서비스의 제공 및 변경)</h4>
+                                            <ol class = "depth1">
+                                                <li>1. 사이트는 다음과 같은 서비스를 제공합니다.</li>
+                                                    <ol class="depth2">
+                                                        <li>가. 재화 또는 용역에 대한 정보 제공 및 구매계약의 체결</li>
+                                                        <li>나. 구매계약이 체결된 재화 또는 용역의 배송</li>
+                                                        <li>다. 광고, 이벤트 행사 등 상품 또는 용역과 관련한 다양한 판촉 행위</li>
+                                                        <li>라. 기타 사이트에서 추가 개발하거나 다른 회사와의 제휴계약 등을 통해 '회원'에게 제공하는 일체의 서비스</li>
+                                                        <li>마. 기타 사이트가 정하는 업무</li>
+                                                    </ol>
+                                                <li>2. 사이트는 재화 또는 용역의 품절 또는 교재 내용이나 기술적 사양의 변경 등의 경우에는 장차 체결되는 계약에 의해 제공할 재화와 용역의 내용을 변경할 수 있습니다. 이 경우에는 변경된 재화와 용역의 내용 및 제공일자를 명시하여 현재의 재화 또는 용역의 내용을 게시한 곳에 그 제공일자 이전 7일부터 공지합니다.</li>
+                                                <li>3. 사이트가 제공하기로 이용자와 계약을 체결한 서비스의 내용을 재화 또는 용역의 품절 또는 교재 내용이나 기술적 사양의 변경 등의 사유로 변경할 경우에는 사이트는 이로 인하여 이용자가 입은 손해를 배상합니다. 단, 사이트에 고의 또는 과실이 없는 경우에는 그러하지 아니합니다. </li>
+                                                <li>4. 사이트는 '서비스'를 일정범위로 분할하여 각 범위 별로 이용가능시간을 별도로 지정할 수 있습니다. 다만, 이러한 경우에는 그 내용을 사전에 공지합니다. </li>
+                                            </ol>
+
+                                        <h4 id="ag6" class="ag-tit">제6조 (서비스의 중단)</h4>
+                                            <ol class="depth1">
+                                                <li>1. 사이트는 컴퓨터 등 정보통신설비의 보수점검, 교체 및 고장, 통신의 두절 등의 사유가 발생한 경우에는 서비스의 제공을 일시적으로 중단할 수 있습니다.</li>
+                                                <li>2. 제1항에 의한 서비스 중단의 경우에는 사이트는 제10조에 정한 방법으로 이용자에게 통지합니다. 다만, 회사가 사전에 통지할 수 없는 부득이한 사유가 있는 경우 사후에 통지할 수 있습니다.</li>
+                                                <li>3. 사이트는 제1항의 사유로 서비스의 제공이 일시적으로 중단됨으로 인하여 이용자 또는 제3자가 입은 손해에 대하여 배상합니다. 단, 사이트에 고의 또는 과실이 없는 경우에는 그러하지 아니합니다.</li>
+                                            </ol>
+
+                                        <h4 id="ag7" class="ag-tit">제7조 (이용계약의 체결)</h4>
+                                            <ol class="depth1">
+                                                <li>1. 이용계약은 회원이 되고자 하는 자(이하 '가입신청자')가 사이트가 정한 가입 양식에 따라 회원정보를 기입한 후 이 약관에 동의한다는 의사표시를 한 다음 회원가입을 신청하고, 사이트가 이러한 신청에 대하여 승낙함으로써 체결됩니다.</li>
+                                                <li>2. 사이트는 제1항과 같은 회원가입신청에 대하여 이를 승낙함을 원칙으로 합니다. 다만, 다음 각 호에 해당하는 신청의 경우에는 승낙을 하지 않을 수 있습니다.</li>
+                                                <ol class="depth2">
+                                                    <li>가. 가입신청자가 이 약관 제9조 제3항에 의하여 이전에 회원자격을 상실한 적이 있는 경우. 단, 제9조 제3항에 의한 회원자격 상실 후 3년이 경과한 자로서 회사의 회원재가입 승낙을 얻은 경우에는 예외로 합니다.</li>
+                                                    <li>나. 타인의 명의를 이용한 경우</li>
+                                                    <li>다. 등록 내용에 허위, 기재누락, 오기가 있는 경우</li>
+                                                    <li>라. 기타 회원으로 등록하는 것이 사이트의 기술상 현저히 지장이 있다고 판단되는 경우</li>
+                                                </ol>
+                                                <li>3. 회원가입계약의 성립시기는 사이트의 승낙이 회원에게 도달한 시점으로 합니다.</li>
+                                                <li>4. 제2항 단서에 따라 회원가입신청의 승낙을 하지 아니하는 경우, 회사는 원칙적으로 이를 가입신청자에게 알리도록 합니다.</li>
+                                            </ol>
+
+                                        <h4 id="ag8" class="ag-tit">제8조 (회원정보의 변경)</h4>
+                                            <ol class="depth1">
+                                                <li>1. 회원은 사이트 내 개인정보관리 화면을 통하여 언제든지 본인의 개인정보를 열람하고 수정할 수 있습니다. 다만, 서비스 관리를 위해 필요한 아이디는 수정이 불가능합니다.</li>
+                                                <li>2. 회원은 회원가입신청시 기재한 사항이 변경되었을 경우, 온라인으로 수정을 하거나 전자우편 기타 방법으로 회사에 대하여 그 변경사항을 알려야 합니다.</li>
+                                                <li>3. 제2항의 변경사항을 회사에 알리지 않아 발생한 불이익에 대하여 회사는 책임지지 않습니다.</li>
+                                            </ol>
+
+                                        <h4 id="ag9" class="ag-tit">제9조 (회원탈퇴 및 자격 상실 등)</h4>
+                                            <ol class="depth1">
+                                                <li>1. 회원은 사이트에 언제든지 탈퇴를 요청할 수 있으며 사이트는 즉시 회원탈퇴를 처리합니다.</li>
+                                                <li>2. 회원이 다음 각호의 사유에 해당하는 경우, 사이트는 회원자격을 제한 및 정지시킬 수 있습니다.</li>
+                                                    <ol class = "depth2">
+                                                        <li>가. 가입 신청시에 허위 내용을 등록한 경우</li>
+                                                        <li>나. 사이트를 이용하여 구입한 재화∙용역 등의 대금, 기타 사이트 이용에 관련하여 회원이 부담하는 채무를 고의로 3회 이상 기일에 지급하지 않는 경우</li>
+                                                        <li>다. 사이트를 이용하여 구입한 재화를 3회 이상 정당한 사유 없이 수취 거부하였을 경우</li>
+                                                        <li>라. 다른 사람의 사이트 이용을 방해하거나 그 정보를 도용하는 등 전자상거래질서를 위협하는 경우</li>
+                                                        <li>마. 사이트를 이용하여 법령 또는 이 약관이 금지하거나 공서양속에 반하는 행위를 하는 경우</li>
+                                                        <li>바. 기타 다음과 같은 행위 등으로 사이트의 건전한 운영을 해하거나 사이트의 업무를 방해하는 경우</li>
+                                                    </ol>
+                                                    <ol class = "depth3">
+                                                        <li>ㄱ. 사이트의 운영에 관련하여 근거 없는 사실 또는 허위의 사실을 적시하거나 유포하여 사이트의 명예를 실추시키거나 사이트의 신뢰성을 해하는 경우</li>
+                                                        <li>ㄴ. 사이트의 운영과정에서 사이트의 직원에게 폭언 또는 음란한 언행을 하여 업무환경을 심각히 해하는 경우<li>
+                                                        <li>ㄷ. 사이트의 운영과정에서 이유 없는 잦은 연락이나 소란 또는 협박, 인과관계가 입증되지 않는 피해에 대한 보상(적립금, 현금, 상품)요구 등으로 업무를 방해하는 경우</li>
+                                                        <li>ㄹ. 사이트를 통해 구입한 재화∙상품 또는 용역에 특별한 하자가 없는데도 불구하고 일부 사용 후 상습적인 취소, 전부 또는 일부 반품 등으로 3회 이상 업무를 방해하는 경우. 상습적인 것으로 판단하는 기준은 당사 내부 규정에 따릅니다.</li>
+                                                    </ol>
+                                                <li>3. 사이트가 회원 자격을 제한∙정지 시킨 후, 동일한 행위가 2회 이상 반복되거나 30일 이내에 그 사유가 시정되지 아니하는 경우 사이트는 회원자격을 상실시킬 수 있습니다.</li>
+                                                <li>4. 사이트가 회원자격을 상실시키는 경우에는 회원등록을 말소합니다. 이 경우 회원에게 이를 통지하고, 회원등록 말소 전에 소명할 기회를 부여합니다.</li>
+                                            </ol>
+
+                                        <h4 id="ag10" class="ag-tit">제10조 (회원에 대한 통지)</h4>
+                                            <ol class="depth1">
+                                                <li>1. 사이트가 회원에 대한 통지를 하는 경우, 회원이 사이트에 제출한 전자우편 주소로 할 수 있습니다.</li>
+                                                <li>2. 사이트는 불특정다수 회원에 대한 통지의 경우 1주일 이상 사이트 게시판에 게시함으로써 개별 통지에 갈음할 수 있습니다. 다만, 회원 본인의 거래와 관련하여 중대한 영향을 미치는 사항에 대하여는 개별통지를 합니다.</li>
+                                            </ol>
+
+                                        <h4 id="ag11" class="ag-tit">제11조 (구매신청)</h4>
+                                            <p>사이트 이용자는 사이트상에서 이하의 방법에 의하여 구매를 신청합니다. 단 회원인 경우 제 1호 내지 제 4호의 적용을 제외할 수 있습니다</p>
+                                            <ol class="depth1">
+                                                <li>1. 성명, 주소, 전화번호, 전자우편주소 (또는 이동전화번호) 등의 입력</li>
+                                                <li>2. 재화 또는 용역의 선택</li>
+                                                <li>3. 결제방법의 선택</li>
+                                                <li>4. 약관내용, 청약철회권이 제한되는 서비스, 배송료, 설치비 등의 비용부담과 관련한 내용에 대한 확인</li>
+                                                <li>5. 이 약관에 동의한다는 표시 (예, 마우스 클릭)</li>
+                                            </ol>
+
+                                        <h4 id="ag12" class="ag-tit">제12조 (계약의 성립)</h4>
+                                            <ol class="depth1">
+                                                <li>1. 사이트는 제11조와 같은 구매신청에 대하여 다음 각호에 해당하지 않는 한 승낙합니다.</li>
+                                                    <ol class = "depth2">
+                                                        <li>가. 신청 내용에 허위, 기재누락, 오기가 있는 경우</li>
+                                                        <li>나. 미성년자가 담배, 주류, 청소년 유해 매체물 등 청소년보호법에서 금지하는 재화 및 용역을 구매하는 경우</li>
+                                                        <li>다. 기타 구매신청에 승낙하는 것이 사이트 기술상 현저히 지장이 있다고 판단하는 경우</li>
+                                                    </ol>
+                                                <li>2. 사이트의 승낙이 제14조 제1항의 수신확인통지형태로 이용자에게 도달한 시점에 계약이 성립한 것으로 봅니다.</li>
+                                                <li>3. 사이트의 승낙의 의사표시에는 이용자의 구매신청에 대한 확인 및 판매가능 여부, 구매신청의 정정 취소 등에 관한 정보 등을 포함합니다</li>
+                                            </ol>
+
+                                        <h4 id="ag13" class="ag-tit">제13조 (지급방법)</h4>
+                                            <p>사이트에서 구매한 재화 또는 용역에 대한 대금지급방법은 다음 각호의 하나로 할 수 있습니다. 단, L-POINT는 혼합 결제로 활용할 수 있습니다.(문화센터 제외)</p>
+                                            <ol class = "depth1">
+                                                <li>1. 실시간 계좌이체 (문화센터 제외)</li>
+                                                <li>2. 회사가 인정하는 신용카드</li>
+                                                <li>3. 롯데마트 마일리지 (문화센터 제외)</li>
+                                                <li>4. L-POINT (문화센터 제외)</li>
+                                                <li>5. 상품권 전환금 (문화센터 제외)</li>
+                                                <li>6. 예치금 (문화센터 제외)</li>
+                                                <li>7. 휴대폰 결제 (모바일 서비스에 한함)</li>
+                                            </ol>
+
+                                        <h4 id="ag14" class="ag-tit">제14조 (수신확인통지, 구매신청 변경 및 취소)</h4>
+                                            <ol class = "depth1">
+                                                <li>1. 사이트는 이용자의 구매신청이 있는 경우 이용자에게 수신확인통지를 합니다.</li>
+                                                <li>2. 수신확인통지를 받은 이용자는 의사표시의 불일치 등이 있는 경우에는 수신확인통지를 받은 후 즉시 구매신청 변경 및 취소를 요청할 수 있습니다.</li>
+                                                <li>3. 사이트는 배송 전 이용자의 구매신청 변경 및 취소 요청이 있는 때에는 지체 없이 그 요청에 따라 처리합니다. 단 롯데마트 문화센터는 요청시점에 따라 차등적으로 롯데마트 문화센터가 별도 규정하여 홈페이지 상에 공지한 처리 절차에 따라 처리합니다.</li>
+                                            </ol>
+
+                                        <h4 id="ag15" class="ag-tit">제15조 (배송)</h4>
+                                            <ol class="depth1">
+                                                <li>1. 사이트는 이용자가 구매한 재화에 대해 배송수단, 수단별 배송비용 부담자, 수단별 배송기간 등을 명시합니다. 만약 사이트가 약정 배송기간을 초과하거나 이용기간을 위반한 경우에는 그로 인한 이용자의 손해를 배상합니다. 다만, 사이트가 고의, 과실이 없음을 입증한 경우에는 그러하지 아니합니다.</li>
+                                            </ol>
+
+                                        <h4 id="ag16" class="ag-tit">제16조 (환급)</h4>
+                                            <ol class="depth1">
+                                                <li>사이트는 이용자가 구매신청한 재화 또는 용역이 품절 등의 사유로 재화의 인도 또는 용역의 제공을 할 수 없을 때에는 지체 없이 그 사유를 이용자에게 통지하고, 사전에 재화 또는 용역의 대금을 받은 경우에는 대금을 받은 날부터 3영업일 이내에 환급하거나 환급에 필요한 절차를 취합니다.</li>
+                                            </ol>
+
+                                        <h4 id="ag17" class="ag-tit">제17조 (청약철회 등)</h4>
+                                            <ol class="depth1">
+                                                <li>1. 사이트와 재화 등의 구매에 관한 계약을 체결한 이용자는 수신확인의 통지를 받은 날부터 7일 이내에 청약의 철회를 할 수 있습니다. 다만 그 서면을 교부 받은 때보다 재화등의 공급이 늦게 이루어진 경우에는 재화 등의 공급을 받거나 공급이 개시된 날부터 7일 이내에 청약의 철회를 할 수 있습니다.</li>
+                                                <li>2. 이용자는 재화 등을 배송 받은 경우 다음 각호의 1에 해당하는 경우에는 반품 및 교환을 할 수 없습니다.</li>
+                                                    <ol class ="depth2">
+                                                        <li>가. 이용자에게 책임 있는 사유로 재화 등이 멸실 또는 훼손된 경우 (다만 재화 등의 내용을 확인하기 위하여 포장 등을 훼손한 경우에는 청약 철회를 할 수 있습니다.)</li>
+                                                        <li>나. 이용자의 사용 또는 일부 소비에 의하여 재화 등의 가치가 현저히 감소한 경우</li>
+                                                        <li>다. 시간의 경과에 의하여 재판매가 곤란할 정도로 재화 등의 가치가 현저히 감소한 경우</li>
+                                                        <li>라. 같은 성능을 지닌 재화 등으로 복제가 가능한 경우 그 원본인 재화 등의 포장을 훼손한 경우</li>
+                                                    </ol>
+                                                <li>3. 제2항 제2호 내지 제4호의 경우에는 사이트가 사전에 청약 철회 등이 제한되는 사실을 소비자가 쉽게 알 수 있는 곳에 명기하거나 시용 상품을 제공하는 등의 조치를 하지 않았다면 이용자의 청약 철회 등이 제한되지 않습니다.</li>
+                                                <li>4. 이용자는 제1항 및 제2항의 규정에도 불구하고 재화 등의 내용이 표시, 광고 내용과 다르거나 계약 내용과 다르게 이행된 때에는 당해 재화 등을 공급받은 날부터 3월 이내, 그 사실을 안 날 또는 알 수 있었던 날부터 30일 이내에 청약철회 등을 할 수 있습니다.</li>
+                                            </ol>
+
+                                        <h4 id="ag18" class="ag-tit">제18조 (청약철회 등의 효과)</h4>
+                                            <ol class="depth1">
+                                                <li>1. 사이트는 이용자로부터 재화 등을 반환 받은 경우 3영업일 이내에 이미 지급받은 재화 등의 대금을 환급합니다. 이 경우 사이트가 이용자에게 재화 등의 환급을 지연한 때에는 그 지연 기간에 대하여 「전자상거래등에서의 소비자보호에 관한 법률 시행령」이 정하는 지연이자율을 곱하여 산정한 지연 이자(이하 '지연 배상금')를 지급합니다.</li>
+                                                <li>2. 사이트는 위 대금을 환급함에 있어서 이용자가 신용카드 그밖에 대통령령이 정하는 결제 수단으로 재화 등의 대금을 지급한 때에는 지체 없이 당해 결제 수단을 제공한 사업자로 하여금 재화등의 대금의 청구를 정지 또는 취소하도록 요청합니다. 다만, 사이트가 결제업자로부터 해당 재화 등의 대금을 이미 지급 받은 때에는 지체 없이 이를 결제업자에게 환급하고, 그 사실을 소비자에게 통지하여야 합니다.</li>
+                                                <li>3. 청약철회 등의 경우 공급받은 재화 등의 반환에 필요한 비용은 이용자가 부담합니다. 사이트는 이용자에게 청약철회 등을 이유로 위약금 또는 손해배상을 청구하지 않습니다. 다만 재화 등의 내용이 표시광고 내용과 다르거나 계약내용과 다르게 이행되어 청약철회 등을 하는 경우 재화 등의 반환에 필요한 비용은 사이트가 부담합니다.</li>
+                                                <li>4. 이미 재화 등이 일부 사용 또는 일부 소비된 경우에는 그 재화 등의 사용 또는 일부 소비에 의하여 소비자가 얻은 이익 또는 그 재화 등의 공급에 소요된 비용에 상당하는 금액으로서 다음과 같은 금액의 지급을 이용자에게 청구할 수 있습니다.</li>
+                                                    <ol calss = "depth2">
+                                                        <li>가. 재화 등의 사용으로 소모성 부품의 재판매가 곤란하거나 재판매가격이 현저히 하락하는 경우에는 해당 소모성 부품의 공급에 든 비용</li>
+                                                        <li>나. 다수의 동일한 가분물로 구성된 재화 등의 경우에는 소비자의 일부 소비로 인하여 소비된 부분의 공급에 든 비용</li>
+                                                    </ol>
+                                                <li>5. 이용자가 재화 등을 제공받을 때 발송비를 부담한 경우에 사이트는 청약철회 시 그 비용을 누가 부담하는지를 이용자가 알기 쉽도록 명확하게 표시합니다.</li>
+                                            </ol>
+
+                                        <h4 id="ag19" class="ag-tit">제19조 (개인정보보호)</h4>
+                                            <ol class="depth1">
+                                                <li>1. 사이트는 이용자의 정보수집시 구매계약 이행에 필요한 최소한의 정보를 수집합니다. 다음 사항을 필수사항으로 하며 그 외 사항은 선택사항으로 합니다.</li>
+                                                    <ol class="depth2">
+                                                        <li>가. 성명</li>
+                                                        <li>나. 주소</li>
+                                                        <li>다. 전화번호(이동전화번호 및 자택전화번호)</li>
+                                                        <li>라. 희망ID(회원의 경우)</li>
+                                                        <li>마. 비밀번호(회원의 경우)</li>
+                                                        <li>바. 전자우편주소</li>
+                                                        <li>사. 지점정보(문화센터의 경우)</li>
+                                                    </ol>
+                                                <li>2. 사이트가 이용자의 개인식별이 가능한 개인정보를 수집하는 때에는 반드시 당해 이용자의 동의를 받습니다.</li>
+                                                <li>3. 제공된 개인정보는 당해 이용자의 동의 없이 목적 외의 이용이나 제3자에게 제공할 수 없으며, 이에 대한 모든 책임은 사이트가 집니다. 다만, 다음의 경우에는 예외로 합니다.</li>
+                                                    <ol class="depth2">
+                                                        <li>가. 배송업무상 배송업체에게 배송에 필요한 최소한의 이용자의 정보(성명, 주소, 전화번호)를 취급 위탁하는 경우. 단, 이 경우 반드시 해당업체 및 목적, 보유 기간을 명기하여 이용자의 동의를 받습니다.</li>
+                                                        <li>나. 통계작성, 학술연구 또는 시장조사를 위하여 필요한 경우로서 특정 개인을 식별할 수 없는 형태로 제공하는 경우</li>
+                                                        <li>다. 재화 등의 거래에 따른 대금정산을 위하여 필요한 경우</li>
+                                                        <li>라. 도용방지를 위하여 본인 확인에 필요한 경우로서 「전자상거래 등에서의 소비자보호에 관한 법률」 시행령 제27조에서 정하는 경우</li>
+                                                        <li>마. 법률의 규정 또는 법률에 의하여 필요한 불가피한 사유가 있는 경우</li>
+                                                    </ol>
+                                                <li>4. 사이트가 제2항과 제3항에 의해 이용자의 동의를 받아야 하는 경우에는 개인정보의 수집∙이용 목적, 수집하는 개인정보의 항목, 개인정보의 보유∙이용기간 등 「정보통신망 이용촉진 및 정보보호 등에 관한 법률」 제22조 제1항이 규정한 사항을 미리 명시하거나 고지해야 하며 이용자는 언제든지 이 동의를 철회할 수 있습니다.</li>
+                                                <li>5. 이용자는 언제든지 사이트가 가지고 있는 자신의 개인정보에 대해 열람 및 오류정정을 요구할 수 있으며 사이트는 이에 대해 지체 없이 필요한 조치를 취할 의무를 집니다. 이용자가 오류의 정정을 요구한 경우에는 사이트는 그 오류를 정정할 때까지 당해 개인정보를 이용하지 않습니다.</li>
+                                                <li>6. 사이트는 개인정보 보호를 위하여 관리자를 한정하여 그 수를 최소화하며 신용카드, 은행계좌 등을 포함한 이용자의 개인정보의 분실, 도난, 유출, 변조 등으로 인한 이용자의 손해에 대하여 모든 책임을 집니다.</li>
+                                                <li>7. 사이트 또는 그로부터 개인정보를 제공 받은 제3자는 개인정보의 수집목적 또는 제공 받은 목적을 달성한 때에는 당해 개인정보를 지체 없이 파기합니다.</li>
+                                            </ol>
+
+                                        <h4 id="ag20" class="ag-tit">제20조 (회사의 의무)</h4>
+                                            <ol class="depth1">
+                                                <li>1. '사이트'에 작성한 저작물에 대한 저작권 기타 지적재산권은 '사이트'에 귀속합니다. </li>
+                                                <li>2. 이용자는 '사이트' 또는 '서비스'를 이용함으로써 얻은 정보 중 '사이트'에게 지적재산권이   귀속된 정보를 '사이트'의 사전 승낙없이 복제, 송신, 출판, 배포, 방송 기타 방법에 의하여 영리목적으로 이용하거나 제3자에게 이용하게   하여서는 안됩니다.</li>
+                                            </ol>
+
+                                        <h4 id="ag21" class="ag-tit">제21조 분쟁해결</h4>
+                                            <ol class="depth1">
+                                                <li>1. 제19조의 경우를 제외한 ID와 비밀번호에 관한 관리책임은 회원에게 있습니다.</li>
+                                                <li>2. 회원은 자신의 ID 및 비밀번호를 제3자에게 이용하게 해서는 안됩니다.</li>
+                                                <li>3. 회원이 자신의 ID 및 비밀번호를 도난 당하거나 제3자가 사용하고 있음을 인지한 경우에는 바로 사이트에 통보하고 사이트의 안내가 있는 경우에는 그에 따라야 합니다.</li>
+                                            </ol>
+
+                                        <h4 id="ag22" class="ag-tit">제22조 (이용자의 의무)</h4>
+                                            <ol class="depth1">
+                                                <li>1. 신청 또는 변경 시 허위내용의 등록</li>
+                                                <li>2. 사이트가 게시한 정보의 변경 </li>
+                                                <li>3. 사이트가 정한 정보 이외의 정보(컴퓨터 프로그램 등)의 송신 또는 게시</li>
+                                                <li>4. 사이트 및 기타 제3자의 저작권 등 지적재산권에 대한 침해</li>
+                                                <li>5. 사이트 및 기타 제3자의 명예를 손상시키거나 업무를 방해하는 행위</li>
+                                                <li>6. 외설 또는 폭력적인 메시지•화상•음성 기타 공서양속에 반하는 정보를 사이트에 공개 또는 게시하는 행위</li>
+                                                <li>7. 타인의 정보도용</li>
+                                                <li>8. 기타 불법적이거나 부당한 행위</li>
+                                            </ol>
+
+                                        <h4 id="ag23" class="ag-tit">제23조 (회사의 웹사이트와 '타사'의 웹사이트간의 연결)</h4>
+                                            <ol class="depth1">
+                                                <li>1. 회사의 웹사이트와 타사의 웹사이트간의 연결이란 회사가 제공하는 웹사이트 및 모바일 서비스 와 타사가 제공하는 웹사이트가 하이퍼링크(예: 하이퍼링크의 대상에는 문자, 그림 및 동화상 등이 포함됨) 방식 등으로 연결된 경우를 말합니다.</li>
+                                                <li>2. 회사는 타사의 웹사이트와 연결된 웹사이트가 독자적으로 제공하는 재화 등에 의하여 '이용자'와 행하는 거래에 대해서 보증책임을 지지 않는다는 뜻을 회사의 사이트 초기화면 또는 연결되는 시점의 팝업화면으로 명시한 경우에는 그 거래에 대한 보증책임을 지지 않습니다.</li>
+                                            </ol>
+
+                                        <h4 id="ag24" class="ag-tit">제24조 (저작권의 귀속 및 이용제한)</h4>
+                                            <ol class="depth1">
+                                                <li>1. 사이트에 작성한 저작물에 대한 저작권 기타 지적재산권은 사이트에 귀속합니다.</li>
+                                                <li>2. 이용자는 사이트 또는 '서비스'를 이용함으로써 얻은 정보 중 사이트에게 지적재산권이 귀속된 정보를 사이트의 사전 승낙없이 복제, 송신, 출판, 배포, 방송 기타 방법에 의하여 영리목적으로 이용하거나 제3자에게 이용하게 하여서는 안됩니다.</li>
+                                                <li>3. 사이트는 약정에 따라 이용자에게 귀속된 저작권을 사용하는 경우 당해 이용자에게 통보하여야 합니다.</li>
+                                            </ol>
+
+                                        <h4 id="ag25" class="ag-tit">제25조 (게시물의 관리)</h4>
+                                            <ol class="depth1">
+                                                <li>1. 회사는 다음 각 호에 해당하는 게시물이나 자료를 사전통지 없이 삭제하거나 이동 또는 등록 거부를 할 수 있습니다.</li>
+                                                <ol class="depth2">
+                                                    <li>가. 다른 회원 또는 제 3자에게 심한 모욕을 주거나 명예를 손상시키는 내용인 경우</li>
+                                                    <li>나. 공공질서 및 미풍양속에 위반되는 내용을 유포하거나 링크시키는 경우 - 불법복제 또는 해킹을 조장하는 내용인 경우</li>
+                                                    <li>다. 영리를 목적으로 하는 광고일 경우</li>
+                                                    <li>라. 범죄와 결부된다고 객관적으로 인정되는 내용일 경우</li>
+                                                    <li>마. 다른 이용자 또는 제 3자의 저작권 등 기타 권리를 침해하는 내용인 경우</li>
+                                                    <li>바. 문화센터에서 규정한 게시물 원칙에 어긋나거나, 게시판 성격에 부합하지 않는 경우</li>
+                                                    <li>사. 기타 관계법령에 위배된다고 판단되는 경우</li>
+                                                </ol>
+                                            </ol>
+
+                                        <h4 id="ag26" class="ag-tit">제 26 조 (면책)</h4>
+                                            <ol class="depth1">
+                                                <li>1. 회사는 천재지변, 불가항력 기타 회사의 합리적인 통제범위를 벗어난 사유로 인하여 서비스를 제공할 수 없는 경우에는 그에 대한 책임을 부담하지 않습니다.</li>
+                                                <li>2. 회사는 이용자의 귀책사유로 인하여 서비스를 제공할 수 없는 경우에는 그에 대한 책임을 부담하지 않습니다 </li>
+                                                <li>3. 회사는 이용자가 서비스를 이용함으로써 기대되는 수익을 얻지 못하거나 서비스를 통해 얻은 자료를 이용하여 발생한 손해에 대해서는 책임을 부담하지 않습니다.</li>
+                                                <li>4. 이용자가 화면에 게재한 정보, 자료, 사실 등의 내용에 관한 신뢰도 또는 정확성에 대하여는 해당 이용자가 책임을 부담하며, 회사는 내용의 부정확 또는 허위로 인해 이용자 또는 제3자에게 발생한 손해에 대하여는 아무런 책임을 부담하지 않습니다.</li>
+                                                <li>5. 회사는 서비스이용과 관련하여 이용자의 고의 또는 과실로 인하여 이용자 또는 제3자에게 발생한 손해에 대하여는 아무런 책임을 부담하지 않습니다.</li>
+                                            </ol>
+
+                                        <h4 id="ag27" class="ag-tit">제27조 (통합회원제)</h4>
+                                            <ol class="depth1">
+                                                <li>1. 회원은 통합된 하나의 계정(ID 및 비밀번호)을 통해 회사에서 운영하는 사이트의 서비스를 이용할 수 있습니다.</li>
+                                                <li>2. 회사는 일부 사이트의 특정 서비스를 제공하기 위해 회원에게 별도 또는 추가적인 가입절차를 요청할 수 있으며, 이러한 특정 서비스를 이용할 경우 해당 사이트 또는 서비스에 대한 이용약관 규정 또는 세칙 등이 본 약관보다 우선 적용됩니다.</li>
+                                                <li>3. 회사는 회원이 사이트 및 서비스를 쉽게 이용할 수 있도록 회원의 ID를 포함한 통합회원제를 관리하거나 사이트 또는 서비스를 개선 변경할 수 있습니다.</li>
+                                                <li>4. 회원의 최초 서비스 이용신청 이후 회사의 사이트가 늘어나거나 줄어든 경우에도 별도 약관으로 명시하지 않는 한 본 약관이 적용되며, 회사는 신규 사이트 또는 서비스 개시에 대한 정보를 사이트에 공지하거나 회원의 전자우편으로 알릴 수 있습니다.</li>
+                                            </ol>
+
+                                        <h4 id="ag28" class="ag-tit">제28조 (분쟁해결)</h4>
+                                            <ol class="depth1">
+                                                <li>1. 회사는 이용자가 제기하는 정당한 의견이나 불만을 반영하고 그 피해를 보상 처리하기 위하여 피해 보상 처리 기구를 설치, 운영합니다.</li>
+                                                <li>2. 회사는 이용자로부터 제출되는 불만사항 및 의견은 우선적으로 그 사항을 처리합니다. 다만, 신속한 처리가 곤란한 경우에는 이용자에게 그 사유와 처리일정을 즉시 통보해 드립니다.</li>
+                                                <li>3. 회사와 이용자간에 발생한 분쟁은 「전자문서 및 전자거래기본법」 제32조 및 동 시행령 제16조에 의하여 설치된 전자거래분쟁조정위원회의 조정에 따를 수 있습니다.</li>
+                                                <li>4. 소비자에게 책임 있는 사유로 인하여 재화 등의 판매에 관한 계약이 해제된 경우 「전자상거래등에서의 소비자보호에 관한 법률」 제19조에 의거 회사가 이용자에게 청구하는 손해배상액은 다음 각호에서 정한 금액에 대금 미납에 따른 지연 배상금을 더한 금액을 초과할 수 없습니다.</li>
+                                                    <ol class="depth2">
+                                                        <li>가. 공급 받은 재화 등이 반환된 경우에는 다음 각목의 1에 해당하는 금액 중 큰 금액</li>
+                                                            <ol class = "depth3">
+                                                                <li>ㄱ. 반환된 재화 등의 통상 사용료액 또는 그 사용에 의하여 통상 얻어지는 이익에 상당하는 금액</li>
+                                                                <li>ㄴ. 반환된 재화 등의 판매 가격에서 그 재화 등이 반환된 당시의 가액을 공제한 금액 </li>
+                                                            </ol>
+                                                        <li>나. 공급 받은 재화 등이 반환되지 아니한 경우에는 그 재화 등의 판매 가액에 상당하는 금액</li>
+                                                    </ol>
+                                            </ol>
+
+                                        <h4 id="ag29" class="ag-tit">제29조 (준거법 및 재판관할)</h4>
+                                        <ol class="depth1">
+                                        <li>1. 회사와 이용자간에 제기된 소송은 대한민국법을 준거법으로 합니다.</li>
+                                        <li>2. 회사 와 이용자간에 발생한 전자거래 분쟁에 관한 소송은 민사소송법상의 법원을 관할법원으로 합니다.</li>
+                                        </ol>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+			</div>
+		</div>
+        <!-- footer -->
+        <div id="footer">
+            <!-- lst_direct-wrap -->
+            <div class="lst_direct-wrap">
+                <ul class="lst-direct">
+                    <li class="item1"><a href="javascript:;" target="_blank" title="새창열기"><span class="blind">롯데마트몰 바로가기</span></a></li>
+                    <li class="item2"><a href="javascript:;" target="_blank" title="새창열기"><span class="blind">롯데마트 바로가기</span></a></li>
+                    <li class="item3"><a href="javascript:;" target="_blank" title="새창열기"><span class="blind">하이마트 바로가기</span></a></li>
+                    <li class="item4"><a href="javascript:;" target="_blank" title="새창열기"><span class="blind">토이저러스 바로가기</span></a></li>
+                    <li class="item5"><a href="javascript:;" target="_blank" title="새창열기"><span class="blind">빅마켓 바로가기</span></a></li>
+                    <li class="item6"><a href="javascript:;" target="_blank" title="새창열기"><span class="blind">동반성장 바로가기</span></a></li>
+                </ul>
+            </div>
+            <!-- //lst_direct-wrap -->
+
+            <!-- foot-wrap -->
+            <div id="foot-wrap">
+                <div class="foot">
+                    <div class="foot-line01">
+                        <ul>
+                            <li><a href="javascript:;">문화센터소개</a></li>
+                            <li><a href="javascript:;">강사지원</a></li>
+                            <li><a href="javascript:;">이용약관</a></li>
+                            <li><a href="javascript:;">개인정보처리방침</a></li>
+                            <li><a href="javascript:;">영상정보관리방침</a></li>
+                            <li><a href="javascript:;">사이트맵</a></li>
+                        </ul>
+                        <div class="family">
+                            <a href="javascript:;">FAMILY SITE</a>
+                            <ul>
+                                <li><a href="javascript:;">관계사 사이트1</a></li>
+                                <li><a href="javascript:;">관계사 사이트2</a></li>
+                                <li><a href="javascript:;">관계사 사이트3</a></li>
+                            </ul>
+                        </div>
+                        <select id="" name="" class="fm-select" title="FAMILY SITE 이동">
+                            <option value="">FAMILY SITE</option>
+                            <option value="">관계사 사이트1</option>
+                            <option value="">관계사 사이트2</option>
+                            <option value="">관계사 사이트3</option>
+                        </select>
+                    </div>
+                    <div class="foot-line02">
+                        <span class="foot-logo"><img src="../resources/images/common/foot_logo.gif"></span>
+                        <ul class="foot-address">
+                            <li>롯데쇼핑(주) 롯데마트사업본부 대표이사 : 이원준</li>
+                            <li>주소 : 서울시 송파구 올림픽로 269 (신천동 롯데캐슬골드) 6, 7층 <span>통신판매업 신고 : 송파 제 3366호</span>     TEL : 02.2145.8000</li>
+                            <li>COPYRIGHT ⓒ LOTTEMART. ALL RIGHTS RESERVED</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- //foot-wrap -->
+        </div>
+        <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+
+<!-- L.POINT 단계별 포인트 적립율 레이어팝업 -->
+<div class="layer-pop  lpoint_conbox-pop">
+	<div class="lay_tit-area">
+		<strong>L.POINT 단계별 포인트 적립율</strong>
+		<a href="#"><span class="blind">레이어팝업 닫기</span></a>
+	</div>
+
+	<div class="lay_cont-area lpoint-conbox">
+		<div class="lpoint-btn">
+			<span>L.POINT 적립은 L.POINT 회원으로 가입된 경우에만 적립됩니다. </span>
+			<a href="#" class="layer-btn color-red big-size">L.POINT 회원가입</a>
+		</div>
+
+		<span class="lay-title mt26">일반 문화센터 이용시</span>
+		<table class="lay-table-type1 mt12">
+			<caption>일반 문화센터 이용시 포인트 적립율 표 - 회원단계,포인트적립율</caption>
+			<thead>
+				<tr>
+					<th scope="col">회원단계</th>
+					<th scope="col">포인트 적립율</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>VIP (월평균 50만원 이상)</td>
+					<td>1.00%</td>
+				</tr>
+				<tr>
+					<td>최우수 (월평균 25만원 이상)</td>
+					<td>0.75%</td>
+				</tr>
+				<tr>
+					<td>우수 (월평균 10만원 이상)</td>
+					<td>0.50%</td>
+				</tr>
+				<tr>
+					<td>일반 (월평균 10만원 미만)</td>
+					<td>0.10%</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="dot-star-box">
+			<p class="txt-star"><span>*</span> VIC마켓 외 롯데마트 문화센터 이용 시 L.POINT적립 기준에 의거하여 단계별 포인트 적립율을 적용/시행합니다.</p>
+		</div>
+
+		<span class="lay-title mt57">VIC마켓 문화센터 이용시</span>
+		<table class="lay-table-type1 mt12">
+			<caption>VIC마켓 문화센터 이용시 포인트 적립율 표 - 회원단계,포인트적립율</caption>
+			<thead>
+				<tr>
+					<th scope="col">회원단계</th>
+					<th scope="col">포인트 적립율</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>VIC 플래티넘 (월평균 30만원 이상)</td>
+					<td>0.5%</td>
+				</tr>
+				<tr>
+					<td>VIC 골드 (월평균 15만원 이상)</td>
+					<td>0.2%</td>
+				</tr>
+				<tr>
+					<td>VIC 멤버 (월평균 15만원 미만)</td>
+					<td>0.1%</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="dot-star-box">
+			<p class="txt-star"><span>*</span> VIC마켓 내 롯데마트 문화센터 이용시 VIC마켓 적립 기준에 의거하여 단계별 포인트적립율을 적용/시행합니다.</p>
+		</div>
+		<div class="btn-area">
+			<a href="#none" class="layer-btn color-red">확인</a>
+		</div>
+	</div>
+</div>
+<!-- //L.POINT 단계별 포인트 적립율 레이어팝업 -->
+
+<!-- L.POINT 온라인 사용인증 서비스 레이어팝업 -->
+<div class="layer-pop  layer_lpoint-pop">
+	<div class="lay_tit-area">
+		<strong>L.POINT 온라인 사용인증 서비스</strong>
+		<a href="#"><span class="blind">레이어팝업 닫기</span></a>
+	</div>
+
+	<div class="lay_cont-area layer-lpoint">
+		<p class="lay-txt">더 많은 L.POINT 혜택을 원하신다면 L.POINT APP을 다운 받으세요!</p>
+
+		<!-- 카드번호, L.POINT 비밀번호 입력 -->
+		<table class="lay-table-type2 mt26">
+			<caption>개인정보 표 - 카드번호, L.POINT 비밀번호</caption>
+			<tbody>
+				<tr>
+					<th scope="row" class="size150">카드번호 </td>
+					<td class="input-line">
+						<ul class="tbl-type-card">
+							<li><input type="text" id="" name="" class="type-input" title="카드번호 첫번째 자리" ></li>
+							<li class="lay-hypen"> - </li>
+							<li><input type="text" id="" name="" class="type-input" title="카드번호 두번째 자리" ></li>
+							<li class="lay-hypen"> - </li>
+							<li><input type="text" id="" name="" class="type-input" title="카드번호 세번째 자리" ></li>
+							<li class="lay-hypen"> - </li>
+							<li><input type="text" id="" name="" class="type-input" title="카드번호 네번째 자리" ></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"> L.POINT 비밀번호 </td>
+					<td class="input-line">
+						<ul class="tbl-type-lpointpw">
+							<li><input type="text" id="" name="" class="type-input" title="이메일 아이디" ></li>
+							<li class="input-size">
+								<a href="#" class="btn-white-round">L.POINT 비밀번호 설정</a>
+							</li>
+						</ul>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<!--// 카드번호, L.POINT 비밀번호 입력 -->
+
+		<div class="btn-area">
+			<a href="#none" class="layer-btn color-red">확인</a>
+		</div>
+
+		<div class="lay-call-text color-gray mt40">
+			<ul>
+				<li>수집 및 이용목적 : 수강관련 각종 정보전달, 사은행사, 회원혜택 정보발송 등 원활한 의사소통의 경로</li>
+				<li>수집항목 : 이름, 생년월일, 성별, 가족관계</li>
+				<li>보유 및 이용기간 : 문화센터 탈퇴 또는 이용 동의 철회시까지 (학기 종료 후 요청시 즉시)</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- //L.POINT 온라인 사용인증 서비스 레이어팝업 -->
+
+<!-- 가족회원등록 레이어팝업 -->
+<div class="layer-pop  family_regist-pop">
+	<div class="lay_tit-area">
+		<strong>가족회원등록</strong>
+		<a href="#"><span class="blind">레이어팝업 닫기</span></a>
+	</div>
+
+	<div class="lay_cont-area family-regist">
+
+		<p class="lay-txt">만 14세 미만의 아동 및 미성년자 아동의 자녀회원 가입시 개인정보 수집 및 취급위탁업무에 동의<br>
+		(만 14세 미만. 미성년자 아동의 경우 법정대리인이 동의) 합니다.
+		<span class="icon-star">*</span> 회원님의 동의를 통해 수집된 개인정보는 수강신청 및 의사소통의 용도로만 사용됩니다.</p>
+
+		<span class="lay-title mt31">수강신청을 위한 가족정보 수집 및 활용동의서</span>
+
+		<div class="agree-wrap mt12">
+			<p class="agree-title"><span>[필수]</span> 개인정보 수집 및 이용에 대한 동의</p>
+			<div class="lay-call-text">
+				<ul>
+					<li>수집 및 이용목적 : 수강관련 각종 정보전달, 사은행사, 회원혜택 정보발송 등 원활한 의사소통의 경로</li>
+					<li>수집항목 : 이름, 생년월일, 성별, 가족관계</li>
+					<li>보유 및 이용기간 : 문화센터 탈퇴 또는 이용 동의 철회시까지 (학기 종료 후 요청시 즉시)</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="dot-star-box">
+			<p class="txt-star"><span>*</span> 개인정보 수집 및 이용 동의에 거부하실 수 있으며 다만 이 경우 수강신청이 제한됩니다.</p>
+		</div>
+
+		<!-- 동의 -->
+		<div class="agree-check-radio">
+			<ul>
+				<li>동의 하시겠습니까?<li>
+				<li class="radio"><input type="radio" id="agree1" name="agree1" ><label for="agree1">예</label></li>
+				<li class="radio"><input type="radio" id="agree2" name="agree1" checked ><label for="agree2">아니오</label></li>
+			</ul>
+		</div>
+		<!--// 동의 -->
+
+		<div class="agree-wrap">
+			<p class="agree-title"><span>[필수]</span> 개인정보 위탁에 대한 동의</p>
+			<table class="lay-table-type1 mt12">
+				<caption>[필수] 개인정보 위탁에 대한 동의 표 - 수탁자,수탁목적</caption>
+				<thead>
+					<tr>
+						<th scope="col">수탁자</th>
+						<th scope="col">수탁목적</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>롯데정보통신</td>
+						<td>시스템 운영 및 관리</td>
+					</tr>
+					<tr>
+						<td>롯데마트 문화센터 강사</td>
+						<td>회원과의 연락 및 교육 상담</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="dot-star-box">
+			<p class="txt-star"><span>*</span> 개인정보 위탁 동의에 거부하실 수 있으며 다만 이 경우 수강신청이 제한됩니다.</p>
+		</div>
+
+		<!-- 동의 -->
+		<div class="agree-check-radio">
+			<ul>
+				<li>동의 하시겠습니까?<li>
+				<li class="radio"><input type="radio" id="agree3" name="agree3" ><label for="agree3">예</label></li>
+				<li class="radio"><input type="radio" id="agree4" name="agree3" checked ><label for="agree4">아니오</label></li>
+			</ul>
+		</div>
+		<!--// 동의 -->
+
+		<!-- 휴대전화, 이메일 입력 -->
+		<table class="lay-table-type2 mt50">
+			<caption>개인정보 표 - 휴대전화, 이메일</caption>
+			<tbody>
+				<tr>
+					<th scope="row" class="size130"><span class="info-dot">*</span> 이름 </td>
+					<td class="input-line">
+						<ul class="tbl-type-defalut">
+							<li class="input-name"><input type="text" id="" name="" class="type-input" title="이름" ></li>
+						</ul>
+					</td>
+				</tr>
+
+				<tr>
+					<th scope="row"><span class="info-dot">*</span> 생년월일 </td>
+					<td class="input-line">
+						<ul class="tbl-type-birth">
+							<li>
+								<div class="selectbox" style="width:100%;">
+									<select name="" id="" title="생년월일 년 선택" >
+										<option value="">선택</option>
+									</select>
+								</div>
+							</li>
+							<li class="lay-txt">년 </li>
+							<li><input type="text" id="" name="" class="type-input" title="생년월일 월" ></li>
+							<li class="lay-txt">월 </li>
+							<li><input type="text" id="" name="" class="type-input" title="생년월일 일" ></li>
+							<li class="lay-txt">일 </li>
+						</ul>
+					</td>
+				</tr>
+
+				<tr>
+					<th scope="row"><span class="info-dot">*</span> 성별 </td>
+					<td class="input-line">
+						<ul class="radio-con">
+							<li class="radio"><input type="radio" id="gender" name="gender1" ><label for="gender1">남</label></li>
+							<li class="radio"><input type="radio" id="gender" name="gender2" checked ><label for="gender2">여</label></li>
+						</ul>
+					</td>
+				</tr>
+
+				<tr>
+					<th scope="row"><span class="info-dot">*</span> 가족관계 </td>
+					<td class="input-line">
+						<ul class="tbl-type-defalut">
+							<li class="family">
+								<div class="selectbox" style="width:100%;">
+									<select name="" id="" title="가족관계 선택" >
+										<option value="">선택</option>
+									</select>
+								</div>
+							</li>
+						</ul>
+
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<!--// 휴대전화, 이메일 입력 -->
+
+		<div class="btn-area">
+			<a href="#none" class="layer-btn color-red">확인</a>
+		</div>
+	</div>
+</div>
+<!-- //가족회원등록 레이어팝업 -->
+
+<!-- 강사소개 레이어팝업 -->
+<div class="layer-pop layer_lecturer">
+	<div class="lay_tit-area">
+		<strong>강사소개</strong>
+		<a href="#"><span class="blind">레이어팝업 닫기</span></a>
+	</div>
+
+	<div class="lay_cont-area layer-lecturer">
+
+		<div class="lecturer-box">
+			<!-- 강사소개 사진 -->
+			<div class="lecturer-img">
+				<span><img src="../resources/images/sample/img_picture.jpg" alt="강사명" ></span>
+			</div>
+			<!--// 강사소개 사진 -->
+
+			<!-- 해당 강사 상세 보기  -->
+			<div class="lecturer-table">
+				<div class="lecturer-con">
+					 <table class="lay-table-type2">
+						<caption>해당 강사 상세 보기  표 - 강사명, 강사블러그, 강사이력</caption>
+						<colgroup>
+							<col style="width:24%" />
+							<col style="width:*" />
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">강사명</th>
+								<td>홍길동</td>
+							</tr>
+							<tr>
+								<th scope="row">강사블러그</th>
+								<td><a href="#" title="강사 블러그 이동"><u>http://blog.naver.com/hongkildong</u></a></td>
+							</tr>
+							<tr>
+								<th scope="row" class="verti-top">강사이력</th>
+								<td>
+									<ul class="lecturer-list-view">
+										<li>- 신라대학교체육교육 대학원 수료</li>
+										<li>- 모라초, 구남초, 강서구체육회 방과후 강사</li>
+										<li>- 부산예술중, 브니엘국제예술중 스포츠강사</li>
+										<li>- 교원자격증 중등2급 (체육)</li>
+										<li>- 스포츠스태킹코치자격증</li>
+										<li>- 플로어볼지도자3급</li>
+										<li>- 킨볼지도자2급</li>
+										<li>- 생활스포츠지도사2급</li>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!--// 해당 강사 상세 보기  -->
+		</div>
+
+		<div class="btn-area">
+			<a href="#none" class="layer-btn color-red">확인</a>
+		</div>
+	</div>
+</div>
+<!-- //강사소개 레이어팝업 -->
+
+<!-- 강의계획서 레이어팝업 -->
+<div class="layer-pop  study_plan-pop">
+	<div class="lay_tit-area">
+		<strong>강의계획서</strong>
+		<a href="#"><span class="blind">레이어팝업 닫기</span></a>
+	</div>
+
+	<div class="lay_cont-area study-plan">
+
+		<!-- 강의계획서 스크롤-->
+		<div class="scroll-table-box size01">
+			<table class="lay-table-scroll">
+				<caption>강의계획서 표 - 회차, 강의내용, 비고</caption>
+				<thead>
+					<tr>
+						<th scope="col" style="width:70px;">회차</th>
+						<th scope="col">강의내용</th>
+						<th scope="col" class="dis-none">비고</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td class="align-left">
+							<p>강의내용이 들어갑니다.</p>
+							<ul class="table-txtList dis-block">
+								<li>비고 : 비고내용입니다.</li>
+							</ul>
+						</td>
+						<td class="dis-none">비고내용입니다.</td>
+					</tr>
+
+					<tr>
+						<td>2</td>
+						<td class="align-left">
+							<p>강의내용이 들어갑니다.</p>
+							<ul class="table-txtList dis-block">
+								<li>비고 : 비고내용입니다.</li>
+							</ul>
+						</td>
+						<td class="dis-none">비고내용입니다.</td>
+					</tr>
+
+					<tr>
+						<td>3</td>
+						<td class="align-left">
+							<p>강의내용이 들어갑니다.</p>
+							<ul class="table-txtList dis-block">
+								<li>비고 : 비고내용입니다.</li>
+							</ul>
+						</td>
+						<td class="dis-none">비고내용입니다.</td>
+					</tr>
+
+					<tr>
+						<td>4</td>
+						<td class="align-left">
+							<p>강의내용이 들어갑니다.</p>
+							<ul class="table-txtList dis-block">
+								<li>비고 : 비고내용입니다.</li>
+							</ul>
+						</td>
+						<td class="dis-none">비고내용입니다.</td>
+					</tr>
+
+					<tr>
+						<td>5</td>
+						<td class="align-left">
+							<p>강의내용이 들어갑니다.</p>
+							<ul class="table-txtList dis-block">
+								<li>비고 : 비고내용입니다.</li>
+							</ul>
+						</td>
+						<td class="dis-none">비고내용입니다.</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!--// 강의계획서 스크롤-->
+
+		<div class="btn-area">
+			<a href="#none" class="layer-btn color-red">확인</a>
+		</div>
+	</div>
+</div>
+<!-- //강의계획서 레이어팝업 -->
+
+<!-- 강좌 Talk 개설 -->
+<div class="layer-pop talk_reg-pop">
+	<div class="lay_tit-area">
+		<strong>강좌 Talk 개설</strong>
+		<a href="#"><span class="blind">레이어팝업 닫기</span></a>
+	</div>
+	<div class="lay_cont-area talk_reg">
+		<div class="lay_cont-box">
+			<em>해당 강좌의 강좌 Talk이 개설되었습니다.</em>
+		</div>
+
+		<div class="btn-area">
+			<a href="#none" class="layer-btn color-red">확인</a>
+		</div>
+
+	</div>
+</div>
+<!-- //강좌 Talk 개설 -->
+
+<!-- 강좌 Talk 개설 실패 -->
+<div class="layer-pop talk_fail-pop">
+	<div class="lay_tit-area">
+		<strong>강좌 Talk 개설</strong>
+		<a href="#"><span class="blind">레이어팝업 닫기</span></a>
+	</div>
+	<div class="lay_cont-area talk-fail">
+		<div class="lay_cont-box">
+			<em>이미 해당 강좌의 강좌 Talk이 다른 수강생에 의해 개설되었습니다.</em>
+			<em>해당 강좌 Talk으로 이동하여 참여하시겠습니까?</em>
+		</div>
+
+		<div class="btn-area">
+			<a href="#none" class="layer-btn color-red">바로가기</a>
+			<a href="#none" class="layer-btn">취소</a>
+		</div>
+
+	</div>
+</div>
+<!-- //강좌 Talk 개설 실패-->
+
+<!-- 강좌정보 수신 연락처 변경 레이어팝업 -->
+<div class="layer-pop  contact_change-pop">
+	<div class="lay_tit-area">
+		<strong>강좌정보 수신 연락처 변경</strong>
+		<a href="#"><span class="blind">레이어팝업 닫기</span></a>
+	</div>
+
+	<div class="lay_cont-area contact-change">
+		<span class="lay-title">수강신청을 위한 수강자정보 수집 및 활용동의서</span>
+		<p class="lay-txt">문화센터 강좌 수강시 개/폐강 관련 및 수업활동에 필요한 정보제공으로 롯데마트 문화센터에서만 관리되며,정보변경은 문화센터 사이트에서 변경하실 수 있습니다.<br>
+		<span class="icon-star">*</span> 아래의 정보는 기본정보 외에 수강하시는 강좌의 휴/폐강시 알리는 SMS발송용으로 사용되는 정보입니다. </p>
+
+		<div class="agree-wrap">
+			<p class="agree-title"><span>[필수]</span> 개인정보 수집 및 이용에 대한 동의</p>
+			<div class="lay-call-text color-gray">
+				<ul>
+					<li>정규강좌 수강 신청 시, 할인적용이 가능합니다.</li>
+					<li>지정된 학기와 지점엥서만 사용 가능합니다.</li>
+					<li>원칙적으로 중복할인이 불가하오니, 자세한 사항은 해당지점에 문의해 주세요.</li>
+					<li>개강이후 강좌취소시 할인적용이 소멸됩니다.</li>
+					<li>L.POINT 회원 및 멤버스 회원에 한해서 사용 가능합니다.</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="dot-star-box">
+			<p class="txt-star"><span>*</span> 개인정보 수집 및 이용 동의에 거부하실 수 있으며 다만 이 경우 수강신청이 제한됩니다.</p>
+		</div>
+
+		<!-- 동의 -->
+		<div class="agree-check-radio">
+			<ul>
+				<li>동의 하시겠습니까?<li>
+				<li class="radio"><input type="radio" id="agree1" name="agree1" ><label for="agree1">예</label></li>
+				<li class="radio"><input type="radio" id="agree2" name="agree1" checked ><label for="agree2">아니오</label></li>
+			</ul>
+		</div>
+		<!--// 동의 -->
+
+		<div class="agree-wrap">
+			<p class="agree-title"><span>[필수]</span> 개인정보 위탁에 대한 동의</p>
+			<table class="lay-table-type1 mt12">
+				<caption>[필수] 개인정보 위탁에 대한 동의 표 - 수탁자,수탁목적</caption>
+				<thead>
+					<tr>
+						<th scope="col">수탁자</th>
+						<th scope="col">수탁목적</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>롯데정보통신</td>
+						<td>시스템 운영 및 관리</td>
+					</tr>
+					<tr>
+						<td>롯데마트 문화센터 강사</td>
+						<td>회원과의 연락 및 교육 상담</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="dot-star-box">
+			<p class="txt-star"><span>*</span> 개인정보 위탁 동의에 거부하실 수 있으며 다만 이 경우 수강신청이 제한됩니다.</p>
+		</div>
+
+		<!-- 동의 -->
+		<div class="agree-check-radio">
+			<ul>
+				<li>동의 하시겠습니까?<li>
+				<li class="radio"><input type="radio" id="agree3" name="agree3" ><label for="agree3">예</label></li>
+				<li class="radio"><input type="radio" id="agree4" name="agree3" checked ><label for="agree4">아니오</label></li>
+			</ul>
+		</div>
+		<!--// 동의 -->
+
+		<!-- 휴대전화, 이메일 입력 -->
+		<table class="lay-table-type2 mt50">
+			<caption>개인정보 표 - 휴대전화, 이메일</caption>
+			<tbody>
+				<tr>
+					<th scope="row" class="size130"><span class="info-dot">*</span> 휴대전화 </td>
+					<td>
+						<ul class="tbl-type-phone">
+							<li>
+								<div class="selectbox" style="width:100%;">
+									<select name="" id="" title="휴대전화 통신사 선택" >
+										<option value="">010</option>
+									</select>
+								</div>
+							</li>
+							<li class="lay-hypen"> - </li>
+							<li><input type="text" id="" name="" class="type-input" title="휴대전화 가운데자리" ></li>
+							<li class="lay-hypen"> - </li>
+							<li><input type="text" id="" name="" class="type-input" title="휴대전화 마지막자리" ></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"><span class="info-dot">*</span> 이메일 </td>
+					<td>
+						<ul class="tbl-type-email">
+							<li class="input-size"><input type="text" id="" name="" class="type-input" title="이메일 아이디" ></li>
+							<li class="lay-email"> @ </li>
+							<li class="input-size"><input type="text" id="" name="" class="type-input" title="이메일 주소" ></li>
+							<li class="ml10">
+								<div class="selectbox" style="width:100%;">
+									<select name="" id="" title="이메일 주소 선택" >
+										<option value="">직접입력</option>
+									</select>
+								</div>
+							</li>
+						</ul>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<!--// 휴대전화, 이메일 입력 -->
+
+		<div class="btn-area">
+			<a href="#none" class="layer-btn color-red">확인</a>
+		</div>
+	</div>
+</div>
+<!-- //강좌정보 수신 연락처 변경 레이어팝업 -->
+
+<!-- 게시글 등록 -->
+<div class="layer-pop write_save-pop">
+	<div class="lay_tit-area">
+		<strong>게시글 등록</strong>
+		<a href="#"><span class="blind">레이어팝업 닫기</span></a>
+	</div>
+	<div class="lay_cont-area write-save">
+		<div class="lay_cont-box">
+			<em>작성하신 게시글을 등록하시겠습니까?</em>
+		</div>
+
+		<div class="btn-area">
+			<a href="#none" class="layer-btn color-red">확인</a>
+			<a href="#none" class="layer-btn">취소</a>
+		</div>
+
+	</div>
+</div>
+<!-- //게시글 등록 -->
+
+<!-- 게시글 등록 취소-->
+<div class="layer-pop write_cancel-pop">
+	<div class="lay_tit-area">
+		<strong>게시글 등록 취소</strong>
+		<a href="#"><span class="blind">레이어팝업 닫기</span></a>
+	</div>
+	<div class="lay_cont-area write-cancel">
+		<div class="lay_cont-box">
+			<em>작성하신 글은 저장되지 않습니다.</em>
+			<em>작성하신 게시물 등록 취소하시겠습니까?</em>
+		</div>
+
+	   <div class="btn-area">
+			<a href="#none" class="layer-btn color-red">확인</a>
+			<a href="#none" class="layer-btn">취소</a>
+		</div>
+	</div>
+</div>
+<!-- //게시글 등록 취소 -->
+
+<!-- 결제취소 레이어팝업 -->
+<div class="layer-pop type1 pay_cencle-pop">
+	<div class="lay_tit-area">
+		<strong>결제취소</strong>
+		<a href="#"><span class="blind">레이어팝업 닫기</span></a>
+	</div>
+
+	<div class="lay_cont-area pay-cencle">
+		<!-- 결제취소 정보 -->
+		<table class="lay-table-type1">
+			<caption>결제취소 표 - 접수일,강좌정보,강사명,실수강자,수강료,결제금액</caption>
+			<thead>
+				<tr>
+					<th scope="col" style="width:110px">접수일</th>
+					<th scope="col">강좌정보</th>
+					<th scope="col" style="width:90px" class="dis-none-long">강사명</th>
+					<th scope="col" style="width:90px" class="dis-none-long">실수강자</th>
+					<th scope="col" style="width:90px" class="dis-none-long">수강료</th>
+					<th scope="col" style="width:90px" class="dis-none-long">할인금액</th>
+					<th scope="col" style="width:100px" class="dis-none-long">결제금액</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>2017.04.23</td>
+					<td class="pay-txt-list">
+						<dl>
+							<dt><span>[송파점]</span> 고마운 분께 드리는 플라워 선물박스(성인)</dt>
+							<dd>노래/댄스<span class="txtbar"></span>2017.05.04</dd>
+							<dd>(월.수.금) 13:00 - 14:00</dd>
+						</dl>
+
+						<ul class="lay-dis-txt dis-block">
+							<li>사용가능학기 : 2017년 여름</li>
+							<li>쿠폰번호 : 1705000153</li>
+							<li>할인금액(율) : 10,000원</li>
+							<li>결제금액 : 30,000</li>
+						</ul>
+					</td>
+					<td class="dis-none-long">김영희</td>
+					<td class="dis-none-long">홍길동</td>
+					<td class="dis-none-long">
+						12회<br>
+						30,000원
+					</td>
+					<td class="dis-none-long">0원</td>
+					<td class="dis-none-long">30,000원</td>
+				</tr>
+			</tbody>
+		</table>
+		<!--// 결제취소 정보 -->
+
+		<!-- 결제취소 사유 등록 -->
+		<div class="lay-coment-wrap">
+			<p class="lay-coment-tit">결제 취소에 대한 사유를 입력해 주세요.</p>
+			<form>
+				<fieldset>
+					<legend>수강후기 입력 폼</legend>
+					<div class="lay-coment-write">
+						<select name="" id="" title="취소사유 선택" >
+							<option value="">취소사유를 선택해주세요</option>
+						</select>
+						<textarea name="" id="" cols="100" rows="3" maxlength="200" placeholder="로그인 이후 글을 작성하실 수 있습니다. (200자 내외)"></textarea>
+						<p><em>0</em>/200</p>
+						<a href="#" class="btn-submit">등록</a>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+		<!--// 결제취소 사유 등록 -->
+
+		<!-- 결제취소 안내문구 -->
+		<div class="pay-txt-box">
+			<ul>
+				<li>결제 단위로 취소 가능하므로 다수 강좌를 동시에 결제하신 경우, 강좌별 개별 취소는 불가합니다. (결제 금액 전체 취소만 가능)</li>
+				<li>강좌 변경은 결제 금액이 동일한 강좌인 경우에 가능하며, 개강일 4일 전까지만 가능합니다.<br>
+				(이후에는 해당 지점을 방문하셔야 됩니다.)</li>
+			</ul>
+		</div>
+		<!--// 결제취소 안내문구 -->
+
+		<p class="cencle-center">선택하신 강좌의 온라인 결제를 <span class="lay-color-red">취소</span>하시겠습니까?</p>
+
+
+		<div class="btn-area">
+			<a href="#none" class="layer-btn color-red">예</a>
+			<a href="#none" class="layer-btn">아니오</a>
+		</div>
+	</div>
+</div>
+<!-- //결제취소 레이어팝업 -->
+
+<!-- 대기신청 레이어팝업 -->
+<div class="layer-pop standby_app-pop">
+	<div class="lay_tit-area">
+		<strong>대기자 신청</strong>
+		<a href="#"><span class="blind">레이어팝업 닫기</span></a>
+	</div>
+
+	<div class="lay_cont-area standby-app">
+		<div class="txt-c">
+			<span class="lay-title">회원님이 신청하신 강좌는 <span class="lay-color-red">인터넷 접수마감</span> 되었습니다.</span>
+			<p class="lay-txt">대기회원으로 신청하시면 강좌에 변동이 있을경우<br>
+			대기순번에 따라 고객님께 개별 연락 드립니다.</p>
+		</div>
+
+		<!-- 접수마감 사용자 정보 -->
+		 <table class="lay-table-type2 mt50">
+			<caption>마감된 강좌 정보 표 - 지점,강좌명,강좌기간,강사명</caption>
+			<colgroup>
+				<col style="width:21%" />
+				<col style="width:*" />
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">지점</th>
+					<td>송파점</td>
+				</tr>
+				<tr>
+					<th scope="row">강좌명</th>
+					<td>[50%할인] 오감놀이! 날아라 병아리 (9~15개월)</td>
+				</tr>
+				<tr>
+					<th scope="row">강좌기간</th>
+					<td>2017.06.01 - 2017.08.17 (12회)</td>
+				</tr>
+				<tr>
+					<th scope="row">강사명</th>
+					<td>김철수</td>
+				</tr>
+			</tbody>
+		</table>
+		<!--// 접수마감 사용자 정보 -->
+
+		<!-- 휴대전화, 이메일 입력 -->
+		<table class="lay-table-type2 mt50">
+			<caption>개인정보 표 - 휴대전화, 이메일</caption>
+			<colgroup>
+				<col style="width:21%">
+				<col style="width:*">
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row"><span class="info-dot">*</span> 휴대전화 </td>
+					<td class="input-line">
+						<ul class="tbl-type-phone">
+							<li>
+								<div class="selectbox" style="width:100%;">
+									<select name="" id="" title="휴대전화 통신사 선택" >
+										<option value="">010</option>
+									</select>
+								</div>
+							</li>
+							<li class="lay-hypen"> - </li>
+							<li><input type="text" id="" name="" class="type-input" title="휴대전화 가운데자리" ></li>
+							<li class="lay-hypen"> - </li>
+							<li><input type="text" id="" name="" class="type-input" title="휴대전화 마지막자리" ></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"><span class="info-dot">*</span> 이메일 </td>
+					<td class="input-line">
+						<ul class="tbl-type-email">
+							<li class="input-size"><input type="text" id="" name="" class="type-input" title="이메일 아이디" ></li>
+							<li class="lay-email"> @ </li>
+							<li class="input-size"><input type="text" id="" name="" class="type-input" title="이메일 주소" ></li>
+							<li class="ml10">
+								<div class="selectbox" style="width:100%;">
+									<select name="" id="" title="이메일 주소 선택" >
+										<option value="">직접입력</option>
+									</select>
+								</div>
+							</li>
+						</ul>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<!--// 휴대전화, 이메일 입력 -->
+
+
+		<div class="btn-area">
+			<a href="#none" class="layer-btn color-red">확인</a>
+		</div>
+	</div>
+</div>
+<!-- //대기신청 레이어팝업 -->
+
+<!-- 부분 결제 취소 -->
+<div class="layer-pop partial_payment-pop">
+	<div class="lay_tit-area">
+		<strong>부분 결제 취소</strong>
+		<a href="#"><span class="blind">레이어팝업 닫기</span></a>
+	</div>
+	<div class="lay_cont-area partial-payment">
+		<div class="lay_cont-box">
+			<em>선택하신 결제 취소 건은 타 강좌와 함께 결제가 되어 있습니다.</em>
+			<em>선택 하신 강좌에 대한 결제 건만 취소 하시겠습니까?</em>
+		</div>
+
+		<div class="btn-area">
+			<a href="#none" class="layer-btn color-red">확인</a>
+			<a href="#none" class="layer-btn">취소</a>
+		</div>
+
+	</div>
+</div>
+ <!--// 부분 결제 취소 -->
+
+ <!-- 수강자 선택 레이어팝업 -->
+<div class="layer-pop layer_student_sel-pop">
+	<div class="lay_tit-area">
+		<strong>수강자 선택</strong>
+		<a href="#"><span class="blind">레이어팝업 닫기</span></a>
+	</div>
+
+	<div class="lay_cont-area layer-student-sel">
+		<p class="lay-txt">실제 수강하실 수강생을 선택해 주세요.<br>
+		엄마랑 아가랑 강좌 신청시에는 수강자로만 보호자 1인, 자녀 1인을 선택하여 주세요.<br>
+		(자녀는 2인까지 수강신청 가능합니다.)</p>
+
+		<!-- 수강자 선택 스크롤-->
+		<div class="scroll-table-box">
+			<table class="lay-table-scroll">
+				<caption>수강자 선택  표 - 선택, 성명, 관계, 생년월일</caption>
+				<thead>
+					<tr>
+						<th scope="col" style="width:70px;">선택</th>
+						<th scope="col">성명</th>
+						<th scope="col" class="dis-none">관계</th>
+						<th scope="col" class="dis-none">생년월일</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<span class="lay-checkbox">
+								<input type="checkbox" id="chh1" name="" />
+								<label for="chh1"><span class="blind">선택</span></label>
+							</span>
+						</td>
+						<td>
+							<p class="alg-left">홍길동</p>
+							<ul class="table-txtList dis-block">
+								<li>관계 : 본인</li>
+								<li>생년월일 : 2017.05.01</li>
+							</ul>
+						</td>
+						<td class="dis-none">본인</td>
+						<td class="dis-none">2017.05.01</td>
+					</tr>
+
+					<tr>
+						<td>
+							<span class="lay-checkbox">
+								<input type="checkbox" id="chh1" name="" />
+								<label for="chh1"><span class="blind">선택</span></label>
+							</span>
+						</td>
+						<td>
+							<p class="alg-left">홍길홍</p>
+							<ul class="table-txtList dis-block">
+								<li>관계 : 자녀</li>
+								<li>생년월일 : 2015.05.01</li>
+							</ul>
+						</td>
+						<td class="dis-none">자녀</td>
+						<td class="dis-none">2011.05.01</td>
+					</tr>
+
+					<tr>
+						<td>
+							<span class="lay-checkbox">
+								<input type="checkbox" id="chh1" name="" />
+								<label for="chh1"><span class="blind">선택</span></label>
+							</span>
+						</td>
+						<td>
+							<p class="alg-left">홍길홍</p>
+							<ul class="table-txtList dis-block">
+								<li>관계 : 자녀</li>
+								<li>생년월일 : 2015.05.01</li>
+							</ul>
+						</td>
+						<td class="dis-none">자녀</td>
+						<td class="dis-none">2011.05.01</td>
+					</tr>
+
+					<tr>
+						<td>
+							<span class="lay-checkbox">
+								<input type="checkbox" id="chh1" name="" />
+								<label for="chh1"><span class="blind">선택</span></label>
+							</span>
+						</td>
+						<td>
+							<p class="alg-left">홍길홍</p>
+							<ul class="table-txtList dis-block">
+								<li>관계 : 자녀</li>
+								<li>생년월일 : 2015.05.01</li>
+							</ul>
+						</td>
+						<td class="dis-none">자녀</td>
+						<td class="dis-none">2011.05.01</td>
+					</tr>
+
+					<tr>
+						<td>
+							<span class="lay-checkbox">
+								<input type="checkbox" id="chh1" name="" />
+								<label for="chh1"><span class="blind">선택</span></label>
+							</span>
+						</td>
+						<td>
+							<p class="alg-left">홍길홍</p>
+							<ul class="table-txtList dis-block">
+								<li>관계 : 자녀</li>
+								<li>생년월일 : 2015.05.01</li>
+							</ul>
+						</td>
+						<td class="dis-none">자녀</td>
+						<td class="dis-none">2011.05.01</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!--// 수강자 선택 스크롤-->
+
+		<div class="btn-area">
+			<a href="#none" class="layer-btn color-red">확인</a>
+		</div>
+	</div>
+</div>
+<!-- //수강자 선택 레이어팝업 -->
+
+<!-- 영수증 레이어팝업 -->
+<div class="layer-pop receipt_con-pop">
+	<div class="lay_tit-area">
+		<strong>영수증</strong>
+		<a href="#"><span class="blind">레이어팝업 닫기</span></a>
+	</div>
+
+	<div class="lay_cont-area receipt-con">
+
+		<!-- 영수증 로드 -->
+		<div class="receipt-load">
+			<img src="../resources/images/sample/receipt.gif" alt="영수증">
+		</div>
+		<!--// 영수증 로드 -->
+
+
+		<div class="btn-area">
+			<a href="#none" class="layer-btn color-red">인쇄</a>
+		</div>
+	</div>
+</div>
+<!-- //영수증 레이어팝업 -->
+
+ <!-- 자주가는 지점 추가  -->
+<div class="layer-pop best_branch-pop type1">
+	<div class="lay_tit-area">
+		<strong>자주가는 지점 추가 </strong>
+		<a href="#"><span class="blind">레이어팝업 닫기</span></a>
+	</div>
+	<div class="lay_cont-area best-branch">
+		<div class="lay-branch-hei view-table">
+			<!-- branch_find-wrap -->
+			<div class="branch_find-wrap">
+				<!-- branch_find-area -->
+				<div class="sub branch_find-area">
+					<!-- 지역별 메뉴 -->
+					<ul class="branch-menu lst_txt-c">
+						<li>서울</li> <!-- [D] 활성화시 active 추가 -->
+						<li>경기도</li>
+						<li class="active">인천권</li>
+						<li>충천권</li>
+						<li>영남권</li>
+						<li>호남권</li>
+						<li>강원도</li>
+						<li>제주도</li>
+					</ul>
+					<!-- // 지역별 메뉴 -->
+
+					<!-- 서울 지역별 메뉴 상세 -->
+					<div class="branch-con">
+						<strong class="blind">서울</strong>
+						<ul>
+							<li><a href="sub/지점메인.html">vic영등포점</a></li><!-- [D] 활성화시 active 추가 -->
+							<li><a href="sub/지점메인.html">구로점</a></li>
+							<li><a href="sub/지점메인.html">송파점</a></li>
+							<li><a href="sub/지점메인.html">양평점</a></li>
+							<li><a href="sub/지점메인.html">은평점</a></li>
+							<li><a href="sub/지점메인.html">중계점</a></li>
+						</ul>
+					</div>
+					<!-- // 서울 지역별 메뉴 상세 -->
+
+					<!-- 경기도 지역별 메뉴 상세 -->
+					<div class="branch-con">
+						<strong class="blind">경기도</strong>
+						<ul>
+							<li><a href="sub/지점메인.html">고양점</a></li>
+							<li><a href="sub/지점메인.html">광교점</a></li>
+							<li><a href="sub/지점메인.html">구리점</a></li>
+							<li><a href="sub/지점메인.html">권선점</a></li>
+							<li><a href="sub/지점메인.html">동두천점</a></li>
+							<li class="active"><a href="sub/지점메인.html">수지점</a></li>
+							<li><a href="sub/지점메인.html">시흥배곧점</a></li>
+							<li><a href="sub/지점메인.html">신갈점</a></li>
+							<li><a href="sub/지점메인.html">안산점</a></li>
+							<li><a href="sub/지점메인.html">안성점</a></li>
+							<li><a href="sub/지점메인.html">양주점</a></li>
+							<li><a href="sub/지점메인.html">영통점</a></li>
+							<li><a href="sub/지점메인.html">오산점</a></li>
+							<li><a href="sub/지점메인.html">의정부점</a></li>
+							<li><a href="sub/지점메인.html">주엽점</a></li>
+							<li><a href="sub/지점메인.html">평택점</a></li>
+						</ul>
+					</div>
+					<!--// 경기도 지역별 메뉴 상세 -->
+
+					<!-- 인천권 지역별 메뉴 상세 -->
+					<div class="branch-con">
+						<strong class="blind">인천권</strong>
+						<ul>
+							<li><a href="sub/지점메인.html">검단점</a></li>
+							<li><a href="sub/지점메인.html">계양점</a></li>
+							<li><a href="sub/지점메인.html">부평점(산곡)</a></li>
+							<li><a href="sub/지점메인.html">삼산점</a></li>
+							<li><a href="sub/지점메인.html">송도점</a></li>
+							<li><a href="sub/지점메인.html">영종도점</a></li>
+							<li><a href="sub/지점메인.html">청라점</a></li>
+						</ul>
+					</div>
+					<!-- // 인천권 지역별 메뉴 상세 -->
+
+					<!-- 충청권 지역별 메뉴 상세 -->
+					<div class="branch-con">
+						<strong class="blind">충청권</strong>
+						<ul>
+							<li><a href="sub/지점메인.html">노은점</a></li>
+							<li><a href="sub/지점메인.html">당진점</a></li>
+							<li><a href="sub/지점메인.html">대덕점</a></li>
+							<li><a href="sub/지점메인.html">상당점</a></li>
+							<li><a href="sub/지점메인.html">서대전점</a></li>
+							<li><a href="sub/지점메인.html">서산점</a></li>
+							<li><a href="sub/지점메인.html">성정점</a></li>
+							<li><a href="sub/지점메인.html">천안점(쌍용)</a></li>
+							<li><a href="sub/지점메인.html">충주점</a></li>
+						</ul>
+					</div>
+					<!-- // 충청권 지역별 메뉴 상세 -->
+
+					<!-- 영남권 지역별 메뉴 상세 -->
+					<div class="branch-con">
+						<strong class="blind">영남권</strong>
+						<ul>
+							<li><a href="sub/지점메인.html">거제점</a></li>
+							<li><a href="sub/지점메인.html">구미점</a></li>
+							<li><a href="sub/지점메인.html">금정점</a></li>
+							<li><a href="sub/지점메인.html">김천점</a></li>
+							<li><a href="sub/지점메인.html">대구율하점</a></li>
+							<li><a href="sub/지점메인.html">부산점</a></li>
+							<li><a href="sub/지점메인.html">사상점</a></li>
+							<li><a href="sub/지점메인.html">사하점</a></li>
+							<li><a href="sub/지점메인.html">양덕점</a></li>
+							<li><a href="sub/지점메인.html">울산점</a></li>
+							<li><a href="sub/지점메인.html">웅상점</a></li>
+							<li><a href="sub/지점메인.html">장유점</a></li>
+							<li><a href="sub/지점메인.html">진장점</a></li>
+							<li><a href="sub/지점메인.html">진해점</a></li>
+							<li><a href="sub/지점메인.html">창원중앙점</a></li>
+							<li><a href="sub/지점메인.html">통영점</a></li>
+						</ul>
+					</div>
+					<!-- // 영남권 지역별 메뉴 상세 -->
+
+					<!-- 호남권 지역별 메뉴 상세 -->
+					<div class="branch-con">
+						<strong class="blind">호남권</strong>
+						<ul>
+							<li><a href="sub/지점메인.html">군산점</a></li>
+							<li><a href="sub/지점메인.html">목포점</a></li>
+							<li><a href="sub/지점메인.html">상무점</a></li>
+							<li><a href="sub/지점메인.html">송천점(전주)</a></li>
+							<li><a href="sub/지점메인.html">수완점</a></li>
+							<li><a href="sub/지점메인.html">여수점</a></li>
+							<li><a href="sub/지점메인.html">월드컵점</a></li>
+							<li><a href="sub/지점메인.html">익산점</a></li>
+							<li><a href="sub/지점메인.html">전주점</a></li>
+							<li><a href="sub/지점메인.html">첨단점</a></li>
+						</ul>
+					</div>
+					<!-- // 호남권 지역별 메뉴 상세 -->
+
+					<!-- 강원도 지역별 메뉴 상세 -->
+					<div class="branch-con">
+						<strong class="blind">강원도</strong>
+						<ul>
+							<li><a href="sub/지점메인.html">석사점</a></li>
+							<li><a href="sub/지점메인.html">춘천점</a></li>
+						</ul>
+					</div>
+					<!-- // 강원도 지역별 메뉴 상세 -->
+
+					<!-- 제주도 지역별 메뉴 상세 -->
+					<div class="branch-con">
+						<strong class="blind">제주도</strong>
+						<ul>
+							<li><a href="sub/지점메인.html">석사점</a></li>
+							<li><a href="sub/지점메인.html">춘천점</a></li>
+						</ul>
+					</div>
+					<!-- // 제주도 지역별 메뉴 상세 -->
+				</div>
+				<!-- //branch_find-area -->
+			</div>
+			<!-- //branch_find-wrap -->
+		</div>
+	   <!-- 검색 -->
+		<div class="lay-search-panel col1">
+			<ul>
+				<li>관심 강좌군</li>
+				<li>
+					<div class="selectbox" style="width:100%;">
+						<select name="" id="" title="관심 강좌군 선택" >
+							<option value="">노래/댄스</option>
+						</select>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!-- //검색 -->
+
+		<div class="btn-area">
+			<a href="#none" class="layer-btn">취소</a>
+			<a href="#none" class="layer-btn color-red">설정완료</a>
+		</div>
+
+	</div>
+</div>
+<!--// 자주가는 지점 추가  -->
+
+<!-- 지점별 보호 책임자 레이어팝업 -->
+<div class="layer-pop  cctv_policy-pop">
+	<div class="lay_tit-area">
+		<strong>지점별 보호 책임자</strong>
+		<a href="#"><span class="blind">레이어팝업 닫기</span></a>
+	</div>
+
+	<div class="lay_cont-area cctv-policy">
+		<!-- 지점별 보호 책임자 스크롤-->
+		<div class="scroll-table-box size01">
+			<table class="lay-table-scroll">
+				<caption>지점별 보호 책임자 표 - 점포명, CCTV 설치수량, 관리책임자 - 이름, 직책, 전화번호</caption>
+				<thead>
+					<tr>
+						<th scope="col" rowspan="2">점포명</th>
+						<th scope="col" rowspan="2">CCTV 설치수량</th>
+						<th scope="col" colspan="3">관리책임자</th>
+					</tr>
+					<tr>
+						<th scope="col">이름</th>
+						<th scope="col">직책</th>
+						<th scope="col">전화번호</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row">송파점</th>
+						<td>102</td>
+						<td>강순규</td>
+						<td>부점장</td>
+						<td>02-2006-7710</td>
+					</tr>
+					<tr>
+						<th scope="row">홍성점</th>
+						<td>65</td>
+						<td>강영훈</td>
+						<td>부점장</td>
+						<td>041-339-2520</td>
+					</tr>
+					<tr>
+						<th scope="row">마석점</th>
+						<td>76</td>
+						<td>강재호</td>
+						<td>부점장</td>
+						<td>031-590-1530</td>
+					</tr>
+					<tr>
+						<th scope="row">웅상점</th>
+						<td>76</td>
+						<td>강지홍</td>
+						<td>부점장</td>
+						<td>055-379-2520</td>
+					</tr>
+					<tr>
+						<th scope="row">삼양점</th>
+						<td>92</td>
+						<td>강지훈</td>
+						<td>부점장</td>
+						<td>02-944-1520</td>
+					</tr>
+					<tr>
+						<th scope="row">창원중앙점</th>
+						<td>193</td>
+						<td>강학수</td>
+						<td>부점장</td>
+						<td>055-240-2520</td>
+					</tr>
+					<tr>
+						<th scope="row">수완점</th>
+						<td>200</td>
+						<td>곽형국</td>
+						<td>점장</td>
+						<td>062-975-2520</td>
+					</tr>
+					<tr>
+						<th scope="row">잠실점</th>
+						<td>140</td>
+						<td>권용근</td>
+						<td>부점장</td>
+						<td>02-411-8410</td>
+					</tr>
+					<tr>
+						<th scope="row">사하점</th>
+						<td>39</td>
+						<td>권용호</td>
+						<td>부점장</td>
+						<td>051-603-2520</td>
+					</tr>
+					<tr>
+						<th scope="row">화정점</th>
+						<td>96</td>
+						<td>김경록</td>
+						<td>부점장</td>
+						<td>031-930-2010</td>
+					</tr>
+					<tr>
+						<th scope="row">시흥점</th>
+						<td>103</td>
+						<td>김대선</td>
+						<td>부점장</td>
+						<td>031-599-2851</td>
+					</tr>
+					<tr>
+						<th scope="row">서청주점</th>
+						<td>164</td>
+						<td>김무찬</td>
+						<td>부점장</td>
+						<td>043-251-0520</td>
+					</tr>
+					<tr>
+						<th scope="row">연수점</th>
+						<td>100</td>
+						<td>김병태</td>
+						<td>부점장</td>
+						<td>032-810-2530</td>
+					</tr>
+					<tr>
+						<th scope="row">마장휴게소점</th>
+						<td>42</td>
+						<td>김봉준</td>
+						<td>점장</td>
+						<td>031-645-5710</td>
+					</tr>
+					<tr>
+						<th scope="row">화명점</th>
+						<td>83</td>
+						<td>김상기</td>
+						<td>부점장</td>
+						<td>051-604-2540</td>
+					</tr>
+					<tr>
+						<th scope="row">상무점</th>
+						<td>95</td>
+						<td>김완철</td>
+						<td>부점장</td>
+						<td>062-602-2520</td>
+					</tr>
+					<tr>
+						<th scope="row">석사점</th>
+						<td>73</td>
+						<td>김정욱</td>
+						<td>부점장</td>
+						<td>033-260-7710</td>
+					</tr>
+					<tr>
+						<th scope="row">구미점</th>
+						<td>138</td>
+						<td>김준우</td>
+						<td>부점장</td>
+						<td>054-440-2520</td>
+					</tr>
+					<tr>
+						<th scope="row">서울역점</th>
+						<td>85</td>
+						<td>김태욱</td>
+						<td>부점장</td>
+						<td>02-390-2520</td>
+					</tr>
+					<tr>
+						<th scope="row">양덕점</th>
+						<td>83</td>
+						<td>김태윤</td>
+						<td>점장</td>
+						<td>055-259-2810</td>
+					</tr>
+					<tr>
+						<th scope="row">정읍점</th>
+						<td>110</td>
+						<td>김해영</td>
+						<td>부점장</td>
+						<td>063-570-2520</td>
+					</tr>
+					<tr>
+						<th scope="row">통영점</th>
+						<td>70</td>
+						<td>노찬영</td>
+						<td>부점장</td>
+						<td>055-640-2520</td>
+					</tr>
+					<tr>
+						<th scope="row">당진점</th>
+						<td>99</td>
+						<td>문동기</td>
+						<td>부점장</td>
+						<td>041-350-7020</td>
+					</tr>
+					<tr>
+						<th scope="row">광복점</th>
+						<td>133</td>
+						<td>문종호</td>
+						<td>부점장</td>
+						<td>051-250-2920</td>
+					</tr>
+					<tr>
+						<th scope="row">구리점</th>
+						<td>204</td>
+						<td>민경수</td>
+						<td>부점장</td>
+						<td>031-550-9610</td>
+					</tr>
+					<tr>
+						<th scope="row">여수점</th>
+						<td>106</td>
+						<td>박경수</td>
+						<td>부점장</td>
+						<td>061-640-2520</td>
+					</tr>
+					<tr>
+						<th scope="row">삼산점</th>
+						<td>190</td>
+						<td>박기현</td>
+						<td>부점장</td>
+						<td>032-363-2520</td>
+					</tr>
+					<tr>
+						<th scope="row">김포점</th>
+						<td>73</td>
+						<td>박덕희</td>
+						<td>부점장</td>
+						<td>031-931-0832</td>
+					</tr>
+					<tr>
+						<th scope="row">울산점</th>
+						<td>53</td>
+						<td>박민균</td>
+						<td>부점장</td>
+						<td>052-240-2512</td>
+					</tr>
+					<tr>
+						<th scope="row">노은점</th>
+						<td>141</td>
+						<td>박민훈</td>
+						<td>부점장</td>
+						<td>042-820-8320</td>
+					</tr>
+					<tr>
+						<th scope="row">동래점</th>
+						<td>240</td>
+						<td>박시우</td>
+						<td>부점장</td>
+						<td>051-668-2520</td>
+					</tr>
+					<tr>
+						<th scope="row">월드컵점</th>
+						<td>107</td>
+						<td>박시중</td>
+						<td>부점장</td>
+						<td>062-610-2520</td>
+					</tr>
+					<tr>
+						<th scope="row">VIC신영통점</th>
+						<td>98</td>
+						<td>박신영</td>
+						<td>부점장</td>
+						<td>031-695-2520</td>
+					</tr>
+					<tr>
+						<th scope="row">VIC신영통점</th>
+						<td>98</td>
+						<td>박신영</td>
+						<td>부점장</td>
+						<td>031-695-2520</td>
+					</tr>
+					<tr>
+						<th scope="row">부산점</th>
+						<td>168</td>
+						<td>박용기</td>
+						<td>부점장</td>
+						<td>051-608-2520</td>
+					</tr>
+					<tr>
+						<th scope="row">부평역점</th>
+						<td>89</td>
+						<td>박지훈</td>
+						<td>부점장</td>
+						<td>032-454-2520</td>
+					</tr>
+					<tr>
+						<th scope="row">천안점</th>
+						<td>77</td>
+						<td>박진두</td>
+						<td>부점장</td>
+						<td>041-570-5715</td>
+					</tr>
+					<tr>
+						<th scope="row">동두천점</th>
+						<td>89</td>
+						<td>박천수</td>
+						<td>부점장</td>
+						<td>031-830-2520</td>
+					</tr>
+					<tr>
+						<th scope="row">청주점</th>
+						<td>52</td>
+						<td>박형상</td>
+						<td>부점장</td>
+						<td>043-230-1010</td>
+					</tr>
+					<tr>
+						<th scope="row">동부산점</th>
+						<td>87</td>
+						<td>박희순</td>
+						<td>부점장</td>
+						<td>051-922-2520</td>
+					</tr>
+					<tr>
+						<th scope="row">고양점</th>
+						<td>120</td>
+						<td>박희용</td>
+						<td>부점장</td>
+						<td>031-930-7010</td>
+					</tr>
+					<tr>
+						<th scope="row">고양점</th>
+						<td>120</td>
+						<td>박희용</td>
+						<td>부점장</td>
+						<td>032-363-2520</td>
+					</tr>
+					<tr>
+						<th scope="row">아산터미널점</th>
+						<td>58</td>
+						<td>변정완</td>
+						<td>부점장</td>
+						<td>041-537-2520</td>
+					</tr>
+					<tr>
+						<th scope="row">권선점</th>
+						<td>100</td>
+						<td>부계형</td>
+						<td>부점장</td>
+						<td>031-229-7750</td>
+					</tr>
+					<tr>
+						<th scope="row">천천점</th>
+						<td>93</td>
+						<td>서동혁</td>
+						<td>부점장</td>
+						<td>031-240-2520</td>
+					</tr>
+					<tr>
+						<th scope="row">VIC도봉점</th>
+						<td>111</td>
+						<td>서정봉</td>
+						<td>부점장</td>
+						<td>02-2289-2520</td>
+					</tr>
+					<tr>
+						<th scope="row">사상점</th>
+						<td>143</td>
+						<td>석대영</td>
+						<td>부점장</td>
+						<td>051-329-2520</td>
+					</tr>
+					<tr>
+						<th scope="row">여천점</th>
+						<td>79</td>
+						<td>설원용</td>
+						<td>부점장</td>
+						<td>061-650-2510</td>
+					</tr>
+					<tr>
+						<th scope="row">평택점</th>
+						<td>163</td>
+						<td>성윤석</td>
+						<td>부점장</td>
+						<td>031-8053-2520</td>
+					</tr>
+					<tr>
+						<th scope="row">대구율하점</th>
+						<td>247</td>
+						<td>손호철</td>
+						<td>부점장</td>
+						<td>053-607-2520</td>
+					</tr>
+					<tr>
+						<th scope="row">의왕점</th>
+						<td>101</td>
+						<td>송인중</td>
+						<td>부점장</td>
+						<td>031-470-2520</td>
+					</tr>
+					<tr>
+						<th scope="row">평촌점</th>
+						<td>236</td>
+						<td>송진영</td>
+						<td>부점장</td>
+						<td>031-478-0230</td>
+					</tr>
+					<tr>
+						<th scope="row">시티세븐점</th>
+						<td>71</td>
+						<td>신동훈</td>
+						<td>부점장</td>
+						<td>055-270-5620</td>
+					</tr>
+					<tr>
+						<th scope="row">원주점</th>
+						<td>67</td>
+						<td>신민호</td>
+						<td>부점장</td>
+						<td>033-749-2520</td>
+					</tr>
+					<tr>
+						<th scope="row">김천점</th>
+						<td>88</td>
+						<td>신종현</td>
+						<td>부점장</td>
+						<td>054-429-0830</td>
+					</tr>
+					<tr>
+						<th scope="row">광교점</th>
+						<td>54</td>
+						<td>신중록</td>
+						<td>부점장</td>
+						<td>031-228-1610</td>
+					</tr>
+					<tr>
+						<th scope="row">청라점</th>
+						<td>141</td>
+						<td>신창우</td>
+						<td>부점장</td>
+						<td>032-590-2520</td>
+					</tr>
+					<tr>
+						<th scope="row">상당점</th>
+						<td>90</td>
+						<td>심현구</td>
+						<td>부점장</td>
+						<td>041-290-7010</td>
+					</tr>
+					<tr>
+						<th scope="row">VIC금천점</th>
+						<td>85</td>
+						<td>안병철</td>
+						<td>부점장</td>
+						<td>02-2109-7510</td>
+					</tr>
+					<tr>
+						<th scope="row">송도점</th>
+						<td>155</td>
+						<td>양승훈</td>
+						<td>부점장</td>
+						<td>032-222-2520</td>
+					</tr>
+					<tr>
+						<th scope="row">서산점</th>
+						<td>70</td>
+						<td>양호</td>
+						<td>부점장</td>
+						<td>041-661-0014</td>
+					</tr>
+					<tr>
+						<th scope="row">충주점</th>
+						<td>174</td>
+						<td>오태수</td>
+						<td>부점장</td>
+						<td>043-841-2520</td>
+					</tr>
+					<tr>
+						<th scope="row">포항점</th>
+						<td>45</td>
+						<td>왕재호</td>
+						<td>부점장</td>
+						<td>054-222-2530</td>
+					</tr>
+					<tr>
+						<th scope="row">판교점</th>
+						<td>126</td>
+						<td>우만호</td>
+						<td>부점장</td>
+						<td>031-783-0220</td>
+					</tr>
+					<tr>
+						<th scope="row">주엽점</th>
+						<td>103</td>
+						<td>윤혜신</td>
+						<td>부점장</td>
+						<td>031-910-3320</td>
+					</tr>
+					<tr>
+						<th scope="row">청량리점</th>
+						<td>148</td>
+						<td>윤희</td>
+						<td>부점장</td>
+						<td>02-3706-4710</td>
+					</tr>
+					<tr>
+						<th scope="row">마산점</th>
+						<td>75</td>
+						<td>이기동</td>
+						<td>부점장</td>
+						<td>055-230-2520</td>
+					</tr>
+					<tr>
+						<th scope="row">나주점</th>
+						<td>30</td>
+						<td>이기준</td>
+						<td>부점장</td>
+						<td>061-339-3220</td>
+					</tr>
+					<tr>
+						<th scope="row">오산점</th>
+						<td>79</td>
+						<td>이동건</td>
+						<td>부점장</td>
+						<td>031-371-2520</td>
+					</tr>
+					<tr>
+						<th scope="row">신갈점</th>
+						<td>157</td>
+						<td>이동우</td>
+						<td>부점장</td>
+						<td>031-280-3320</td>
+					</tr>
+					<tr>
+						<th scope="row">덕소점</th>
+						<td>73</td>
+						<td>이상재</td>
+						<td>부점장</td>
+						<td>031-579-7710</td>
+					</tr>
+					<tr>
+						<th scope="row">중계점</th>
+						<td>156</td>
+						<td>이승만</td>
+						<td>부점장</td>
+						<td>02-2092-2520</td>
+					</tr>
+					<tr>
+						<th scope="row">VIC킨텍스점</th>
+						<td>90</td>
+						<td>이승호</td>
+						<td>부점장</td>
+						<td>031-8071-8320</td>
+					</tr>
+					<tr>
+						<th scope="row">제주점</th>
+						<td>131</td>
+						<td>이영희</td>
+						<td>부점장</td>
+						<td>064-798-2520</td>
+					</tr>
+					<tr>
+						<th scope="row">대덕점</th>
+						<td>126</td>
+						<td>이욱선</td>
+						<td>부점장</td>
+						<td>042-930-2520</td>
+					</tr>
+					<tr>
+						<th scope="row">양주점</th>
+						<td>77</td>
+						<td>이재남</td>
+						<td>점장</td>
+						<td>031-870-2510</td>
+					</tr>
+					<tr>
+						<th scope="row">진장점</th>
+						<td>146</td>
+						<td>이재현</td>
+						<td>부점장</td>
+						<td>054-540-2520</td>
+					</tr>
+					<tr>
+						<th scope="row">영통점</th>
+						<td>142</td>
+						<td>이종서</td>
+						<td>점장</td>
+						<td>031-290-4020</td>
+					</tr>
+					<tr>
+						<th scope="row">진해점</th>
+						<td>57</td>
+						<td>이종석</td>
+						<td>부점장</td>
+						<td>055-540-7050</td>
+					</tr>
+					<tr>
+						<th scope="row">계양점</th>
+						<td>142</td>
+						<td>이종익</td>
+						<td>부점장</td>
+						<td>032-550-2520</td>
+					</tr>
+					<tr>
+						<th scope="row">춘천점</th>
+						<td>118</td>
+						<td>이진식</td>
+						<td>부점장</td>
+						<td>033-240-2520</td>
+					</tr>
+					<tr>
+						<th scope="row">군산점</th>
+						<td>126</td>
+						<td>이현우</td>
+						<td>부점장</td>
+						<td>063-441-2520</td>
+					</tr>
+					<tr>
+						<th scope="row">서현점</th>
+						<td>90</td>
+						<td>이혜원</td>
+						<td>부점장</td>
+						<td>031-789-2520</td>
+					</tr>
+					<tr>
+						<th scope="row">첨단점</th>
+						<td>53</td>
+						<td>이호연</td>
+						<td>부점장</td>
+						<td>062-970-0808</td>
+					</tr>
+					<tr>
+						<th scope="row">동대전점</th>
+						<td>70</td>
+						<td>임동훈</td>
+						<td>부점장</td>
+						<td>042-607-7701</td>
+					</tr>
+					<tr>
+						<th scope="row">전주점</th>
+						<td>173</td>
+						<td>임애림</td>
+						<td>부점장</td>
+						<td>063-249-2520</td>
+					</tr>
+					<tr>
+						<th scope="row">삼계점</th>
+						<td>53</td>
+						<td>임종균</td>
+						<td>부점장</td>
+						<td>055-719-5212</td>
+					</tr>
+					<tr>
+						<th scope="row">부평점</th>
+						<td>152</td>
+						<td>장은수</td>
+						<td>부점장</td>
+						<td>032-509-2520</td>
+					</tr>
+					<tr>
+						<th scope="row">장암점</th>
+						<td>102</td>
+						<td>장재수</td>
+						<td>부점장</td>
+						<td>031-849-2520</td>
+					</tr>
+					<tr>
+						<th scope="row">김포공항점</th>
+						<td>72</td>
+						<td>장진욱</td>
+						<td>부점장</td>
+						<td>02-6116-1520</td>
+					</tr>
+					<tr>
+						<th scope="row">월드타워점</th>
+						<td>81</td>
+						<td>장현육</td>
+						<td>부점장</td>
+						<td>02-3213-2720</td>
+					</tr>
+					<tr>
+						<th scope="row">안산점</th>
+						<td>96</td>
+						<td>전광택</td>
+						<td>부점장</td>
+						<td>031-412-8810</td>
+					</tr>
+					<tr>
+						<th scope="row">성정점</th>
+						<td>101</td>
+						<td>전종헌</td>
+						<td>부점장</td>
+						<td>041-629-8510</td>
+					</tr>
+					<tr>
+						<th scope="row">수지점</th>
+						<td>130</td>
+						<td>정수근</td>
+						<td>부점장</td>
+						<td>031-270-3110</td>
+					</tr>
+					<tr>
+						<th scope="row">김해점</th>
+						<td>152</td>
+						<td>정영덕</td>
+						<td>부점장</td>
+						<td>055-340-2820</td>
+					</tr>
+					<tr>
+						<th scope="row">거제점</th>
+						<td>146</td>
+						<td>정용훈</td>
+						<td>부점장</td>
+						<td>055-680-5820</td>
+					</tr>
+					<tr>
+						<th scope="row">영종도점</th>
+						<td>92</td>
+						<td>정인준</td>
+						<td>부점장</td>
+						<td>032-745-3520</td>
+					</tr>
+					<tr>
+						<th scope="row">천안아산점</th>
+						<td>68</td>
+						<td>정한수</td>
+						<td>부점장</td>
+						<td>041-539-2540</td>
+					</tr>
+					<tr>
+						<th scope="row">제천점</th>
+						<td>39</td>
+						<td>조민영</td>
+						<td>부점장</td>
+						<td>043-640-2630</td>
+					</tr>
+					<tr>
+						<th scope="row">선부점</th>
+						<td>105</td>
+						<td>조철행</td>
+						<td>부점장</td>
+						<td>031-8084-1720</td>
+					</tr>
+					<tr>
+						<th scope="row">남원점</th>
+						<td>115</td>
+						<td>조혁수</td>
+						<td>점장</td>
+						<td>063-650-2510</td>
+					</tr>
+					<tr>
+						<th scope="row">강변점</th>
+						<td>36</td>
+						<td>조혁일</td>
+						<td>부점장</td>
+						<td>02-3424-2520</td>
+					</tr>
+					<tr>
+						<th scope="row">덕진점</th>
+						<td>56</td>
+						<td>차용선</td>
+						<td>부점장</td>
+						<td>063-270-0758</td>
+					</tr>
+					<tr>
+						<th scope="row">반여점</th>
+						<td>41</td>
+						<td>천소영</td>
+						<td>부점장</td>
+						<td>051-520-7000</td>
+					</tr>
+					<tr>
+						<th scope="row">수원점</th>
+						<td>86</td>
+						<td>천우석</td>
+						<td>부점장</td>
+						<td>031-8066-2210</td>
+					</tr>
+					<tr>
+						<th scope="row">금정점</th>
+						<td>78</td>
+						<td>최상훈</td>
+						<td>점장</td>
+						<td>051-580-7716</td>
+					</tr>
+					<tr>
+						<th scope="row">시화점</th>
+						<td>48</td>
+						<td>최성우</td>
+						<td>부점장</td>
+						<td>031-496-7710</td>
+					</tr>
+					<tr>
+						<th scope="row">구로점</th>
+						<td>171</td>
+						<td>최수진</td>
+						<td>부점장</td>
+						<td>02-2639-2520</td>
+					</tr>
+					<tr>
+						<th scope="row">송천점</th>
+						<td>170</td>
+						<td>최지구</td>
+						<td>부점장</td>
+						<td>063-219-2520</td>
+					</tr>
+					<tr>
+						<th scope="row">서대전점</th>
+						<td>74</td>
+						<td>최화열</td>
+						<td>부점장</td>
+						<td>042-540-2520</td>
+					</tr>
+					<tr>
+						<th scope="row">행당역점</th>
+						<td>54</td>
+						<td>하언정</td>
+						<td>부점장</td>
+						<td>02-2290-7031</td>
+					</tr>
+					<tr>
+						<th scope="row">검단점</th>
+						<td>114</td>
+						<td>함승우</td>
+						<td>부점장</td>
+						<td>032-560-2520</td>
+					</tr>
+					<tr>
+						<th scope="row">VIC영등포점</th>
+						<td>154</td>
+						<td>허성녕</td>
+						<td>부점장</td>
+						<td>02-2165-2520</td>
+					</tr>
+					<tr>
+						<th scope="row">의정부점</th>
+						<td>120</td>
+						<td>홍성순</td>
+						<td>부점장</td>
+						<td>031-850-2520</td>
+					</tr>
+					<tr>
+						<th scope="row">익산점</th>
+						<td>128</td>
+						<td>홍영의</td>
+						<td>부점장</td>
+						<td>063-830-2520</td>
+					</tr>
+					<tr>
+						<th scope="row">상록점</th>
+						<td>99</td>
+						<td>홍은표</td>
+						<td>부점장</td>
+						<td>031-8086-0811</td>
+					</tr>
+					<tr>
+						<th scope="row">목포점</th>
+						<td>97</td>
+						<td>황범연</td>
+						<td>부점장</td>
+						<td>061-280-2520</td>
+					</tr>
+					<tr>
+						<th scope="row">장유점</th>
+						<td>109</td>
+						<td>황영규</td>
+						<td>부점장</td>
+						<td>055-330-0520</td>
+					</tr>
+					<tr>
+						<th scope="row">안성점</th>
+						<td>85</td>
+						<td>황윤주</td>
+						<td>부점장</td>
+						<td>031-569-9220</td>
+					</tr>
+
+
+				</tbody>
+			</table>
+		</div>
+		<!-- //지점별 보호 책임자 스크롤-->
+
+		<div class="btn-area">
+			<a href="#none" class="layer-btn color-red">확인</a>
+		</div>
+	</div>
+</div>
+<!-- //지점별 보호 책임자 레이어팝업 -->
+
+<!-- 쿠폰선택 레이어팝업 -->
+<div class="layer-pop  layer_coupon_sel-pop">
+	<div class="lay_tit-area">
+		<strong>쿠폰선택</strong>
+		<a href="#"><span class="blind">레이어팝업 닫기</span></a>
+	</div>
+
+	<div class="lay_cont-area layer-coupon-sel">
+		<p class="lay-txt">아래의 쿠폰 목록에서 사용할 쿠폰을 선택하시면 쿠폰이 적용 됩니다.</p>
+
+		<!-- 쿠폰선택 스크롤-->
+		<div class="scroll-table-box">
+			<table class="lay-table-scroll">
+				<caption>쿠폰선택 표 - 선택, 쿠폰명, 금액, 유효기간</caption>
+				<thead>
+					<tr>
+						<th scope="col" style="width:70px;">선택</th>
+						<th scope="col">쿠폰명</th>
+						<th scope="col" class="dis-none">금액</th>
+						<th scope="col" class="dis-none">유효기간</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<span class="lay-checkbox">
+								<input type="checkbox" id="chh1" name="" />
+								<label for="chh1"><span class="blind">선택</span></label>
+							</span>
+						</td>
+						<td class="align-left">
+							<p>신규회원가입쿠폰</p>
+							<ul class="table-txtList dis-block">
+								<li>금액 : 3,000원</li>
+								<li>유효기간 : 2017.05.01 -2017.05.01</li>
+							</ul>
+						</td>
+						<td class="dis-none">3,000원</td>
+						<td class="day-num dis-none">2017.05.01 -2017.05.01</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="lay-checkbox">
+								<input type="checkbox" id="chh1" name="" />
+								<label for="chh1"><span class="blind">선택</span></label>
+							</span>
+						</td>
+						<td class="align-left">
+							<p>신규회원가입쿠폰</p>
+							<ul class="table-txtList dis-block">
+								<li>금액 : 3,000원</li>
+								<li>유효기간 : 2017.05.01 -2017.05.01</li>
+							</ul>
+						</td>
+						<td class="dis-none">3,000원</td>
+						<td class="day-num dis-none">2017.05.01 -2017.05.01</td>
+					</tr>
+
+					<tr>
+						<td>
+							<span class="lay-checkbox">
+								<input type="checkbox" id="chh1" name="" />
+								<label for="chh1"><span class="blind">선택</span></label>
+							</span>
+						</td>
+						<td class="align-left">
+							<p>신규회원가입쿠폰</p>
+							<ul class="table-txtList dis-block">
+								<li>금액 : 3,000원</li>
+								<li>유효기간 : 2017.05.01 -2017.05.01</li>
+							</ul>
+						</td>
+						<td class="dis-none">3,000원</td>
+						<td class="day-num dis-none">2017.05.01 -2017.05.01</td>
+					</tr>
+
+					<tr>
+						<td>
+							<span class="lay-checkbox">
+								<input type="checkbox" id="chh1" name="" />
+								<label for="chh1"><span class="blind">선택</span></label>
+							</span>
+						</td>
+						<td class="align-left">
+							<p>신규회원가입쿠폰</p>
+							<ul class="table-txtList dis-block">
+								<li>금액 : 3,000원</li>
+								<li>유효기간 : 2017.05.01 -2017.05.01</li>
+							</ul>
+						</td>
+						<td class="dis-none">3,000원</td>
+						<td class="day-num dis-none">2017.05.01 -2017.05.01</td>
+					</tr>
+
+					<tr>
+						<td>
+							<span class="lay-checkbox">
+								<input type="checkbox" id="chh1" name="" />
+								<label for="chh1"><span class="blind">선택</span></label>
+							</span>
+						</td>
+						<td class="align-left">
+							<p>신규회원가입쿠폰</p>
+							<ul class="table-txtList dis-block">
+								<li>금액 : 3,000원</li>
+								<li>유효기간 : 2017.05.01 -2017.05.01</li>
+							</ul>
+						</td>
+						<td class="dis-none">3,000원</td>
+						<td class="day-num dis-none">2017.05.01 -2017.05.01</td>
+					</tr>
+
+
+				</tbody>
+			</table>
+		</div>
+		<!--// 쿠폰선택 스크롤-->
+		<!-- 쿠폰적용 금액  -->
+		 <table class="lay-table-type2 mt50">
+			<caption>쿠폰적용 금액  표 - 수강료, 쿠폰적용</caption>
+			<tbody>
+				<tr>
+					<th scope="row" class="size130">수강료</th>
+					<td>68,000원</td>
+				</tr>
+				<tr>
+					<th scope="row">쿠폰적용</th>
+					<td class="lay-color-red">3,000원</td>
+				</tr>
+			</tbody>
+		</table>
+		<!--// 쿠폰적용 금액  -->
+
+		<div class="btn-area">
+			<a href="#none" class="layer-btn color-red">확인</a>
+		</div>
+	</div>
+</div>
+<!-- //쿠폰선택 레이어팝업 -->
+
+<!-- 쿠폰출력 레이어팝업 -->
+<div class="layer-pop  coupon_print-pop">
+	<div class="lay_tit-area">
+		<strong>쿠폰출력</strong>
+		<a href="#"><span class="blind">레이어팝업 닫기</span></a>
+	</div>
+
+	<div class="lay_cont-area coupon-print">
+		<span class="lay-title">롯데마트 문화센터에서 제공해 드리는 고객님만의 혜택을 누려보세요.</span>
+		<p class="lay-txt">롯데마트 문화센터가 고객님만을 위한 특별한 혜택을 준비하였습니다.</p>
+
+		<div class="coupon-print-con">
+			<div class="coupon-print-bd">
+				<span class="logo-coupon"><img src="../resources/images/common/img_logo.png" alt="롯데마트 문화센터 - culture center" style="width:100%;"></span>
+				<ul>
+					<li>연속수강 할인쿠폰</li>
+					<li><strong>10,000원</strong></li>
+					<li>
+						적용기준 : 엄마랑아가랑 전학기 수강회원 대상<br>
+						본 쿠폰은 지점방문 <span>선착순 30명</span>에 한해 적용 됩니다.
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<table class="lay-table-type1">
+			<caption>쿠폰혜택 표 - 구분,적용지점,사용가능학기,사용기간,할인혜택,적용,상태,출력</caption>
+			<thead>
+				<tr>
+					<th scope="col" style="width:110px" class="dis-none">지점</th>
+					<th scope="col" style="width:110px" class="dis-none">사용가능학기</th>
+					<th scope="col">사용기간</th>
+					<th scope="col" style="width:110px" class="dis-none">쿠폰번호</th>
+					<th scope="col" style="width:110px" class="dis-none">할인금액(율)</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="dis-none">송파점</td>
+					<td class="dis-none">2017년 여름</td>
+					<td class="lay-align-left bd-left-none">2017.05.15~2017.05.15
+						<ul class="table-txtList dis-block">
+							<li>지점 : 송파점</li>
+							<li>사용가능학기 : 2017년 여름</li>
+							<li>쿠폰번호 : 1705000153</li>
+							<li>할인금액(율) : 10,000원</li>
+						</ul>
+					</td>
+					<td class="dis-none">1705000153</td>
+					<td class="dis-none">10,000원</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<div class="lay-call-text">
+			<ul>
+				<li>정규강좌 수강 신청 시, 할인적용이 가능합니다.</li>
+				<li>지정된 학기와 지점엥서만 사용 가능합니다.</li>
+				<li>원칙적으로 중복할인이 불가하오니, 자세한 사항은 해당지점에 문의해 주세요.</li>
+				<li>개강이후 강좌취소시 할인적용이 소멸됩니다.</li>
+				<li>L.POINT 회원 및 멤버스 회원에 한해서 사용 가능합니다.</li>
+			</ul>
+		</div>
+
+		<div class="btn-area">
+			<a href="#none" class="layer-btn color-red">인쇄</a>
+		</div>
+	</div>
+</div>
+<!-- //쿠폰출력 레이어팝업 -->
+
+</body>
+</html>
